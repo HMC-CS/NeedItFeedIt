@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AF1FB3C17639747009CF2E6 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1FB3B17639747009CF2E6 /* GameController.m */; };
+		0AF1FB3F1763A077009CF2E6 /* Organism.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1FB3E1763A077009CF2E6 /* Organism.m */; };
+		0AF1FB421763A124009CF2E6 /* Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1FB411763A124009CF2E6 /* Resource.m */; };
+		0AF1FB451763A19C009CF2E6 /* OrganismFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1FB441763A19B009CF2E6 /* OrganismFactory.m */; };
+		0AF1FB481763A1DD009CF2E6 /* ResourceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1FB471763A1DD009CF2E6 /* ResourceFactory.m */; };
+		0AF1FB4B1763A1F1009CF2E6 /* ResourceBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1FB4A1763A1F1009CF2E6 /* ResourceBar.m */; };
+		0AF1FB4E1763A226009CF2E6 /* UserLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1FB4D1763A226009CF2E6 /* UserLayer.m */; };
+		0AF1FB591763A8F3009CF2E6 /* air.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1FB501763A8F3009CF2E6 /* air.png */; };
+		0AF1FB5A1763A8F3009CF2E6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1FB511763A8F3009CF2E6 /* background.png */; };
+		0AF1FB5B1763A8F3009CF2E6 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1FB521763A8F3009CF2E6 /* background1.png */; };
+		0AF1FB5C1763A8F3009CF2E6 /* flower.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1FB531763A8F3009CF2E6 /* flower.png */; };
+		0AF1FB5D1763A8F3009CF2E6 /* grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1FB541763A8F3009CF2E6 /* grass.png */; };
+		0AF1FB5E1763A8F3009CF2E6 /* moss.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1FB551763A8F3009CF2E6 /* moss.png */; };
+		0AF1FB5F1763A8F3009CF2E6 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1FB561763A8F3009CF2E6 /* sun.png */; };
+		0AF1FB601763A8F3009CF2E6 /* water.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1FB571763A8F3009CF2E6 /* water.png */; };
+		0AF1FB611763A8F3009CF2E6 /* water1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1FB581763A8F3009CF2E6 /* water1.png */; };
 		EF7A6F1B17629CD900F81B3C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7A6F1A17629CD900F81B3C /* QuartzCore.framework */; };
 		EF7A6F1D17629CD900F81B3C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7A6F1C17629CD900F81B3C /* OpenGLES.framework */; };
 		EF7A6F1F17629CD900F81B3C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7A6F1E17629CD900F81B3C /* OpenAL.framework */; };
@@ -137,11 +153,34 @@
 		EF7A70B417629CDD00F81B3C /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = EF7A70B317629CDD00F81B3C /* vec4.c */; };
 		EF7A70B917629CDD00F81B3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7A70B817629CDD00F81B3C /* main.m */; };
 		EF7A70BC17629CDD00F81B3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7A70BB17629CDD00F81B3C /* AppDelegate.m */; };
-		EF7A70BF17629CDD00F81B3C /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7A70BE17629CDD00F81B3C /* HelloWorldLayer.m */; };
+		EF7A70BF17629CDD00F81B3C /* MenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7A70BE17629CDD00F81B3C /* MenuLayer.m */; };
 		EF7A70C217629CDD00F81B3C /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7A70C117629CDD00F81B3C /* IntroLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AF1FB3A17639747009CF2E6 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		0AF1FB3B17639747009CF2E6 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; wrapsLines = 0; };
+		0AF1FB3D1763A077009CF2E6 /* Organism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organism.h; sourceTree = "<group>"; };
+		0AF1FB3E1763A077009CF2E6 /* Organism.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organism.m; sourceTree = "<group>"; };
+		0AF1FB401763A124009CF2E6 /* Resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
+		0AF1FB411763A124009CF2E6 /* Resource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Resource.m; sourceTree = "<group>"; };
+		0AF1FB431763A19B009CF2E6 /* OrganismFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganismFactory.h; sourceTree = "<group>"; };
+		0AF1FB441763A19B009CF2E6 /* OrganismFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganismFactory.m; sourceTree = "<group>"; };
+		0AF1FB461763A1DD009CF2E6 /* ResourceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceFactory.h; sourceTree = "<group>"; };
+		0AF1FB471763A1DD009CF2E6 /* ResourceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceFactory.m; sourceTree = "<group>"; };
+		0AF1FB491763A1F1009CF2E6 /* ResourceBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceBar.h; sourceTree = "<group>"; };
+		0AF1FB4A1763A1F1009CF2E6 /* ResourceBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceBar.m; sourceTree = "<group>"; };
+		0AF1FB4C1763A226009CF2E6 /* UserLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLayer.h; sourceTree = "<group>"; };
+		0AF1FB4D1763A226009CF2E6 /* UserLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLayer.m; sourceTree = "<group>"; };
+		0AF1FB501763A8F3009CF2E6 /* air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = air.png; sourceTree = "<group>"; };
+		0AF1FB511763A8F3009CF2E6 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		0AF1FB521763A8F3009CF2E6 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
+		0AF1FB531763A8F3009CF2E6 /* flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flower.png; sourceTree = "<group>"; };
+		0AF1FB541763A8F3009CF2E6 /* grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass.png; sourceTree = "<group>"; };
+		0AF1FB551763A8F3009CF2E6 /* moss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moss.png; sourceTree = "<group>"; };
+		0AF1FB561763A8F3009CF2E6 /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
+		0AF1FB571763A8F3009CF2E6 /* water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water.png; sourceTree = "<group>"; };
+		0AF1FB581763A8F3009CF2E6 /* water1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water1.png; sourceTree = "<group>"; };
 		EF7A6F1717629CD900F81B3C /* NeeditFeeditCocos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeeditFeeditCocos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7A6F1A17629CD900F81B3C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EF7A6F1C17629CD900F81B3C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -416,8 +455,8 @@
 		EF7A70B817629CDD00F81B3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF7A70BA17629CDD00F81B3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EF7A70BB17629CDD00F81B3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EF7A70BD17629CDD00F81B3C /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		EF7A70BE17629CDD00F81B3C /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
+		EF7A70BD17629CDD00F81B3C /* MenuLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuLayer.h; sourceTree = "<group>"; };
+		EF7A70BE17629CDD00F81B3C /* MenuLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuLayer.m; sourceTree = "<group>"; };
 		EF7A70C017629CDD00F81B3C /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		EF7A70C117629CDD00F81B3C /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -442,6 +481,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AF1FB4F1763A8F3009CF2E6 /* needitfeeditimages */ = {
+			isa = PBXGroup;
+			children = (
+				0AF1FB501763A8F3009CF2E6 /* air.png */,
+				0AF1FB511763A8F3009CF2E6 /* background.png */,
+				0AF1FB521763A8F3009CF2E6 /* background1.png */,
+				0AF1FB531763A8F3009CF2E6 /* flower.png */,
+				0AF1FB541763A8F3009CF2E6 /* grass.png */,
+				0AF1FB551763A8F3009CF2E6 /* moss.png */,
+				0AF1FB561763A8F3009CF2E6 /* sun.png */,
+				0AF1FB571763A8F3009CF2E6 /* water.png */,
+				0AF1FB581763A8F3009CF2E6 /* water1.png */,
+			);
+			path = needitfeeditimages;
+			sourceTree = "<group>";
+		};
 		EF7A6F0E17629CD900F81B3C = {
 			isa = PBXGroup;
 			children = (
@@ -480,10 +535,24 @@
 			children = (
 				EF7A70BA17629CDD00F81B3C /* AppDelegate.h */,
 				EF7A70BB17629CDD00F81B3C /* AppDelegate.m */,
-				EF7A70BD17629CDD00F81B3C /* HelloWorldLayer.h */,
-				EF7A70BE17629CDD00F81B3C /* HelloWorldLayer.m */,
+				EF7A70BD17629CDD00F81B3C /* MenuLayer.h */,
+				EF7A70BE17629CDD00F81B3C /* MenuLayer.m */,
 				EF7A70C017629CDD00F81B3C /* IntroLayer.h */,
 				EF7A70C117629CDD00F81B3C /* IntroLayer.m */,
+				0AF1FB3A17639747009CF2E6 /* GameController.h */,
+				0AF1FB3B17639747009CF2E6 /* GameController.m */,
+				0AF1FB3D1763A077009CF2E6 /* Organism.h */,
+				0AF1FB3E1763A077009CF2E6 /* Organism.m */,
+				0AF1FB431763A19B009CF2E6 /* OrganismFactory.h */,
+				0AF1FB441763A19B009CF2E6 /* OrganismFactory.m */,
+				0AF1FB401763A124009CF2E6 /* Resource.h */,
+				0AF1FB411763A124009CF2E6 /* Resource.m */,
+				0AF1FB461763A1DD009CF2E6 /* ResourceFactory.h */,
+				0AF1FB471763A1DD009CF2E6 /* ResourceFactory.m */,
+				0AF1FB491763A1F1009CF2E6 /* ResourceBar.h */,
+				0AF1FB4A1763A1F1009CF2E6 /* ResourceBar.m */,
+				0AF1FB4C1763A226009CF2E6 /* UserLayer.h */,
+				0AF1FB4D1763A226009CF2E6 /* UserLayer.m */,
 				EF7A6F2D17629CD900F81B3C /* Resources */,
 				EF7A6F4517629CD900F81B3C /* libs */,
 				EF7A70B617629CDD00F81B3C /* Supporting Files */,
@@ -494,6 +563,7 @@
 		EF7A6F2D17629CD900F81B3C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0AF1FB4F1763A8F3009CF2E6 /* needitfeeditimages */,
 				EF7A6F2E17629CD900F81B3C /* Default.png */,
 				EF7A6F3017629CD900F81B3C /* Default@2x.png */,
 				EF7A6F3217629CD900F81B3C /* Default-568h@2x.png */,
@@ -622,6 +692,7 @@
 				EF7A6FD117629CDB00F81B3C /* CCRenderTexture.h */,
 				EF7A6FD217629CDB00F81B3C /* CCRenderTexture.m */,
 				EF7A6FD417629CDB00F81B3C /* CCScene.h */,
+				EF7A6FE117629CDB00F81B3C /* ccShader_PositionTexture_uColor_frag.h */,
 				EF7A6FD517629CDB00F81B3C /* CCScene.m */,
 				EF7A6FD717629CDB00F81B3C /* CCScheduler.h */,
 				EF7A6FD817629CDB00F81B3C /* CCScheduler.m */,
@@ -632,7 +703,6 @@
 				EF7A6FDE17629CDB00F81B3C /* ccShader_PositionColorLengthTexture_frag.h */,
 				EF7A6FDF17629CDB00F81B3C /* ccShader_PositionColorLengthTexture_vert.h */,
 				EF7A6FE017629CDB00F81B3C /* ccShader_PositionTexture_frag.h */,
-				EF7A6FE117629CDB00F81B3C /* ccShader_PositionTexture_uColor_frag.h */,
 				EF7A6FE217629CDB00F81B3C /* ccShader_PositionTexture_uColor_vert.h */,
 				EF7A6FE317629CDB00F81B3C /* ccShader_PositionTexture_vert.h */,
 				EF7A6FE417629CDB00F81B3C /* ccShader_PositionTextureA8Color_frag.h */,
@@ -933,6 +1003,15 @@
 				EF7A6F4117629CD900F81B3C /* Icon@2x.png in Resources */,
 				EF7A6F4417629CD900F81B3C /* iTunesArtwork in Resources */,
 				EF7A709A17629CDD00F81B3C /* ChangeLog in Resources */,
+				0AF1FB591763A8F3009CF2E6 /* air.png in Resources */,
+				0AF1FB5A1763A8F3009CF2E6 /* background.png in Resources */,
+				0AF1FB5B1763A8F3009CF2E6 /* background1.png in Resources */,
+				0AF1FB5C1763A8F3009CF2E6 /* flower.png in Resources */,
+				0AF1FB5D1763A8F3009CF2E6 /* grass.png in Resources */,
+				0AF1FB5E1763A8F3009CF2E6 /* moss.png in Resources */,
+				0AF1FB5F1763A8F3009CF2E6 /* sun.png in Resources */,
+				0AF1FB601763A8F3009CF2E6 /* water.png in Resources */,
+				0AF1FB611763A8F3009CF2E6 /* water1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1052,8 +1131,15 @@
 				EF7A70B417629CDD00F81B3C /* vec4.c in Sources */,
 				EF7A70B917629CDD00F81B3C /* main.m in Sources */,
 				EF7A70BC17629CDD00F81B3C /* AppDelegate.m in Sources */,
-				EF7A70BF17629CDD00F81B3C /* HelloWorldLayer.m in Sources */,
+				EF7A70BF17629CDD00F81B3C /* MenuLayer.m in Sources */,
 				EF7A70C217629CDD00F81B3C /* IntroLayer.m in Sources */,
+				0AF1FB3C17639747009CF2E6 /* GameController.m in Sources */,
+				0AF1FB3F1763A077009CF2E6 /* Organism.m in Sources */,
+				0AF1FB421763A124009CF2E6 /* Resource.m in Sources */,
+				0AF1FB451763A19C009CF2E6 /* OrganismFactory.m in Sources */,
+				0AF1FB481763A1DD009CF2E6 /* ResourceFactory.m in Sources */,
+				0AF1FB4B1763A1F1009CF2E6 /* ResourceBar.m in Sources */,
+				0AF1FB4E1763A226009CF2E6 /* UserLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1159,6 +1245,7 @@
 				EF7A70C717629CDD00F81B3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
