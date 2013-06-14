@@ -11,8 +11,12 @@
 
 @implementation Organism
 
--(id) init{
+-(id) initWithString: (NSString*) name{
     if (self = [super init]) {
+        //Load the image and initialize the property values
+        NSString* currentOrg = [[NSString alloc] initWithFormat:@"%@.png",name];
+        _orgImage = [CCSprite spriteWithFile:currentOrg];
+        _orgName = name;
         return self;
     }
     return nil;

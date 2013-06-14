@@ -9,10 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface Resource : CCLayer {
-    
-}
+@class Resource;
+@protocol ResourceDragProtocol <NSObject>
 
--(id) init;
+-(void) resource:(Resource*) resource didDragToPoint:(CGPoint) pt;
+
+@end
+
+
+
+@interface Resource : CCLayer
+
+@property(strong, nonatomic) CCSprite* image;
+@property(strong, nonatomic) NSString* name;
+@property(nonatomic) int frequency;
+@property(unsafe_unretained, nonatomic) id <ResourceDragProtocol> dragDelegate;
+
+-(id) initWithString: (NSString*) name andFrequency: (int) freq;
 
 @end

@@ -13,4 +13,7 @@
     
 }
 
+-(id) init;
+-(NSMutableArray*) getOrganisms:(int) num;
+
 @end

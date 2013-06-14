@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>flower</key>
+	<array>
+		<array>
+			<string>water</string>
+			<integer>34</integer>
+		</array>
+		<array>
+			<string>air</string>
+			<integer>33</integer>
+		</array>
+		<array>
+			<string>sun</string>
+			<integer>33</integer>
+		</array>
+	</array>
+	<key>grass</key>
+	<array>
+		<array>
+			<string>water</string>
+			<integer>34</integer>
+		</array>
+		<array>
+			<string>air</string>
+			<integer>33</integer>
+		</array>
+		<array>
+			<string>sun</string>
+			<integer>33</integer>
+		</array>
+	</array>
+	<key>moss</key>
+	<array>
+		<array>
+			<string>water</string>
+			<integer>60</integer>
+		</array>
+		<array>
+			<string>air</string>
+			<integer>20</integer>
+		</array>
+		<array>
+			<string>sun</string>
+			<integer>20</integer>
+		</array>
+	</array>
+</dict>
+</plist>

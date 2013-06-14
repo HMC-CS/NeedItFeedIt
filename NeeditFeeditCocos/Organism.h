@@ -12,8 +12,10 @@
 @interface Organism : CCLayer {
     
 }
+@property(strong, nonatomic) CCSprite* orgImage;
+@property(strong, nonatomic) NSString* orgName;
 
--(id) init;
+-(id) initWithString:(NSString*) name;
 -(BOOL) isSatisfied;
 -(BOOL) isDead;
 -(void) updateHeath;

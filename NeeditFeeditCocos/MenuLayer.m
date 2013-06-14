@@ -81,7 +81,6 @@
 	// cocos2d will automatically release all the children (Label)
 	
 	// don't forget to call "super dealloc"
-	[super dealloc];
 }
 
 -(void) goToGame: (id) sender{
