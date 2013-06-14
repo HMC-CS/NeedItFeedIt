@@ -23,7 +23,7 @@
 @property(strong, nonatomic) CCSprite* image;
 @property(strong, nonatomic) NSString* name;
 @property(nonatomic) int frequency;
-@property(unsafe_unretained, nonatomic) id <ResourceDragProtocol> dragDelegate;
+@property(weak, nonatomic) id <ResourceDragProtocol> dragDelegate;
 
 -(id) initWithString: (NSString*) name andFrequency: (int) freq;
 

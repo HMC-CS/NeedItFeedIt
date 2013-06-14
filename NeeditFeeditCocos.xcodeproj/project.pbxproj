@@ -1221,6 +1221,7 @@
 				GCC_PREFIX_HEADER = NeeditFeeditCocos/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"NeeditFeeditCocos/libs/kazmath/include\"";
 				INFOPLIST_FILE = NeeditFeeditCocos/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
@@ -1241,6 +1242,7 @@
 				GCC_PREFIX_HEADER = NeeditFeeditCocos/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"NeeditFeeditCocos/libs/kazmath/include\"";
 				INFOPLIST_FILE = NeeditFeeditCocos/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
