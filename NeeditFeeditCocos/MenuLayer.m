@@ -52,20 +52,22 @@
         [self addChild:background z:-1];
 		
 		// create title label
-		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Need It Feed It" fontName:@"Arial Rounded MT Bold" fontSize:36];
-		label.position =  ccp( size.width /2 , size.height/2 );
+        CCSprite* title = [CCSprite spriteWithFile:@"title1.png"];
+//		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Need It Feed It" fontName:@"Arial Rounded MT Bold" fontSize:36];
+		title.position =  ccp( size.width /2 , size.height/1.5 );
         
         //Create a menu item as a start button
-        [CCMenuItemFont setFontName:@"Arial Rounded MT Bold"];
-        [CCMenuItemFont setFontSize:30];
-        CCMenuItem* start = [CCMenuItemFont itemWithString:@"Start" target:self selector:@selector(goToGame:)];
+//        [CCMenuItemFont setFontName:@"Arial Rounded MT Bold"];
+//        [CCMenuItemFont setFontSize:30];
+//        CCMenuItem* start = [CCMenuItemFont itemWithString:@"Start" target:self selector:@selector(goToGame:)];
+        CCMenuItemImage* start =[CCMenuItemImage itemWithNormalImage:@"start1.png" selectedImage:@"start1.png" target:self selector:@selector(goToGame:)];
         
         //Create the menu to hold the start command
         CCMenu* menu = [CCMenu menuWithItems:start, nil];
-        menu.position = ccp(size.width/2, size.height/4);
+        menu.position = ccp(size.width/2, size.height/5);
 		
 		// add the label and menu as a child to this Layer
-		[self addChild: label];
+		[self addChild: title];
         [self addChild:menu];
 		
 		

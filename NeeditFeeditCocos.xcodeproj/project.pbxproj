@@ -37,12 +37,13 @@
 		EF737E6E176BDD4600EF4E4D /* retrylevel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E53176BDD4500EF4E4D /* retrylevel.png */; };
 		EF737E6F176BDD4600EF4E4D /* score.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E54176BDD4500EF4E4D /* score.png */; };
 		EF737E70176BDD4600EF4E4D /* soil.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E55176BDD4500EF4E4D /* soil.png */; };
-		EF737E71176BDD4600EF4E4D /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E56176BDD4500EF4E4D /* start.png */; };
 		EF737E72176BDD4600EF4E4D /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E57176BDD4600EF4E4D /* sun.png */; };
 		EF737E73176BDD4600EF4E4D /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E58176BDD4600EF4E4D /* tree.png */; };
 		EF737E74176BDD4600EF4E4D /* water.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E59176BDD4600EF4E4D /* water.png */; };
 		EF737E75176BDD4600EF4E4D /* water1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E5A176BDD4600EF4E4D /* water1.png */; };
 		EF737E76176BDD4600EF4E4D /* wincase.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E5B176BDD4600EF4E4D /* wincase.png */; };
+		EF737E7D176BE99100EF4E4D /* start1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E7C176BE99100EF4E4D /* start1.png */; };
+		EF737E7F176BE9B300EF4E4D /* title1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E7E176BE9B300EF4E4D /* title1.png */; };
 		EF7A6F1B17629CD900F81B3C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7A6F1A17629CD900F81B3C /* QuartzCore.framework */; };
 		EF7A6F1D17629CD900F81B3C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7A6F1C17629CD900F81B3C /* OpenGLES.framework */; };
 		EF7A6F1F17629CD900F81B3C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7A6F1E17629CD900F81B3C /* OpenAL.framework */; };
@@ -215,12 +216,13 @@
 		EF737E53176BDD4500EF4E4D /* retrylevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retrylevel.png; sourceTree = "<group>"; };
 		EF737E54176BDD4500EF4E4D /* score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = score.png; sourceTree = "<group>"; };
 		EF737E55176BDD4500EF4E4D /* soil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soil.png; sourceTree = "<group>"; };
-		EF737E56176BDD4500EF4E4D /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		EF737E57176BDD4600EF4E4D /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
 		EF737E58176BDD4600EF4E4D /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		EF737E59176BDD4600EF4E4D /* water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water.png; sourceTree = "<group>"; };
 		EF737E5A176BDD4600EF4E4D /* water1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water1.png; sourceTree = "<group>"; };
 		EF737E5B176BDD4600EF4E4D /* wincase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wincase.png; sourceTree = "<group>"; };
+		EF737E7C176BE99100EF4E4D /* start1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start1.png; sourceTree = "<group>"; };
+		EF737E7E176BE9B300EF4E4D /* title1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title1.png; sourceTree = "<group>"; };
 		EF7A6F1717629CD900F81B3C /* NeeditFeeditCocos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeeditFeeditCocos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7A6F1A17629CD900F81B3C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EF7A6F1C17629CD900F81B3C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -554,6 +556,8 @@
 		EF737E77176BDD4C00EF4E4D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EF737E7E176BE9B300EF4E4D /* title1.png */,
+				EF737E7C176BE99100EF4E4D /* start1.png */,
 				EF737E41176BDD4500EF4E4D /* background.png */,
 				EF737E42176BDD4500EF4E4D /* background1.png */,
 				EF737E43176BDD4500EF4E4D /* bunny.png */,
@@ -575,7 +579,6 @@
 				EF737E53176BDD4500EF4E4D /* retrylevel.png */,
 				EF737E54176BDD4500EF4E4D /* score.png */,
 				EF737E55176BDD4500EF4E4D /* soil.png */,
-				EF737E56176BDD4500EF4E4D /* start.png */,
 				EF737E57176BDD4600EF4E4D /* sun.png */,
 				EF737E58176BDD4600EF4E4D /* tree.png */,
 				EF737E59176BDD4600EF4E4D /* water.png */,
@@ -1102,12 +1105,13 @@
 				EF737E6E176BDD4600EF4E4D /* retrylevel.png in Resources */,
 				EF737E6F176BDD4600EF4E4D /* score.png in Resources */,
 				EF737E70176BDD4600EF4E4D /* soil.png in Resources */,
-				EF737E71176BDD4600EF4E4D /* start.png in Resources */,
 				EF737E72176BDD4600EF4E4D /* sun.png in Resources */,
 				EF737E73176BDD4600EF4E4D /* tree.png in Resources */,
 				EF737E74176BDD4600EF4E4D /* water.png in Resources */,
 				EF737E75176BDD4600EF4E4D /* water1.png in Resources */,
 				EF737E76176BDD4600EF4E4D /* wincase.png in Resources */,
+				EF737E7D176BE99100EF4E4D /* start1.png in Resources */,
+				EF737E7F176BE9B300EF4E4D /* title1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
