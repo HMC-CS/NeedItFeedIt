@@ -2,6 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>cactus</key>
+	<array>
+		<array>
+			<string>water</string>
+			<integer>34</integer>
+		</array>
+		<array>
+			<string>sun</string>
+			<integer>33</integer>
+		</array>
+		<array>
+			<string>soil</string>
+			<integer>33</integer>
+		</array>
+	</array>
 	<key>flower</key>
 	<array>
 		<array>
@@ -9,11 +24,11 @@
 			<integer>34</integer>
 		</array>
 		<array>
-			<string>air</string>
+			<string>sun</string>
 			<integer>33</integer>
 		</array>
 		<array>
-			<string>sun</string>
+			<string>soil</string>
 			<integer>33</integer>
 		</array>
 	</array>
@@ -21,30 +36,75 @@
 	<array>
 		<array>
 			<string>water</string>
-			<integer>34</integer>
-		</array>
-		<array>
-			<string>air</string>
-			<integer>33</integer>
+			<integer>60</integer>
 		</array>
 		<array>
 			<string>sun</string>
-			<integer>33</integer>
+			<integer>20</integer>
+		</array>
+		<array>
+			<string>soil</string>
+			<integer>20</integer>
 		</array>
 	</array>
 	<key>moss</key>
 	<array>
 		<array>
 			<string>water</string>
-			<integer>60</integer>
-		</array>
-		<array>
-			<string>air</string>
-			<integer>20</integer>
+			<string>34</string>
 		</array>
 		<array>
 			<string>sun</string>
-			<integer>20</integer>
+			<string>33</string>
+		</array>
+		<array>
+			<string>soil</string>
+			<string>33</string>
+		</array>
+	</array>
+	<key>pinetree</key>
+	<array>
+		<array>
+			<string>water</string>
+			<string>34</string>
+		</array>
+		<array>
+			<string>sun</string>
+			<string>33</string>
+		</array>
+		<array>
+			<string>soil</string>
+			<string>33</string>
+		</array>
+	</array>
+	<key>bush</key>
+	<array>
+		<array>
+			<string>water</string>
+			<string>34</string>
+		</array>
+		<array>
+			<string>sun</string>
+			<string>33</string>
+		</array>
+		<array>
+			<string>soil</string>
+			<string>33</string>
+		</array>
+	</array>
+	<key>tree</key>
+	<array>
+		<array>
+			<string>water</string>
+			<string>34</string>
+		</array>
+		<array>
+			<string>sun</string>
+			<string>33</string>
+		</array>
+		<array>
+			<string>soil</string>
+			<string>33</string>
 		</array>
 	</array>
 </dict>
