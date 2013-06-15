@@ -13,7 +13,7 @@
     
 }
 
--(id) init;
+-(id) initGivenLevel: (int) level;
 -(NSMutableArray*) getOrganisms:(int) num;
 
 @end

@@ -25,6 +25,6 @@
 @property(nonatomic) int frequency;
 @property(weak, nonatomic) id <ResourceDragProtocol> dragDelegate;
 
--(id) initWithString: (NSString*) name andFrequency: (int) freq;
+-(id) initWithString: (NSString*) name;
 
 @end

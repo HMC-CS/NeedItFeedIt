@@ -6,15 +6,15 @@
 	<array>
 		<array>
 			<string>water</string>
-			<integer>34</integer>
+			<integer>20</integer>
 		</array>
 		<array>
 			<string>sun</string>
-			<integer>33</integer>
+			<integer>60</integer>
 		</array>
 		<array>
 			<string>soil</string>
-			<integer>33</integer>
+			<integer>20</integer>
 		</array>
 	</array>
 	<key>flower</key>
@@ -36,30 +36,30 @@
 	<array>
 		<array>
 			<string>water</string>
-			<integer>60</integer>
+			<integer>34</integer>
 		</array>
 		<array>
 			<string>sun</string>
-			<integer>20</integer>
+			<integer>33</integer>
 		</array>
 		<array>
 			<string>soil</string>
-			<integer>20</integer>
+			<integer>33</integer>
 		</array>
 	</array>
 	<key>moss</key>
 	<array>
 		<array>
 			<string>water</string>
-			<string>34</string>
+			<string>60</string>
 		</array>
 		<array>
 			<string>sun</string>
-			<string>33</string>
+			<string>20</string>
 		</array>
 		<array>
 			<string>soil</string>
-			<string>33</string>
+			<string>20</string>
 		</array>
 	</array>
 	<key>pinetree</key>
@@ -105,6 +105,96 @@
 		<array>
 			<string>soil</string>
 			<string>33</string>
+		</array>
+	</array>
+	<key>bunny</key>
+	<array>
+		<array>
+			<string>grass</string>
+			<integer>34</integer>
+		</array>
+		<array>
+			<string>water</string>
+			<integer>33</integer>
+		</array>
+		<array>
+			<string>bush</string>
+			<integer>33</integer>
+		</array>
+	</array>
+	<key>cow</key>
+	<array>
+		<array>
+			<string>grass</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>water</string>
+			<integer>30</integer>
+		</array>
+		<array>
+			<string>sun</string>
+			<integer>20</integer>
+		</array>
+	</array>
+	<key>deer</key>
+	<array>
+		<array>
+			<string>grass</string>
+			<integer>34</integer>
+		</array>
+		<array>
+			<string>water</string>
+			<integer>33</integer>
+		</array>
+		<array>
+			<string>bush</string>
+			<integer>33</integer>
+		</array>
+	</array>
+	<key>elephant</key>
+	<array>
+		<array>
+			<string>grass</string>
+			<integer>34</integer>
+		</array>
+		<array>
+			<string>water</string>
+			<integer>33</integer>
+		</array>
+		<array>
+			<string>bush</string>
+			<integer>33</integer>
+		</array>
+	</array>
+	<key>giraffe</key>
+	<array>
+		<array>
+			<string>tree</string>
+			<integer>34</integer>
+		</array>
+		<array>
+			<string>water</string>
+			<integer>33</integer>
+		</array>
+		<array>
+			<string>bush</string>
+			<integer>33</integer>
+		</array>
+	</array>
+	<key>lion</key>
+	<array>
+		<array>
+			<string>deer</string>
+			<integer>60</integer>
+		</array>
+		<array>
+			<string>water</string>
+			<integer>20</integer>
+		</array>
+		<array>
+			<string>giraffe</string>
+			<integer>20</integer>
 		</array>
 	</array>
 </dict>

@@ -14,7 +14,7 @@
     UITouch* touch;
 }
 
--(id) initWithString: (NSString*) name andFrequency: (int) freq{
+-(id) initWithString: (NSString*) name{
     if (self = [super init]) {
         //Converts the name to picture format and loads the sprite
         NSString* currentOrg = [[NSString alloc] initWithFormat:@"%@.png",name];
@@ -23,7 +23,6 @@
         
         //Sets necessary variables
         _name = name;
-        _frequency = freq;
         touch = [[UITouch alloc]init];
         touch = nil;
         self.touchEnabled = YES;
@@ -60,12 +59,13 @@
 -(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     //At end it checks ccTouchesMoved one more time to make sure resource is in the right location
-    if (touch!=nil)
+    if (touch!=nil){
         [self ccTouchesMoved:touches withEvent:event];
-    
-    //Tells the GameController that a resource has been dropped
-    if (self.dragDelegate) 
-        [self.dragDelegate resource:self didDragToPoint:self.image.position];
+        
+        //Tells the GameController that a resource has been dropped
+        if (self.dragDelegate) 
+            [self.dragDelegate resource:self didDragToPoint:self.image.position];
+    }
     
     //Resets touches to nil so that a new touch is treated correctly
     touch = nil;

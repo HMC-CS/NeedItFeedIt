@@ -18,8 +18,7 @@
     NSArray* resourceList;
     NSMutableArray* resources;
     CGSize winSize;
-    NSTimer* timer;
-    int tagCount;
+    NSTimer* timer; 
 }
 
 -(id) init{
@@ -40,8 +39,7 @@
         
         //Add all organisms and resources
         [self loadOrganisms: 3];
-        [self addOrganisms];
-        [self addResources];
+        [self addOrganismsAndResources];
         
         //Schedule new resources to be added every 2 sec
         [self schedule:@selector(update:) interval:2.0];
@@ -55,37 +53,39 @@
 }
 
 -(void) loadOrganisms: (int) num{
-    OrganismFactory *orgFac = [[OrganismFactory alloc]init];
+    //Initiates a new OrganismFactory and gets back num organisms
+    OrganismFactory *orgFac = [[OrganismFactory alloc]initGivenLevel:1];
     organismList = [[NSMutableArray alloc] init];
     organismList = [orgFac getOrganisms:num];
 }
 
--(void) addOrganisms{
+-(void) addOrganismsAndResources{
+    //Initialtes a resource factory
+    ResourceFactory* resFac = [[ResourceFactory alloc] initWithOrganisms:organismList];
+    resourceList = [[NSMutableArray alloc] init];
+    
+    //resourceList is assigned to be all resources that need to be displayed
+    resourceList = resFac.displayResources;
+    
+    //Creates new organisms with resources and frequencies
+    NSArray* orgTemps = [[NSArray alloc] initWithArray:resFac.orgsAndResources];
     float offset = winSize.width / organismList.count;
     for (int i=0; i<organismList.count; i++) {
-        Organism *newOrg = [[Organism alloc] initWithString: organismList[i]];
+        NSArray* temp = [[NSArray alloc] initWithArray: orgTemps[i]];
+        Organism *newOrg = [[Organism alloc] initWithString: organismList[i]
+                            andResource1:temp[0] andResource2:temp[1] andResource3:temp[2]];
         newOrg.orgImage.position = ccp(offset*i +newOrg.orgImage.contentSize.width/2 , winSize.height/6);
         [self addChild:newOrg.orgImage z:0];
         [organisms addObject:newOrg];
     }
 }
 
--(void) addResources{
-    ResourceFactory* resFac = [[ResourceFactory alloc] initWithOrganisms:organismList];
-    resourceList = [[NSMutableArray alloc] init];
-    resourceList = resFac.resources;
-}
-
 -(void) moveResources{
-    //Up the tag count so every action has a different tag
-    tagCount++;
     
     //Get one of the objects in resourceList
-    //resourceList = [[NSArray alloc] initWithObjects:@"water", @"sun", @"air", nil];
     int i = arc4random() % 3;
-    NSArray *temp = [[NSArray alloc] initWithArray:resourceList[i]];
-    NSString* name = [[NSString alloc] initWithFormat: temp[0]];
-    Resource *newResource =  [[Resource alloc] initWithString:name andFrequency: temp[1]];
+    NSString* name = [[NSString alloc] initWithFormat: resourceList[i]];
+    Resource *newResource =  [[Resource alloc] initWithString:name];
     newResource.dragDelegate = self;
     [resources addObject:newResource];
 
@@ -134,7 +134,6 @@
     
     [resources removeObject:resource];
     [resource removeFromParentAndCleanup:YES];
-    
 }
             
 -(BOOL) allSatisfied{

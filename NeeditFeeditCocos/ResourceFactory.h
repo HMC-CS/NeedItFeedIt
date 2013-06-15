@@ -12,7 +12,8 @@
 @interface ResourceFactory : CCNode {
     
 }
-@property(strong, nonatomic) NSArray* resources;
+@property(strong, nonatomic) NSMutableArray* displayResources;
+@property(strong, nonatomic) NSMutableArray* orgsAndResources;
 
 -(id) initWithOrganisms: (NSMutableArray*) organisms;
 

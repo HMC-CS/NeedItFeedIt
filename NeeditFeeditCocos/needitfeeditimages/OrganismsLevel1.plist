@@ -8,5 +8,13 @@
 	<string>moss</string>
 	<key>Item 2</key>
 	<string>flower</string>
+	<key>Item 3</key>
+	<string>bush</string>
+	<key>Item 4</key>
+	<string>cactus</string>
+	<key>Item 5</key>
+	<string>pinetree</string>
+	<key>Item 6</key>
+	<string>tree</string>
 </dict>
 </plist>
