@@ -11,12 +11,14 @@
 #import "Resource.h"
 #import "OrganismFactory.h"
 #import "Organism.h"
+#import "ResourceBar.h"
 
 @implementation GameController{
     NSMutableArray* organismList;
     NSMutableArray* organisms;
     NSArray* resourceList;
     NSMutableArray* resources;
+    NSMutableArray* resourceBars;
     CGSize winSize;
     NSTimer* timer; 
 }
@@ -36,6 +38,7 @@
         //Initialize any necessary variables
         organisms = [[NSMutableArray alloc] init];
         resources = [[NSMutableArray alloc] init];
+        resourceBars = [[NSMutableArray alloc] init];
         
         //Add all organisms and resources
         [self loadOrganisms: 3];
@@ -74,11 +77,18 @@
         NSArray* temp = [[NSArray alloc] initWithArray: orgTemps[i]];
         Organism *newOrg = [[Organism alloc] initWithString: organismList[i]
                             andResource1:temp[0] andResource2:temp[1] andResource3:temp[2]];
-        newOrg.orgImage.position = ccp(offset*i +newOrg.orgImage.contentSize.width/2 , winSize.height/6);
+        newOrg.orgImage.position = ccp(offset*i +newOrg.orgImage.contentSize.width/2 +50, winSize.height/4);
         [self addChild:newOrg.orgImage z:0];
         [organisms addObject:newOrg];
+        ResourceBar *newBar = [[ResourceBar alloc] init];
+        newBar.position = ccp(newOrg.orgImage.position.x , winSize.height/8);
+        [self addChild:newBar];
+        [resourceBars addObject:newBar];
     }
 }
+
+//This way of moving comes from a Ray Weinderlich Tutorial that we made some adaptions to:
+//http://www.raywenderlich.com/25736/how-to-make-a-simple-iphone-game-with-cocos2d-2-x-tutorial
 
 -(void) moveResources{
     

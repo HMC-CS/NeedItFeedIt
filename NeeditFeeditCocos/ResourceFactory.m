@@ -22,15 +22,13 @@
         NSString* resourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:fileName];
         NSDictionary* resourceDict = [NSDictionary dictionaryWithContentsOfFile:resourcePath];
         
-        //Goes through each of the organisms and loads the information
-        //about resources and frequencies into _orgsAndResources
+        //Copies all information about the passsed organisms from Resources.plist into _orgsAndResources
         for (int i= 0; i<organisms.count; i++) {
             NSString* currOrganisms = [[NSString alloc] initWithString: organisms[i]];
             NSArray* currResources = [[NSArray alloc] initWithArray:resourceDict[currOrganisms]];
             [_orgsAndResources addObject: currResources];
             
-            //Then goes through and adds all resources to _displayResources allow multiples
-            //of resources
+            //Then goes through and adds all resources
             for (int j=0; j<currResources.count; j++) {
                 NSArray* temp = [[NSArray alloc] initWithArray: currResources[j]];
                 [_displayResources addObject: temp[0]];
