@@ -131,6 +131,7 @@
     Organism *targetOrg = nil;
     for (Organism* org in organisms){
         if (CGRectContainsPoint(org.orgImage.boundingBox, pt)) {
+            NSLog(@"%f by %f", org.orgImage.contentSize.width, org.orgImage.contentSize.height);
             targetOrg = org;
             break;
         }
