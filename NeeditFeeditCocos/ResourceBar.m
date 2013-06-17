@@ -24,11 +24,15 @@
         innerBar.scaleX = 0.85;
         innerBar.scaleY = 0.5;
         
+        
+        
 
         fillBar = [CCSprite spriteWithFile:@"fillBar.png"];
         fillBar.scaleX = 0.85;
         fillBar.scaleY = 0.5;
+        NSLog(@"%f", fillBar.contentSize.width);
         [innerBar setTextureRect: CGRectMake( 0, 0, innerBar.contentSize.width/2, innerBar.contentSize.height)];
+        innerBar.position = CGPointMake(-58, fillBar.position.y);
         
         [super addChild: backBar];
         [super addChild:fillBar];
