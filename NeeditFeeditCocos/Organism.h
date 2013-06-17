@@ -14,9 +14,9 @@
 }
 @property(strong, nonatomic) CCSprite* orgImage;
 @property(strong, nonatomic) NSString* orgName;
+@property(strong, nonatomic) NSArray* neededResources;
 
--(id) initWithString: (NSString*) name andResource1: (NSArray*) res1
-        andResource2: (NSArray*) res2 andResource3: (NSArray*) res3;
+-(id) initWithString: (NSString*) name andResources: (NSArray*) resources;
 -(BOOL) isSatisfied;
 -(BOOL) isDead;
 -(void) updateHeath;

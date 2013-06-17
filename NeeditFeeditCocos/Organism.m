@@ -9,14 +9,9 @@
 #import "Organism.h"
 
 
-@implementation Organism{
-    NSArray* resource1;
-    NSArray* resource2;
-    NSArray* resource3;
-}
+@implementation Organism
 
--(id) initWithString: (NSString*) name andResource1: (NSArray*) res1
-        andResource2: (NSArray*) res2 andResource3: (NSArray*) res3 {
+-(id) initWithString: (NSString*) name andResources: (NSArray*) resources {
     if (self = [super init]) {
         //Load the image and initialize the property values
         NSString* currentOrg = [[NSString alloc] initWithFormat:@"%@.png",name];
@@ -24,9 +19,7 @@
         _orgName = name;
         
         //Set all of the resources as those passed to the organism
-        resource1 = [[NSArray alloc] initWithArray:res1];
-        resource2 = [[NSArray alloc] initWithArray:res2];
-        resource3 = [[NSArray alloc] initWithArray:res3];
+        _neededResources = [[NSArray alloc] initWithArray: resources];
         return self;
     }
     return nil;
