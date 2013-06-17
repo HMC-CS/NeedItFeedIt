@@ -133,6 +133,7 @@
     Organism *targetOrg = nil;
     for (Organism* org in organisms){
         if (CGRectContainsPoint(org.orgImage.boundingBox, pt)) {
+            NSLog(@"resource in organism");
             targetOrg = org;
             break;
         }
@@ -140,6 +141,7 @@
     
     if (targetOrg!=nil) {
         //Here we will update the resource bar and possibly score
+        NSLog(@"I was fed!");
     }
     
     [resources removeObject:resource];
