@@ -63,8 +63,8 @@
         [self ccTouchesMoved:touches withEvent:event];
         
         //Tells the GameController that a resource has been dropped
-        if (self.dragDelegate) 
-            [self.dragDelegate resource:self didDragToPoint:self.image.position];
+        if (self.dragDelegate)
+            [self.dragDelegate resource:self didDragToPoint:[self convertToNodeSpace: [self convertTouchToNodeSpace:touch]]];
     }
     
     //Resets touches to nil so that a new touch is treated correctly
