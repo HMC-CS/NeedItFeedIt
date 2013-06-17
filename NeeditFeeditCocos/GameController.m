@@ -57,7 +57,7 @@
 
 -(void) loadOrganisms: (int) num{
     //Initiates a new OrganismFactory and gets back num organisms
-    OrganismFactory *orgFac = [[OrganismFactory alloc]initGivenLevel:1];
+    OrganismFactory *orgFac = [[OrganismFactory alloc]initGivenLevel:2];
     organismList = [[NSMutableArray alloc] init];
     organismList = [orgFac getOrganisms:num];
 }
@@ -132,6 +132,8 @@
     //Loops over all organisms and checks if this resource is within its boundingBox
     Organism *targetOrg = nil;
     for (Organism* org in organisms){
+        NSLog(@"org: %f, %f", org.orgImage.boundingBox.origin.x, org.orgImage.boundingBox.origin.y);
+        NSLog(@"resource: %f, %f", pt.x, pt.y);
         if (CGRectContainsPoint(org.orgImage.boundingBox, pt)) {
             NSLog(@"resource in organism");
             targetOrg = org;
