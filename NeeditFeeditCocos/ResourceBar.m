@@ -12,22 +12,27 @@
 @implementation ResourceBar{
     CCSprite* backBar;
     CCSprite* innerBar;
+    CCSprite* fillBar;
 }
 
 -(id) init{
     if (self = [super init]) {
         //Loads the background sprite for the resource bar
         backBar = [CCSprite spriteWithFile:@"backbar.png"];
-        [super addChild: backBar];
         
         innerBar = [CCSprite spriteWithFile:@"innerBar.png"];
         innerBar.scaleX = 0.85;
         innerBar.scaleY = 0.5;
-        CCTexture2D* fill = [[CCTextureCache sharedTextureCache] addImage:@"fillBar.png"];
-        [innerBar setTexture:fill];
-        [innerBar setTextureRect:CGRectMake(innerBar.position.x, innerBar.position.y,
-                                           innerBar.contentSize.width/2, innerBar.contentSize.height)];
         
+
+        fillBar = [CCSprite spriteWithFile:@"fillBar.png"];
+        fillBar.scaleX = 0.85;
+        fillBar.scaleY = 0.5;
+        [innerBar setTextureRect: CGRectMake( 0, 0, innerBar.contentSize.width/2, innerBar.contentSize.height)];
+        
+        [super addChild: backBar];
+        [super addChild:fillBar];
+        [super addChild:innerBar];
         return self;
     }
     return nil;
