@@ -135,6 +135,7 @@
             break;
         }
     }
+
     
     if (targetOrg!=nil) {
         for (int i=0; i<targetOrg.neededResources.count; i++) {
