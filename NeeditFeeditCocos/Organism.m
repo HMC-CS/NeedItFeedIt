@@ -32,8 +32,7 @@
         [self addChild: glow z:-1];
         [self addChild: _orgImage z:0];
         
-        self.contentSize = CGSizeMake(_orgImage.contentSize.width, _orgImage.contentSize.height);
-        
+        self.contentSize = CGSizeMake(_orgImage.textureRect.size.width, _orgImage.textureRect.size.height);
         return self;
     }
     return nil;

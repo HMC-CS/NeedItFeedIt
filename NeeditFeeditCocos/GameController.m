@@ -106,7 +106,7 @@
     
     // Create the resource slightly off-screen along the right edge,
     // and along a random position along the Y axis as calculated above
-    newResource.position = ccp(-newResource.image.contentSize.width/2, actualY);
+    newResource.position = ccp(-newResource.contentSize.width/2, actualY);
     [self addChild:newResource z:1];
     
     // Determine speed of the resource
@@ -123,22 +123,21 @@
         [node removeFromParentAndCleanup:YES];
     }];
     [newResource runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
- 
 }
 
 -(void) resource:(Resource*) resource didDragToPoint:(CGPoint)pt{
     //Loops over all organisms and checks if this resource is within its boundingBox
     Organism *targetOrg = nil;
-    NSLog(@"resource: %f, %f", pt.x, pt.y);
+    NSLog(@"resource: %f, %f", resource.boundingBox.origin.x, resource.boundingBox.origin.y);
     for (Organism* org in organisms){
         NSLog(@"%f by %f", org.boundingBox.origin.x, org.boundingBox.origin.y);
-        if (CGRectContainsPoint(org.boundingBox, pt)) {
+        if (CGRectIntersectsRect(org.boundingBox, resource.boundingBox)) {
             targetOrg = org;
             break;
         }
     }
-
     
+    //If a target org is selected, checks if the resource is one of the needed resources
     if (targetOrg!=nil) {
         for (int i=0; i<targetOrg.neededResources.count; i++) {
             NSArray* temp = targetOrg.neededResources[i];
