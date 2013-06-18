@@ -128,9 +128,7 @@
 -(void) resource:(Resource*) resource didDragToPoint:(CGPoint)pt{
     //Loops over all organisms and checks if this resource is within its boundingBox
     Organism *targetOrg = nil;
-    NSLog(@"resource: %f, %f", resource.boundingBox.origin.x, resource.boundingBox.origin.y);
     for (Organism* org in organisms){
-        NSLog(@"%f by %f", org.boundingBox.origin.x, org.boundingBox.origin.y);
         if (CGRectIntersectsRect(org.boundingBox, resource.boundingBox)) {
             targetOrg = org;
             break;
@@ -143,14 +141,30 @@
             NSArray* temp = targetOrg.neededResources[i];
             if ([temp[0] isEqualToString:resource.name]) {
                 NSLog(@"%@ was fed", targetOrg.orgName);
+                [resources removeObject:resource];
+                [resource removeFromParentAndCleanup:YES];
                 [targetOrg highlight];
                 break;
             }
         }
+        [self animateRemoveResource:resource];
     }
-    
-    [resources removeObject:resource];
-    [resource removeFromParentAndCleanup:YES];
+    else
+        [self animateRemoveResource:resource];
+}
+
+-(void) animateRemoveResource: (Resource*) resource{
+    float distanceY = MAX(-(3*winSize.height/4 - resource.position.y), 3*winSize.height/4 - resource.position.y);
+    float distanceX = MAX(0, winSize.width - resource.position.x);
+    NSLog(@"distanceY: %f distanceX: %f", distanceY, distanceX);
+    CCMoveTo* moveUp = [CCMoveTo actionWithDuration: distanceY/150 position:CGPointMake(resource.position.x, 3*winSize.height/4)];
+    CCMoveTo* moveOver = [CCMoveTo actionWithDuration: distanceX/150
+                                             position:CGPointMake(winSize.width+resource.contentSize.width/2, 3*winSize.height/4)];
+    CCCallBlockN * moveDone = [CCCallBlockN actionWithBlock:^(CCNode *node) {
+        [resources removeObject:resource];
+        [node removeFromParentAndCleanup:YES];
+    }];
+    [resource runAction:[CCSequence actions:moveUp, moveOver, moveDone, nil]];
 }
             
 -(BOOL) allSatisfied{
