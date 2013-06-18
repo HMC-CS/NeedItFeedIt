@@ -14,7 +14,6 @@
 }
 
 -(id) init;
--(void) increaseSelf;
 -(void)updatePercentageToValue:(int)newValue;
 
 @end
