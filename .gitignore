@@ -4,3 +4,4 @@
 *.xcbkptlist
 *.xcscheme
 xcschememanagement.plist
+*.xcuserstate

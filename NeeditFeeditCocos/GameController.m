@@ -75,8 +75,8 @@
     float offset = winSize.width / organismList.count;
     for (int i=0; i<organismList.count; i++) {
         Organism *newOrg = [[Organism alloc] initWithString: organismList[i] andResources:orgTemps[i]];
-        newOrg.orgImage.position = ccp(offset*i +newOrg.orgImage.contentSize.width/2 +50, winSize.height/4);
-        [self addChild:newOrg.orgImage z:0];
+        newOrg.position = ccp(offset*i +newOrg.orgImage.contentSize.width/2 +50, winSize.height/4);
+        [self addChild:newOrg z:0];
         [organisms addObject:newOrg];
         ResourceBar *newBar = [[ResourceBar alloc] init];
         newBar.position = ccp(newOrg.orgImage.position.x , winSize.height/8);
@@ -129,9 +129,10 @@
 -(void) resource:(Resource*) resource didDragToPoint:(CGPoint)pt{
     //Loops over all organisms and checks if this resource is within its boundingBox
     Organism *targetOrg = nil;
+    NSLog(@"resource: %f, %f", pt.x, pt.y);
     for (Organism* org in organisms){
-        if (CGRectContainsPoint(org.orgImage.boundingBox, pt)) {
-            NSLog(@"%f by %f", org.orgImage.contentSize.width, org.orgImage.contentSize.height);
+        if (CGRectContainsPoint(org.boundingBox, pt)) {
+            NSLog(@"%f by %f", org.boundingBox.origin.x, org.boundingBox.origin.y);
             targetOrg = org;
             break;
         }
@@ -143,6 +144,7 @@
             NSArray* temp = targetOrg.neededResources[i];
             if ([temp[0] isEqualToString:resource.name]) {
                 NSLog(@"I was fed");
+                [targetOrg highlight];
                 break;
             }
         }
