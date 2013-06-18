@@ -20,6 +20,7 @@
         _orgImage = [CCSprite spriteWithFile:currentOrg];
         _orgName = name;
         
+        //Loads the glowing background and sets transparency to 0
         NSString* glowOrg = [[NSString alloc] initWithFormat:@"%@Glow.png", name];
         glow = [CCSprite spriteWithFile:glowOrg];
         glow.opacity = 0;
@@ -27,8 +28,9 @@
         //Set all of the resources as those passed to the organism
         _neededResources = [[NSArray alloc] initWithArray: resources];
         
-        [super addChild: glow z:-1];
-        [super addChild: _orgImage z:0];
+        //Adds the glow and the orgImage to the layer
+        [self addChild: glow z:-1];
+        [self addChild: _orgImage z:0];
         
         self.contentSize = CGSizeMake(_orgImage.contentSize.width, _orgImage.contentSize.height);
         
