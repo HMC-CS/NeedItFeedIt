@@ -79,7 +79,7 @@
         [self addChild:newOrg z:0];
         [organisms addObject:newOrg];
         ResourceBar *newBar = [[ResourceBar alloc] init];
-        newBar.position = ccp(newOrg.orgImage.position.x , winSize.height/8);
+        newBar.position = ccp(newOrg.position.x , winSize.height/8);
         [self addChild:newBar];
         [resourceBars addObject:newBar];
     }
@@ -91,7 +91,7 @@
 -(void) moveResources{
     
     //Get one of the objects in resourceList
-    int i = arc4random() % 3;
+    int i = arc4random() % resourceList.count;
     NSString* name = [[NSString alloc] initWithFormat: resourceList[i]];
     Resource *newResource =  [[Resource alloc] initWithString:name];
     newResource.dragDelegate = self;
@@ -131,8 +131,8 @@
     Organism *targetOrg = nil;
     NSLog(@"resource: %f, %f", pt.x, pt.y);
     for (Organism* org in organisms){
+        NSLog(@"%f by %f", org.boundingBox.origin.x, org.boundingBox.origin.y);
         if (CGRectContainsPoint(org.boundingBox, pt)) {
-            NSLog(@"%f by %f", org.boundingBox.origin.x, org.boundingBox.origin.y);
             targetOrg = org;
             break;
         }
@@ -143,7 +143,7 @@
         for (int i=0; i<targetOrg.neededResources.count; i++) {
             NSArray* temp = targetOrg.neededResources[i];
             if ([temp[0] isEqualToString:resource.name]) {
-                NSLog(@"I was fed");
+                NSLog(@"%@ was fed", targetOrg.orgName);
                 [targetOrg highlight];
                 break;
             }
