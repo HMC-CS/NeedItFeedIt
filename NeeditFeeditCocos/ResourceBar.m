@@ -34,7 +34,7 @@
         innerBar.anchorPoint = ccp(0,0.5);
         innerBar.position = CGPointMake(-innerBar.boundingBox.size.width/2, 0);
         
-        [innerBar setTextureRect: CGRectMake(0, 0, innerBar.contentSize.width/2, innerBar.contentSize.height)];
+        [innerBar setTextureRect: CGRectMake(0, 0, fillBar.contentSize.width/2, fillBar.contentSize.height)];
         //innerBar.position = CGPointMake(-58, fillBar.position.y);
         
         [super addChild: backBar];

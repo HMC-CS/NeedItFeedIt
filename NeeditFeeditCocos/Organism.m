@@ -9,7 +9,9 @@
 #import "Organism.h"
 
 
-@implementation Organism
+@implementation Organism{
+    CCSprite* glow;
+}
 
 -(id) initWithString: (NSString*) name andResources: (NSArray*) resources {
     if (self = [super init]) {
@@ -18,15 +20,26 @@
         _orgImage = [CCSprite spriteWithFile:currentOrg];
         _orgName = name;
         
+        NSString* glowOrg = [[NSString alloc] initWithFormat:@"%@Glow.png", name];
+        glow = [CCSprite spriteWithFile:glowOrg];
+        glow.opacity = 0;
+        
         //Set all of the resources as those passed to the organism
         _neededResources = [[NSArray alloc] initWithArray: resources];
+        
+        [super addChild: glow z:-1];
+        [super addChild: _orgImage z:0];
+        
+        self.contentSize = CGSizeMake(glow.contentSize.width, glow.contentSize.height);
         return self;
     }
     return nil;
 }
 
 -(void) highlight{
-    
+    CCFadeTo* fadeIn = [CCFadeTo actionWithDuration:0.2 opacity:250];
+    CCFadeTo* fadeOut = [CCFadeTo actionWithDuration:0.5 opacity:0];
+    [glow runAction:[CCSequence actions:fadeIn, fadeOut, nil]];
 }
 
 -(BOOL) isSatisfied{

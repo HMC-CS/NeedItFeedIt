@@ -17,8 +17,9 @@
 @property(strong, nonatomic) NSArray* neededResources;
 
 -(id) initWithString: (NSString*) name andResources: (NSArray*) resources;
+-(void) highlight;
 -(BOOL) isSatisfied;
 -(BOOL) isDead;
--(void) updateHeath;
+-(void) updateHealth;
 
 @end
