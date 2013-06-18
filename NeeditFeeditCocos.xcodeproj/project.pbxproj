@@ -12,6 +12,19 @@
 		0A2F8FC4176D162000A98CC7 /* backbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2F8FC2176D161F00A98CC7 /* backbar.png */; };
 		0A2F8FC5176D162000A98CC7 /* innerBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2F8FC3176D161F00A98CC7 /* innerBar.png */; };
 		0A2F8FC7176D314F00A98CC7 /* fillBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2F8FC6176D314E00A98CC7 /* fillBar.png */; };
+		0A91A7721770C30D003BDFF7 /* bushGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A7661770C30D003BDFF7 /* bushGlow.png */; };
+		0A91A7731770C30D003BDFF7 /* cactusGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A7671770C30D003BDFF7 /* cactusGlow.png */; };
+		0A91A7741770C30D003BDFF7 /* cowGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A7681770C30D003BDFF7 /* cowGlow.png */; };
+		0A91A7751770C30D003BDFF7 /* deerGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A7691770C30D003BDFF7 /* deerGlow.png */; };
+		0A91A7761770C30D003BDFF7 /* elephantGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A76A1770C30D003BDFF7 /* elephantGlow.png */; };
+		0A91A7771770C30D003BDFF7 /* flowerGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A76B1770C30D003BDFF7 /* flowerGlow.png */; };
+		0A91A7781770C30D003BDFF7 /* giraffeGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A76C1770C30D003BDFF7 /* giraffeGlow.png */; };
+		0A91A7791770C30D003BDFF7 /* grassGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A76D1770C30D003BDFF7 /* grassGlow.png */; };
+		0A91A77A1770C30D003BDFF7 /* lionGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A76E1770C30D003BDFF7 /* lionGlow.png */; };
+		0A91A77B1770C30D003BDFF7 /* mossGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A76F1770C30D003BDFF7 /* mossGlow.png */; };
+		0A91A77C1770C30D003BDFF7 /* pinetreeGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A7701770C30D003BDFF7 /* pinetreeGlow.png */; };
+		0A91A77D1770C30D003BDFF7 /* treeGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A7711770C30D003BDFF7 /* treeGlow.png */; };
+		0A91A77F1770C31C003BDFF7 /* bunnyGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A77E1770C31C003BDFF7 /* bunnyGlow.png */; };
 		0AF1FB3C17639747009CF2E6 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1FB3B17639747009CF2E6 /* GameController.m */; };
 		0AF1FB3F1763A077009CF2E6 /* Organism.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1FB3E1763A077009CF2E6 /* Organism.m */; };
 		0AF1FB421763A124009CF2E6 /* Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1FB411763A124009CF2E6 /* Resource.m */; };
@@ -188,6 +201,19 @@
 		0A2F8FC2176D161F00A98CC7 /* backbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbar.png; sourceTree = "<group>"; };
 		0A2F8FC3176D161F00A98CC7 /* innerBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = innerBar.png; sourceTree = "<group>"; };
 		0A2F8FC6176D314E00A98CC7 /* fillBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fillBar.png; sourceTree = "<group>"; };
+		0A91A7661770C30D003BDFF7 /* bushGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bushGlow.png; sourceTree = "<group>"; };
+		0A91A7671770C30D003BDFF7 /* cactusGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cactusGlow.png; sourceTree = "<group>"; };
+		0A91A7681770C30D003BDFF7 /* cowGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cowGlow.png; sourceTree = "<group>"; };
+		0A91A7691770C30D003BDFF7 /* deerGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deerGlow.png; sourceTree = "<group>"; };
+		0A91A76A1770C30D003BDFF7 /* elephantGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephantGlow.png; sourceTree = "<group>"; };
+		0A91A76B1770C30D003BDFF7 /* flowerGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flowerGlow.png; sourceTree = "<group>"; };
+		0A91A76C1770C30D003BDFF7 /* giraffeGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giraffeGlow.png; sourceTree = "<group>"; };
+		0A91A76D1770C30D003BDFF7 /* grassGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grassGlow.png; sourceTree = "<group>"; };
+		0A91A76E1770C30D003BDFF7 /* lionGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lionGlow.png; sourceTree = "<group>"; };
+		0A91A76F1770C30D003BDFF7 /* mossGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mossGlow.png; sourceTree = "<group>"; };
+		0A91A7701770C30D003BDFF7 /* pinetreeGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinetreeGlow.png; sourceTree = "<group>"; };
+		0A91A7711770C30D003BDFF7 /* treeGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treeGlow.png; sourceTree = "<group>"; };
+		0A91A77E1770C31C003BDFF7 /* bunnyGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bunnyGlow.png; sourceTree = "<group>"; };
 		0AF1FB3A17639747009CF2E6 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		0AF1FB3B17639747009CF2E6 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; wrapsLines = 0; };
 		0AF1FB3D1763A077009CF2E6 /* Organism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organism.h; sourceTree = "<group>"; };
@@ -561,10 +587,32 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		0A91A7651770C30D003BDFF7 /* Glow Images */ = {
+			isa = PBXGroup;
+			children = (
+				0A91A7661770C30D003BDFF7 /* bushGlow.png */,
+				0A91A77E1770C31C003BDFF7 /* bunnyGlow.png */,
+				0A91A7671770C30D003BDFF7 /* cactusGlow.png */,
+				0A91A7681770C30D003BDFF7 /* cowGlow.png */,
+				0A91A7691770C30D003BDFF7 /* deerGlow.png */,
+				0A91A76A1770C30D003BDFF7 /* elephantGlow.png */,
+				0A91A76B1770C30D003BDFF7 /* flowerGlow.png */,
+				0A91A76C1770C30D003BDFF7 /* giraffeGlow.png */,
+				0A91A76D1770C30D003BDFF7 /* grassGlow.png */,
+				0A91A76E1770C30D003BDFF7 /* lionGlow.png */,
+				0A91A76F1770C30D003BDFF7 /* mossGlow.png */,
+				0A91A7701770C30D003BDFF7 /* pinetreeGlow.png */,
+				0A91A7711770C30D003BDFF7 /* treeGlow.png */,
+			);
+			name = "Glow Images";
+			path = "redemimages (1)";
+			sourceTree = "<group>";
+		};
 		EF737E77176BDD4C00EF4E4D /* images */ = {
 			isa = PBXGroup;
 			children = (
 				EF737E7E176BE9B300EF4E4D /* title1.png */,
+				0A91A7651770C30D003BDFF7 /* Glow Images */,
 				0A2F8FC2176D161F00A98CC7 /* backbar.png */,
 				0A2F8FC3176D161F00A98CC7 /* innerBar.png */,
 				0A2F8FC6176D314E00A98CC7 /* fillBar.png */,
@@ -1128,6 +1176,19 @@
 				0A2F8FC4176D162000A98CC7 /* backbar.png in Resources */,
 				0A2F8FC5176D162000A98CC7 /* innerBar.png in Resources */,
 				0A2F8FC7176D314F00A98CC7 /* fillBar.png in Resources */,
+				0A91A7721770C30D003BDFF7 /* bushGlow.png in Resources */,
+				0A91A7731770C30D003BDFF7 /* cactusGlow.png in Resources */,
+				0A91A7741770C30D003BDFF7 /* cowGlow.png in Resources */,
+				0A91A7751770C30D003BDFF7 /* deerGlow.png in Resources */,
+				0A91A7761770C30D003BDFF7 /* elephantGlow.png in Resources */,
+				0A91A7771770C30D003BDFF7 /* flowerGlow.png in Resources */,
+				0A91A7781770C30D003BDFF7 /* giraffeGlow.png in Resources */,
+				0A91A7791770C30D003BDFF7 /* grassGlow.png in Resources */,
+				0A91A77A1770C30D003BDFF7 /* lionGlow.png in Resources */,
+				0A91A77B1770C30D003BDFF7 /* mossGlow.png in Resources */,
+				0A91A77C1770C30D003BDFF7 /* pinetreeGlow.png in Resources */,
+				0A91A77D1770C30D003BDFF7 /* treeGlow.png in Resources */,
+				0A91A77F1770C31C003BDFF7 /* bunnyGlow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
