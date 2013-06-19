@@ -15,6 +15,7 @@
 @property(strong, nonatomic) CCSprite* orgImage;
 @property(strong, nonatomic) NSString* orgName;
 @property(strong, nonatomic) NSArray* neededResources;
+@property(strong, nonatomic) NSArray* resourceBars;
 
 -(id) initWithString: (NSString*) name andResources: (NSArray*) resources;
 -(void) highlight;

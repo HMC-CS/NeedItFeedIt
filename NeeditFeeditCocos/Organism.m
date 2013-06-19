@@ -7,6 +7,7 @@
 //
 
 #import "Organism.h"
+#import "ResourceBar.h"
 
 
 @implementation Organism{
@@ -15,6 +16,7 @@
 
 -(id) initWithString: (NSString*) name andResources: (NSArray*) resources {
     if (self = [super init]) {
+
         //Load the image and initialize the property values
         NSString* currentOrg = [[NSString alloc] initWithFormat:@"%@.png",name];
         _orgImage = [CCSprite spriteWithFile:currentOrg];
@@ -27,6 +29,9 @@
         
         //Set all of the resources as those passed to the organism
         _neededResources = [[NSArray alloc] initWithArray: resources];
+       // NSLog(@"r1: %@", _neededResources[0][0]);
+       // NSLog(@"r2: %@", _neededResources[1]);
+        
         
         //Adds the glow and the orgImage to the layer
         [self addChild: glow z:-1];
@@ -45,10 +50,12 @@
 }
 
 -(BOOL) isSatisfied{
-    return NO;
+    //if (ResourceBar.percentage == 100)
+        return NO;
 }
 
 -(BOOL) isDead{
+    //if (ResourceBar.percentage == 0)
     return NO;
 }
 
