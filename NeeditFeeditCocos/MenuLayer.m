@@ -14,6 +14,8 @@
 #import "AppDelegate.h"
 
 #import "GameController.h"
+#import "InstructionsLayer.h"
+#import "CreditsLayer.h"
 
 #pragma mark - HelloWorldLayer
 
@@ -53,22 +55,29 @@
 		
 		// create title label
         CCSprite* title = [CCSprite spriteWithFile:@"title1.png"];
-//		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Need It Feed It" fontName:@"Arial Rounded MT Bold" fontSize:36];
 		title.position =  ccp( size.width /2 , size.height/1.5 );
         
-        //Create a menu item as a start button
-//        [CCMenuItemFont setFontName:@"Arial Rounded MT Bold"];
-//        [CCMenuItemFont setFontSize:30];
-//        CCMenuItem* start = [CCMenuItemFont itemWithString:@"Start" target:self selector:@selector(goToGame:)];
         CCMenuItemImage* start =[CCMenuItemImage itemWithNormalImage:@"start1.png" selectedImage:@"start1.png" target:self selector:@selector(goToGame:)];
         
+        //Create an instructions menu item 
+        [CCMenuItemFont setFontName:@"Marker Felt"];
+        [CCMenuItemFont setFontSize:50];
+        CCMenuItem* instructions  = [CCMenuItemFont itemWithString:@"Instructions" target:self selector:@selector(goToInstructions:)];
+        
+        CCMenuItem* credits  = [CCMenuItemFont itemWithString:@"Credits" target:self selector:@selector(goToCredits:)];
+        
         //Create the menu to hold the start command
-        CCMenu* menu = [CCMenu menuWithItems:start, nil];
-        menu.position = ccp(size.width/2, size.height/5);
+        CCMenu* topMenu = [CCMenu menuWithItems:start, nil];
+        topMenu.position = ccp(size.width/2, size.height/3);
+        
+        CCMenu* bottomMenu = [CCMenu menuWithItems:instructions, credits, nil];
+        bottomMenu.position = ccp(size.width/2, size.height/6);
+        [bottomMenu alignItemsHorizontallyWithPadding:100];
 		
 		// add the label and menu as a child to this Layer
 		[self addChild: title];
-        [self addChild:menu];
+        [self addChild:topMenu];
+        [self addChild:bottomMenu];
 		
 		
     }
@@ -86,7 +95,15 @@
 }
 
 -(void) goToGame: (id) sender{
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameController node] withColor:ccBLACK]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameController node]]];
+}
+
+-(void) goToInstructions: (id) sender{
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[InstructionsLayer node]]];
+}
+
+-(void) goToCredits: (id) sender{
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[CreditsLayer node]]];
 }
 
 #pragma mark GameKit delegate

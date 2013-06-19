@@ -12,6 +12,10 @@
 		0A2F8FC4176D162000A98CC7 /* backbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2F8FC2176D161F00A98CC7 /* backbar.png */; };
 		0A2F8FC5176D162000A98CC7 /* innerBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2F8FC3176D161F00A98CC7 /* innerBar.png */; };
 		0A2F8FC7176D314F00A98CC7 /* fillBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2F8FC6176D314E00A98CC7 /* fillBar.png */; };
+		0A586F3B17726DD0006D3E9C /* InstructionsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A586F3A17726DD0006D3E9C /* InstructionsLayer.m */; };
+		0A586F3E17726DDB006D3E9C /* CreditsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A586F3D17726DDB006D3E9C /* CreditsLayer.m */; };
+		0A586F4017726FBC006D3E9C /* instructions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A586F3F17726FBC006D3E9C /* instructions.txt */; };
+		0A586F42177273F5006D3E9C /* credits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A586F41177273F5006D3E9C /* credits.txt */; };
 		0A91A7721770C30D003BDFF7 /* bushGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A7661770C30D003BDFF7 /* bushGlow.png */; };
 		0A91A7731770C30D003BDFF7 /* cactusGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A7671770C30D003BDFF7 /* cactusGlow.png */; };
 		0A91A7741770C30D003BDFF7 /* cowGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A91A7681770C30D003BDFF7 /* cowGlow.png */; };
@@ -204,6 +208,12 @@
 		0A2F8FC2176D161F00A98CC7 /* backbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbar.png; sourceTree = "<group>"; };
 		0A2F8FC3176D161F00A98CC7 /* innerBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = innerBar.png; sourceTree = "<group>"; };
 		0A2F8FC6176D314E00A98CC7 /* fillBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fillBar.png; sourceTree = "<group>"; };
+		0A586F3917726DD0006D3E9C /* InstructionsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsLayer.h; sourceTree = "<group>"; };
+		0A586F3A17726DD0006D3E9C /* InstructionsLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsLayer.m; sourceTree = "<group>"; };
+		0A586F3C17726DDB006D3E9C /* CreditsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditsLayer.h; sourceTree = "<group>"; };
+		0A586F3D17726DDB006D3E9C /* CreditsLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsLayer.m; sourceTree = "<group>"; };
+		0A586F3F17726FBC006D3E9C /* instructions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = instructions.txt; sourceTree = "<group>"; };
+		0A586F41177273F5006D3E9C /* credits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = credits.txt; sourceTree = "<group>"; };
 		0A91A7661770C30D003BDFF7 /* bushGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bushGlow.png; sourceTree = "<group>"; };
 		0A91A7671770C30D003BDFF7 /* cactusGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cactusGlow.png; sourceTree = "<group>"; };
 		0A91A7681770C30D003BDFF7 /* cowGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cowGlow.png; sourceTree = "<group>"; };
@@ -584,6 +594,10 @@
 			children = (
 				EF7A70BD17629CDD00F81B3C /* MenuLayer.h */,
 				EF7A70BE17629CDD00F81B3C /* MenuLayer.m */,
+				0A586F3917726DD0006D3E9C /* InstructionsLayer.h */,
+				0A586F3A17726DD0006D3E9C /* InstructionsLayer.m */,
+				0A586F3C17726DDB006D3E9C /* CreditsLayer.h */,
+				0A586F3D17726DDB006D3E9C /* CreditsLayer.m */,
 				EF603C0E17725FB100E49B22 /* GameOverLayer.h */,
 				EF603C0F17725FB100E49B22 /* GameOverLayer.m */,
 				EF7A70C017629CDD00F81B3C /* IntroLayer.h */,
@@ -718,6 +732,8 @@
 				EF603C0C17725F6A00E49B22 /* OrganismsLevel1.plist */,
 				0A2F8FBC176CF24800A98CC7 /* OrganismsLevel2.plist */,
 				0A2F8FBA176A8F0500A98CC7 /* Resources.plist */,
+				0A586F3F17726FBC006D3E9C /* instructions.txt */,
+				0A586F41177273F5006D3E9C /* credits.txt */,
 				EF7A6F2E17629CD900F81B3C /* Default.png */,
 				EF7A6F3017629CD900F81B3C /* Default@2x.png */,
 				EF7A6F3217629CD900F81B3C /* Default-568h@2x.png */,
@@ -1204,6 +1220,8 @@
 				0A91A77D1770C30D003BDFF7 /* treeGlow.png in Resources */,
 				0A91A77F1770C31C003BDFF7 /* bunnyGlow.png in Resources */,
 				EF603C0D17725F6A00E49B22 /* OrganismsLevel1.plist in Resources */,
+				0A586F4017726FBC006D3E9C /* instructions.txt in Resources */,
+				0A586F42177273F5006D3E9C /* credits.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1335,6 +1353,8 @@
 				EF603C1017725FB100E49B22 /* GameOverLayer.m in Sources */,
 				EF603C13177261D400E49B22 /* Level.m in Sources */,
 				EF603C161772623200E49B22 /* LevelManager.m in Sources */,
+				0A586F3B17726DD0006D3E9C /* InstructionsLayer.m in Sources */,
+				0A586F3E17726DDB006D3E9C /* CreditsLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
