@@ -7,6 +7,7 @@
 //
 
 #import "ResourceBar.h"
+#import "GameOverLayer.h"
 
 static const int ORGANISM_WIDTH = 204;
 static const int BAR_WIDTH = ORGANISM_WIDTH * 0.9;
@@ -16,8 +17,8 @@ static const int SATISFIED_HEALTH = 85;
 static const int ICON_HEIGHT = 170;
 static const int OFFSET = 30;
 static const double ICON_SCALE = 0.2;
-static const ccTime DELTA = 3.0;
-static const int PERCENT_DECAY = 1;
+static const ccTime DELTA = 1.0;
+static const int PERCENT_DECAY = 10;
 
 
 @implementation ResourceBar{
@@ -62,8 +63,6 @@ static const int PERCENT_DECAY = 1;
         [super addChild:innerBar];
         [super addChild:icon];
         
-        //percentage += frequency/10;
-        
         //Starts bar at 50%
         [self updateBar:50.0];
         
@@ -76,9 +75,12 @@ static const int PERCENT_DECAY = 1;
 }
 
 -(void) decreaseUpdate:(ccTime)delta{
-    if (percentage>PERCENT_DECAY) {
+    if (percentage>=PERCENT_DECAY) {
         [self updateBar:-PERCENT_DECAY];
     }
+    
+    //Check for success
+    [self checkSuccess];
     
 }
 
@@ -123,5 +125,18 @@ static const int PERCENT_DECAY = 1;
     else
         return 1 - (float)percentage / SATISFIED_HEALTH;
 }
+
+-(void) checkSuccess {
+    if (percentage <= 0) {
+        CCScene *loseScene = [GameOverLayer sceneWithWon:NO];
+        [[CCDirector sharedDirector] replaceScene:loseScene];
+    }
+    if (percentage >= 99) {
+        CCScene *winScene = [GameOverLayer sceneWithWon:YES];
+        [[CCDirector sharedDirector] replaceScene:winScene];
+    }
+
+}
+
 
 @end

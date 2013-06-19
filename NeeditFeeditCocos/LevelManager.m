@@ -8,6 +8,46 @@
 
 #import "LevelManager.h"
 
-@implementation LevelManager
+@implementation LevelManager {
+    NSArray * levels;
+    int currentLevelIndex;
+}
+
++ (LevelManager *)sharedInstance {
+    static dispatch_once_t once;
+    static LevelManager * sharedInstance; dispatch_once(&once, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
+
+- (id)init {
+    if ((self = [super init])) {
+        currentLevelIndex = 0;
+        Level * level1 = [[Level alloc] initWithLevelNum:1 resourceInterval:1.5];
+        Level * level2 = [[Level alloc] initWithLevelNum:2 resourceInterval:1.0];
+        levels = @[level1, level2];
+    }
+    return self;
+}
+
+- (Level *)currentLevel {
+    if (currentLevelIndex >= levels.count) {
+        return nil;
+    }
+    return levels[currentLevelIndex];
+}
+
+- (void)nextLevel {
+    currentLevelIndex++;
+}
+
+- (void)reset {
+    currentLevelIndex = 0;
+}
+
+- (void)dealloc {
+    levels = nil;
+}
 
 @end
