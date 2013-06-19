@@ -7,7 +7,6 @@
 //
 
 #import "ResourceBar.h"
-#import "Organism.h"
 
 static const int ORGANISM_WIDTH = 204;
 static const int BAR_WIDTH = ORGANISM_WIDTH * 0.9;
@@ -17,7 +16,7 @@ static const int SATISFIED_HEALTH = 85;
 static const int ICON_HEIGHT = 170;
 static const int OFFSET = 30;
 static const double ICON_SCALE = 0.2;
-static const ccTime DELTA = 1.0;
+static const ccTime DELTA = 3.0;
 static const int PERCENT_DECAY = 1;
 
 
@@ -26,15 +25,16 @@ static const int PERCENT_DECAY = 1;
     CCSprite* innerBar;
     CCSprite* fillBar;
     CCSprite* icon;
-    int percentage;
+    float percentage;
     NSTimer* timer;
     ccTime* delta;
+    NSArray* resources;
 }
 
--(id) init{
+-(id) initGivenResources:(NSArray*) resource {
     if (self = [super init]) {
-        //Set initial percentage, bars are initially half full
-        percentage = 50;
+        
+        resources = [[NSArray alloc] initWithArray:resource];
         
         //Loads the sprites for the resource bars
         backBar = [CCSprite spriteWithFile:@"backbar.png"];
@@ -52,8 +52,8 @@ static const int PERCENT_DECAY = 1;
         innerBar.position = CGPointMake(-(BAR_WIDTH/2 + 1),0);
         [innerBar setTextureRect: CGRectMake(0, 0, BAR_WIDTH * 0.5, BAR_HEIGHT * 0.5)];
         
-        //icon = [CCSprite spriteWithFile:@"%@", Organism._neededresources[i][0]];
-        icon = [CCSprite spriteWithFile:@"bunny.png"];
+        NSString* name = [[NSString alloc] initWithFormat:@"%@.png", resources[0]];
+        icon = [CCSprite spriteWithFile:name];
         icon.position = CGPointMake(backBar.position.x - OFFSET, 0);
         [icon setScale:ICON_SCALE];
         
@@ -64,30 +64,32 @@ static const int PERCENT_DECAY = 1;
         
         //percentage += frequency/10;
         
-        [self updateBar:percentage];
+        //Starts bar at 50%
+        [self updateBar:50.0];
         
         //Schedule decreasing of resource bars
-        [self schedule:@selector(update:) interval:DELTA];
+        [self schedule:@selector(decreaseUpdate:) interval:DELTA];
         
         return self;
     }
     return nil;
 }
 
--(void) update:(ccTime)delta{
-    [self updateBar:percentage];
-    [self decreasePercentage];
+-(void) decreaseUpdate:(ccTime)delta{
+    if (percentage>PERCENT_DECAY) {
+        [self updateBar:-PERCENT_DECAY];
+    }
     
 }
 
--(void)updateBar:(int)newPercentage
+-(void)updateBar:(float)addedPercentage
 {
     // Set color of bars
     ccColor3B barColor = [self colorFromRed:[self redAmount] Green:[self greenAmount] Blue:0];    
     innerBar.color = barColor;
 
     // Update percentage with current value
-    percentage = newPercentage;
+    percentage += addedPercentage;
     
     if( percentage >= 100) {    // max bar width = %100
         [innerBar setTextureRect: CGRectMake(0, 0, BAR_WIDTH, BAR_HEIGHT * 0.5)];
@@ -95,13 +97,6 @@ static const int PERCENT_DECAY = 1;
     }
     else
         [innerBar setTextureRect: CGRectMake(0, 0, BAR_WIDTH * percentage / 100, BAR_HEIGHT * 0.5)];
-}
-
--(void) decreasePercentage {
-    percentage -= PERCENT_DECAY;
-    
-    if (percentage <= 0)    // min percentage = %0
-        percentage = 0;
 }
 
 -(ccColor3B)colorFromRed: (float)redFrac Green: (float)greenFrac Blue: (float)blueFrac

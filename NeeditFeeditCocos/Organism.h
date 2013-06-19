@@ -22,5 +22,6 @@
 -(BOOL) isSatisfied;
 -(BOOL) isDead;
 -(void) updateHealth;
+-(void) setResourceBars:(NSArray *)resourceBars;
 
 @end
