@@ -13,4 +13,7 @@
     
 }
 
++(CCScene *) sceneWithWon:(BOOL)won;
+- (id)initWithWon:(BOOL)won;
+
 @end

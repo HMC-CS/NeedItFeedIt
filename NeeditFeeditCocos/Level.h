@@ -10,4 +10,9 @@
 
 @interface Level : NSObject
 
+@property (nonatomic, assign) int levelNum;
+@property (nonatomic, assign) float resourceInterval;
+
+- (id)initWithLevelNum:(int)levelNum resourceInterval:(float)resourceInterval;
+
 @end
