@@ -23,6 +23,8 @@
     NSTimer* timer; 
 }
 
+static const int NUM_RESOURCEBARS = 3;
+
 -(id) init{
     if (self = [super init]) {
         // ask director for the window size
@@ -78,10 +80,13 @@
         newOrg.position = ccp(offset*i +newOrg.orgImage.contentSize.width/2 +50, winSize.height/4);
         [self addChild:newOrg z:0];
         [organisms addObject:newOrg];
-        ResourceBar *newBar = [[ResourceBar alloc] init];
-        newBar.position = ccp(newOrg.position.x , winSize.height/8);
-        [self addChild:newBar];
-        [resourceBars addObject:newBar];
+        for (int j=0; j<NUM_RESOURCEBARS; j++) {
+            ResourceBar *newBar = [[ResourceBar alloc] init];
+            newBar.position = ccp(newOrg.position.x , winSize.height/8 - 30*j);
+            [self addChild:newBar];
+            [resourceBars addObject:newBar];
+        }
+        
     }
 }
 

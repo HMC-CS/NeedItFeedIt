@@ -13,7 +13,25 @@
     
 }
 
+//@property (nonatomic) int* percentage;
+
+
 -(id) init;
--(void)updatePercentageToValue:(int)newValue;
+
+// Fill up the bars depending on percentage
+-(void)updateBar:(int)newPercentage;
+
+// Decrements percentage
+-(void)decreasePercentage;
+
+// Generates an unsigned int representing a color.
+// redFrac, greenFrac, blueFrac should be values from 0-1.
+-(ccColor3B)colorFromRed: (float)redFrac Green: (float)greenFrac Blue: (float)blueFrac;
+
+// Increase green linearly
+-(float)greenAmount;
+
+// Decrease red linearly
+-(float)redAmount;
 
 @end
