@@ -84,12 +84,12 @@ static const int PERCENT_DECAY = 1;
 
 -(void)updateBar:(float)addedPercentage
 {
-    // Set color of bars
-    ccColor3B barColor = [self colorFromRed:[self redAmount] Green:[self greenAmount] Blue:0];    
-    innerBar.color = barColor;
-
     // Update percentage with current value
     percentage += addedPercentage;
+    
+    // Set color of bars
+    ccColor3B barColor = [self colorFromRed:[self redAmount] Green:[self greenAmount] Blue:0];
+    innerBar.color = barColor;
     
     if( percentage >= 100) {    // max bar width = %100
         [innerBar setTextureRect: CGRectMake(0, 0, BAR_WIDTH, BAR_HEIGHT * 0.5)];
