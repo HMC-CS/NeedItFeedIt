@@ -18,6 +18,7 @@
     NSMutableArray* organisms;
     NSArray* resourceList;
     NSMutableArray* resources;
+    NSArray* resourceProbs;
     CGSize winSize;
     NSTimer* timer; 
 }
@@ -65,10 +66,10 @@ static const int NUM_RESOURCEBARS = 3;
 -(void) addOrganismsAndResources{
     //Initialtes a resource factory
     ResourceFactory* resFac = [[ResourceFactory alloc] initWithOrganisms:organismList];
-    resourceList = [[NSMutableArray alloc] init];
+    resourceList = [[NSMutableArray alloc] initWithArray:resFac.displayResources];
     
-    //resourceList is assigned to be all resources that need to be displayed
-    resourceList = resFac.displayResources;
+    //Get the probability at which the resources should appear
+    resourceProbs = [[NSArray alloc] initWithArray:resFac.resourceProbs];
     
     //Creates new organisms with resources and frequencies
     NSArray* orgTemps = [[NSArray alloc] initWithArray:resFac.orgsAndResources];
@@ -79,6 +80,7 @@ static const int NUM_RESOURCEBARS = 3;
         [self addChild:newOrg z:0];
         [organisms addObject:newOrg];
         
+        //Creates all the resource bars and adds them as a property of the organism
         NSMutableArray* resBars = [[NSMutableArray alloc] init];
         for (int j=0; j<NUM_RESOURCEBARS; j++) {
             ResourceBar *newBar = [[ResourceBar alloc] initGivenResources:orgTemps[i][j]];
@@ -95,9 +97,23 @@ static const int NUM_RESOURCEBARS = 3;
 
 -(void) moveResources{
     
-    //Get one of the objects in resourceList
-    int i = arc4random() % resourceList.count;
-    NSString* name = [[NSString alloc] initWithFormat: resourceList[i]];
+    //Gets a random number in the range of frequencies in resourceProbs 
+    NSNumber* countNum = resourceProbs[resourceProbs.count-1];
+    int mod = (int) roundf(countNum.floatValue);
+    int i = arc4random() % mod;
+    
+    //Finds the correct range that contains the random number
+    int setResource = resourceProbs.count-1;
+    for (int j = 0; j<resourceProbs.count; j++) {
+        NSNumber *counter = resourceProbs[j];
+        if (counter.floatValue > i ) {
+            setResource = j;
+            break;
+        }
+    }
+    
+    //Makes a new resource that corresponds to the number picked
+    NSString* name = [[NSString alloc] initWithFormat: resourceList[setResource]];
     Resource *newResource =  [[Resource alloc] initWithString:name];
     newResource.dragDelegate = self;
     [resources addObject:newResource];
