@@ -13,6 +13,7 @@
     
 }
 @property(strong, nonatomic) NSMutableArray* displayResources;
+@property(strong, nonatomic) NSMutableArray* resourceProbs;
 @property(strong, nonatomic) NSMutableArray* orgsAndResources;
 
 -(id) initWithOrganisms: (NSMutableArray*) organisms;
