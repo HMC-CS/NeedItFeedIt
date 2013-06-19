@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "UserLayer.h"
 
 @interface GameController : CCLayer {
     
 }
+
+@property (strong, nonatomic) UserLayer* userLayer;
 
 @end
