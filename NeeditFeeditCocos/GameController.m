@@ -18,7 +18,6 @@
     NSMutableArray* organisms;
     NSArray* resourceList;
     NSMutableArray* resources;
-    NSMutableArray* resourceBars;
     CGSize winSize;
     NSTimer* timer; 
 }
@@ -40,14 +39,13 @@ static const int NUM_RESOURCEBARS = 3;
         //Initialize any necessary variables
         organisms = [[NSMutableArray alloc] init];
         resources = [[NSMutableArray alloc] init];
-        resourceBars = [[NSMutableArray alloc] init];
         
         //Add all organisms and resources
         [self loadOrganisms: 3];
         [self addOrganismsAndResources];
         
         //Schedule new resources to be added every 2 sec
-        [self schedule:@selector(update:) interval:2.0];
+        [self schedule:@selector(update:) interval:1.0];
         return self;
     }
     return nil;
@@ -80,13 +78,15 @@ static const int NUM_RESOURCEBARS = 3;
         newOrg.position = ccp(offset*i +newOrg.orgImage.contentSize.width/2 +50, winSize.height/4);
         [self addChild:newOrg z:0];
         [organisms addObject:newOrg];
+        
+        NSMutableArray* resBars = [[NSMutableArray alloc] init];
         for (int j=0; j<NUM_RESOURCEBARS; j++) {
-            ResourceBar *newBar = [[ResourceBar alloc] init];
+            ResourceBar *newBar = [[ResourceBar alloc] initGivenResources:orgTemps[i][j]];
             newBar.position = ccp(newOrg.position.x , winSize.height/8 - 30*j);
             [self addChild:newBar];
-            [resourceBars addObject:newBar];
+            [resBars addObject:newBar];
         }
-        
+        [newOrg setResourceBars:resBars];
     }
 }
 
@@ -130,6 +130,22 @@ static const int NUM_RESOURCEBARS = 3;
     [newResource runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
 }
 
+-(void) ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    //Gets the point at which the touch occured and checks if it is within this resource object
+    UITouch* thisTouch = [touches anyObject];
+    for(Resource* resource in resources){
+        CGRect boundingBox = CGRectOffset([resource boundingBox], -resource.contentSize.width/2, -resource.contentSize.height/2);
+        CGPoint pt = [self convertToWorldSpace:[self convertTouchToNodeSpace:thisTouch]];
+        if (CGRectContainsPoint(boundingBox, pt)){
+            resource.touch = thisTouch;
+            [resource stopAllActions];
+            [resource setOffsetX:(pt.x - resource.position.x) andOffsetY:(pt.y - resource.position.y)];
+            break;
+        }
+    }
+}
+
 -(void) resource:(Resource*) resource didDragToPoint:(CGPoint)pt{
     //Loops over all organisms and checks if this resource is within its boundingBox
     Organism *targetOrg = nil;
@@ -148,6 +164,9 @@ static const int NUM_RESOURCEBARS = 3;
                 [resources removeObject:resource];
                 [resource removeFromParentAndCleanup:YES];
                 [targetOrg highlight];
+                ResourceBar* current = targetOrg.resourceBars[i];
+                NSNumber *freq = temp[1];
+                [current updateBar: (100.0-freq.floatValue)/10.0];
                 break;
             }
         }

@@ -11,7 +11,6 @@
 
 @implementation Resource{
     int xOffset, yOffset;
-    UITouch* touch;
 }
 
 -(id) initWithString: (NSString*) name{
@@ -23,8 +22,8 @@
         
         //Sets necessary variables
         _name = name;
-        touch = [[UITouch alloc]init];
-        touch = nil;
+        _touch = [[UITouch alloc]init];
+        _touch = nil;
         self.touchEnabled = YES;
         
         self.contentSize = CGSizeMake(_image.contentSize.width, _image.contentSize.height);
@@ -33,28 +32,16 @@
     }
     return nil;
 }
-
--(void) ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    
-    //Gets the point at which the touch occured and checks if it is within this resource object
-    UITouch* thisTouch = [touches anyObject];
-    CGRect boundingBox = CGRectOffset([self boundingBox], -self.contentSize.width/2, -self.contentSize.height/2);
-    CGPoint pt = [self convertToWorldSpace:[self convertTouchToNodeSpace:thisTouch]];
-    if (CGRectContainsPoint(boundingBox, pt)){
-        touch = thisTouch;
-        [self stopAllActions];
-        
-        //Setting an offset makes the dragging look more natural
-        xOffset = pt.x - self.position.x;
-        yOffset = pt.y - self.position.y;
-    }
+-(void) setOffsetX:(int) xoffSet andOffsetY: (int) yoffSet{
+    xOffset = xoffSet;
+    yOffset = yoffSet;
 }
 
 -(void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     //Makes sure that the same touch is being tracked throughout the drag
-    if (touch!=nil){
-        CGPoint pt = [self convertToWorldSpace:[self convertTouchToNodeSpace:touch]];
+    if (_touch!=nil){
+        CGPoint pt = [self convertToWorldSpace:[self convertTouchToNodeSpace:_touch]];
         self.position = CGPointMake(pt.x - xOffset, pt.y - yOffset);
     }
 }
@@ -62,16 +49,16 @@
 -(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     //At end it checks ccTouchesMoved one more time to make sure resource is in the right location
-    if (touch!=nil){
+    if (_touch!=nil){
         [self ccTouchesMoved:touches withEvent:event];
         
         //Tells the GameController that a resource has been dropped
         if (self.dragDelegate)
-            [self.dragDelegate resource:self didDragToPoint:[self convertToWorldSpace: [self convertTouchToNodeSpace: touch]]];
+            [self.dragDelegate resource:self didDragToPoint:[self convertToWorldSpace: [self convertTouchToNodeSpace: _touch]]];
     }
     
     //Resets touches to nil so that a new touch is treated correctly
-    touch = nil;
+    _touch = nil;
 }
 
 

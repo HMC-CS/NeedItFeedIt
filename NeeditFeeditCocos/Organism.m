@@ -49,6 +49,10 @@
     [glow runAction:[CCSequence actions:fadeIn, fadeOut, nil]];
 }
 
+-(void) setResourceBars:(NSArray *)resourceBars{
+    _resourceBars = [[NSArray alloc] initWithArray:resourceBars];
+}
+
 -(BOOL) isSatisfied{
     //if (ResourceBar.percentage == 100)
         return NO;

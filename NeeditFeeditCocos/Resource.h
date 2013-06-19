@@ -22,9 +22,11 @@
 
 @property(strong, nonatomic) CCSprite* image;
 @property(strong, nonatomic) NSString* name;
+@property(strong, nonatomic) UITouch* touch;
 @property(nonatomic) int frequency;
 @property(weak, nonatomic) id <ResourceDragProtocol> dragDelegate;
 
 -(id) initWithString: (NSString*) name;
+-(void) setOffsetX:(int) xoffSet andOffsetY: (int) yoffSet;
 
 @end
