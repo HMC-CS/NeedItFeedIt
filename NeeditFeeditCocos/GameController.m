@@ -145,7 +145,6 @@ static const int NUM_RESOURCEBARS = 3;
         for (int i=0; i<targetOrg.neededResources.count; i++) {
             NSArray* temp = targetOrg.neededResources[i];
             if ([temp[0] isEqualToString:resource.name]) {
-                NSLog(@"%@ was fed", targetOrg.orgName);
                 [resources removeObject:resource];
                 [resource removeFromParentAndCleanup:YES];
                 [targetOrg highlight];
@@ -161,7 +160,6 @@ static const int NUM_RESOURCEBARS = 3;
 -(void) animateRemoveResource: (Resource*) resource{
     float distanceY = MAX(-(3*winSize.height/4 - resource.position.y), 3*winSize.height/4 - resource.position.y);
     float distanceX = MAX(0, winSize.width - resource.position.x);
-    NSLog(@"distanceY: %f distanceX: %f", distanceY, distanceX);
     CCMoveTo* moveUp = [CCMoveTo actionWithDuration: distanceY/150 position:CGPointMake(resource.position.x, 3*winSize.height/4)];
     CCMoveTo* moveOver = [CCMoveTo actionWithDuration: distanceX/150
                                              position:CGPointMake(winSize.width+resource.contentSize.width/2, 3*winSize.height/4)];
