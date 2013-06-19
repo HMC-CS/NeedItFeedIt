@@ -20,7 +20,8 @@
     NSMutableArray* resources;
     NSArray* resourceProbs;
     CGSize winSize;
-    NSTimer* timer; 
+    NSTimer* timer;
+    int seconds;
 }
 
 static const int NUM_RESOURCEBARS = 3;
@@ -40,6 +41,9 @@ static const int NUM_RESOURCEBARS = 3;
         //Initialize any necessary variables
         organisms = [[NSMutableArray alloc] init];
         resources = [[NSMutableArray alloc] init];
+        _userLayer =[[UserLayer alloc] init];
+        [self addChild:_userLayer];
+        
         
         //Add all organisms and resources
         [self loadOrganisms: 3];
@@ -47,6 +51,10 @@ static const int NUM_RESOURCEBARS = 3;
         
         //Schedule new resources to be added every 2 sec
         [self schedule:@selector(update:) interval:1.0];
+        
+        //Start the timer
+        [self startStopwatch];
+        
         return self;
     }
     return nil;
@@ -116,12 +124,12 @@ static const int NUM_RESOURCEBARS = 3;
     NSString* name = [[NSString alloc] initWithFormat: resourceList[setResource]];
     Resource *newResource =  [[Resource alloc] initWithString:name];
     newResource.dragDelegate = self;
-    [resources addObject:newResource];
+    [resources insertObject:newResource atIndex:0];
 
 
     // Determine where to spawn the resource along the Y axis
     int minY = 3*winSize.height/4 - newResource.image.contentSize.height / 2;
-    int maxY = winSize.height - newResource.image.contentSize.height/2;
+    int maxY = winSize.height*.95 - newResource.image.contentSize.height/2;
     int rangeY = maxY - minY;
     int actualY = (arc4random() % rangeY) + minY;
     
@@ -203,6 +211,24 @@ static const int NUM_RESOURCEBARS = 3;
         [node removeFromParentAndCleanup:YES];
     }];
     [resource runAction:[CCSequence actions:moveUp, moveOver, moveDone, nil]];
+}
+
+-(void) startStopwatch{
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                             target:self
+                                           selector:@selector(tick:)
+                                           userInfo:nil
+                                            repeats:YES];
+}
+
+-(void) tick: (NSTimer*) timer{
+    seconds++;
+    [_userLayer updateTimer:seconds];
+}
+
+-(void) stopStopWatch{
+    [timer invalidate];
+    timer = nil;
 }
             
 -(BOOL) allSatisfied{

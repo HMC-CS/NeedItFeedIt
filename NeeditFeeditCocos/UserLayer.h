@@ -13,4 +13,7 @@
     
 }
 
+-(id) init;
+-(void) updateTimer: (int) seconds;
+
 @end
