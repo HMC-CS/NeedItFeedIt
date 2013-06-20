@@ -18,7 +18,7 @@ static const int ICON_HEIGHT = 170;
 static const int OFFSET = 30;
 static const double ICON_SCALE = 0.2;
 static const ccTime DELTA = 1.0;
-static const int PERCENT_DECAY = 10;
+static const int PERCENT_DECAY = 1;
 
 
 @implementation ResourceBar{
