@@ -7,6 +7,7 @@
 //
 
 #import "OrganismFactory.h"
+#import "Level.h"
 
 
 @implementation OrganismFactory{

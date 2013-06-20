@@ -12,6 +12,8 @@
 #import "OrganismFactory.h"
 #import "Organism.h"
 #import "ResourceBar.h"
+#import "Level.h"
+#import "LevelManager.h"
 
 @implementation GameController{
     NSMutableArray* organismList;
@@ -22,12 +24,15 @@
     CGSize winSize;
     NSTimer* timer;
     int seconds;
+    Level* level;
 }
 
 static const int NUM_RESOURCEBARS = 3;
+static const int POINTS_PER_RESOURCE = 10;
 
 -(id) init{
     if (self = [super init]) {
+        
         // ask director for the window size
 		winSize = [[CCDirector sharedDirector] winSize];
         
@@ -191,10 +196,17 @@ static const int NUM_RESOURCEBARS = 3;
                 ResourceBar* current = targetOrg.resourceBars[i];
                 NSNumber *freq = temp[1];
                 [current updateBar: (100.0-freq.floatValue)/10.0];
+                self.userLayer.points += POINTS_PER_RESOURCE;
+                [_userLayer updatePoints:self.userLayer.points];
+                
                 break;
             }
         }
+        self.userLayer.points -= POINTS_PER_RESOURCE/2;
+        [_userLayer updatePoints:self.userLayer.points];
+        NSLog(@"points: %d", self.userLayer.points);
         [self animateRemoveResource:resource];
+        
     }
     else
         [self animateRemoveResource:resource];
@@ -230,7 +242,8 @@ static const int NUM_RESOURCEBARS = 3;
     [timer invalidate];
     timer = nil;
 }
-            
+
+
 -(BOOL) allSatisfied{
     return NO;
 }

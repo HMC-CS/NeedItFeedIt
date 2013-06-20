@@ -13,7 +13,11 @@
     
 }
 
+@property (assign, nonatomic) int points;
+
 -(id) init;
 -(void) updateTimer: (int) seconds;
+-(void) updatePoints: (int) points;
+
 
 @end
