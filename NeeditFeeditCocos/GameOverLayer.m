@@ -8,6 +8,7 @@
 
 #import "GameOverLayer.h"
 #import "MenuLayer.h"
+#import "LevelManager.h"
 
 @implementation GameOverLayer
 
@@ -19,19 +20,25 @@
 }
 
 - (id)initWithWon:(BOOL)won {
-    if ((self = [super initWithColor:ccc4(221, 160, 221, 255)])) {   // purple color
+    if (self = [super init]) {
         
         NSString * message;
         if (won) {
             message = @"You Won!";
-        } else {
+        }
+        else {
             message = @"You Lost!";
         }
         
-        CGSize winSize = [[CCDirector sharedDirector] winSize];
+        CGSize size = [[CCDirector sharedDirector] winSize];
+        
+        CCSprite* background = [CCSprite spriteWithFile:@"background.png"];
+        background.position = ccp(size.width/2, size.height/2);
+        [self addChild:background z:-1];
+        
         CCLabelTTF * label = [CCLabelTTF labelWithString:message fontName:@"Arial" fontSize:32];
         label.color = ccc3(0,0,0);
-        label.position = ccp(winSize.width/2, winSize.height/2);
+        label.position = ccp(size.width/2, size.height/2);
         [self addChild:label];
         
         [self runAction:

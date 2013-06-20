@@ -24,8 +24,8 @@
 - (id)init {
     if ((self = [super init])) {
         currentLevelIndex = 0;
-        Level * level1 = [[Level alloc] initWithLevelNum:1 resourceInterval:1.5];
-        Level * level2 = [[Level alloc] initWithLevelNum:2 resourceInterval:1.0];
+        Level * level1 = [[Level alloc] initWithLevelNum:1];
+        Level * level2 = [[Level alloc] initWithLevelNum:2];
         levels = @[level1, level2];
     }
     return self;

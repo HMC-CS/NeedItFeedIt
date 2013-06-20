@@ -12,7 +12,7 @@
 @interface LevelManager : NSObject
 
 + (LevelManager *)sharedInstance;
-- (Level *)curLevel;
+- (Level *)currentLevel;
 - (void)nextLevel;
 - (void)reset;
 

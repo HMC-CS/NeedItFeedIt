@@ -10,10 +10,9 @@
 
 @implementation Level
 
-- (id)initWithLevelNum:(int)levelNum resourceInterval:(float)resourceInterval {
+- (id)initWithLevelNum:(int)levelNum {
     if ((self = [super init])) {
         self.levelNum = levelNum;
-        self.resourceInterval = resourceInterval;
     }
     return self;
 }
