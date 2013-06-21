@@ -21,4 +21,6 @@
 // Fill up the bars depending on percentage
 -(void)updateBar:(float)addedPercentage;
 
+-(BOOL) checkSuccess;
+
 @end
