@@ -13,7 +13,7 @@
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
 
-#import "GameController.h"
+#import "PickLevelLayer.h"
 #import "InstructionsLayer.h"
 #import "CreditsLayer.h"
 
@@ -57,7 +57,7 @@
         CCSprite* title = [CCSprite spriteWithFile:@"title1.png"];
 		title.position =  ccp( size.width /2 , size.height/1.5 );
         
-        CCMenuItemImage* start =[CCMenuItemImage itemWithNormalImage:@"start1.png" selectedImage:@"start1.png" target:self selector:@selector(goToGame:)];
+        CCMenuItemImage* start =[CCMenuItemImage itemWithNormalImage:@"start1.png" selectedImage:@"start1.png" target:self selector:@selector(goToLevelPick:)];
         
         //Create an instructions menu item 
         [CCMenuItemFont setFontName:@"Marker Felt"];
@@ -94,8 +94,8 @@
 	// don't forget to call "super dealloc"
 }
 
--(void) goToGame: (id) sender{
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameController node]]];
+-(void) goToLevelPick: (id) sender{
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[PickLevelLayer node]]];
 }
 
 -(void) goToInstructions: (id) sender{

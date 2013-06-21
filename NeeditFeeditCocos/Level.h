@@ -11,7 +11,8 @@
 @interface Level : NSObject
 
 @property (nonatomic, assign) int levelNum;
+@property (nonatomic, assign) NSString* ecosystem;
 
-- (id)initWithLevelNum:(int)levelNum;
+- (id)initWithEcosystem: (NSString*) ecosys andLevelNum:(int)levelNum;
 
 @end

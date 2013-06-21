@@ -10,9 +10,10 @@
 
 @implementation Level
 
-- (id)initWithLevelNum:(int)levelNum {
+- (id)initWithEcosystem: (NSString*) ecosys andLevelNum:(int)levelNum {
     if ((self = [super init])) {
         self.levelNum = levelNum;
+        self.ecosystem = ecosys;
     }
     return self;
 }
