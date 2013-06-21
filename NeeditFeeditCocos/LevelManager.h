@@ -14,6 +14,7 @@
 + (LevelManager *)sharedInstance;
 - (Level *)currentLevel;
 - (void)nextLevel;
+-(void) startAtLevel: (NSString*) ecosystem;
 - (void)reset;
 
 @end

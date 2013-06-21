@@ -14,6 +14,7 @@
 #import "ResourceBar.h"
 #import "Level.h"
 #import "LevelManager.h"
+#import "GameOverLayer.h"
 
 @implementation GameController{
     NSMutableArray* organismList;
@@ -51,7 +52,7 @@ static const int POINTS_PER_RESOURCE = 10;
         
         
         //Add all organisms and resources
-        [self loadOrganisms: 3];
+        [self loadOrganisms];
         [self addOrganismsAndResources];
         
         //Schedule new resources to be added every 2 sec
@@ -69,11 +70,11 @@ static const int POINTS_PER_RESOURCE = 10;
     [self moveResources];
 }
 
--(void) loadOrganisms: (int) num{
+-(void) loadOrganisms{
     //Initiates a new OrganismFactory and gets back num organisms
-    OrganismFactory *orgFac = [[OrganismFactory alloc]initGivenLevel:2];
+    OrganismFactory *orgFac = [[OrganismFactory alloc] init];
     organismList = [[NSMutableArray alloc] init];
-    organismList = [orgFac getOrganisms:num];
+    organismList = [orgFac getOrganisms];
 }
 
 -(void) addOrganismsAndResources{
@@ -201,6 +202,21 @@ static const int POINTS_PER_RESOURCE = 10;
                 
                 break;
             }
+        }
+        BOOL allSatisfied = true;
+        for (Organism* org in organisms) {
+            NSArray* storeBars = [[NSArray alloc] initWithArray: org.resourceBars];
+            for (ResourceBar* bar in storeBars) {
+                if (![bar checkSuccess]) {
+                    allSatisfied = false;
+                    break;
+                }
+            }
+            
+        }
+        if (allSatisfied) {
+            CCScene *loseScene = [GameOverLayer sceneWithWon:YES];
+            [[CCDirector sharedDirector] replaceScene:loseScene];
         }
         self.userLayer.points -= POINTS_PER_RESOURCE/2;
         [_userLayer updatePoints:self.userLayer.points];

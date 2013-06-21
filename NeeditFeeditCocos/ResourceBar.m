@@ -64,7 +64,7 @@ static const int PERCENT_DECAY = 1;
         [super addChild:icon];
         
         //Starts bar at 50%
-        [self updateBar:50.0];
+        [self updateBar:10.0];
         
         //Schedule decreasing of resource bars
         [self schedule:@selector(decreaseUpdate:) interval:DELTA];
@@ -79,8 +79,8 @@ static const int PERCENT_DECAY = 1;
         [self updateBar:-PERCENT_DECAY];
     }
     
-    //Check for success
-    [self checkSuccess];
+    //Check for death
+    [self checkDeath];
     
 }
 
@@ -126,16 +126,19 @@ static const int PERCENT_DECAY = 1;
         return 1 - (float)percentage / SATISFIED_HEALTH;
 }
 
--(void) checkSuccess {
-    if (percentage <= 0) {
+-(BOOL) checkSuccess {
+    if (percentage >= 99) {
+        return true;
+    }
+    return false;
+
+}
+
+-(void) checkDeath{
+    if (percentage<=0) {
         CCScene *loseScene = [GameOverLayer sceneWithWon:NO];
         [[CCDirector sharedDirector] replaceScene:loseScene];
     }
-    if (percentage >= 99) {
-        CCScene *winScene = [GameOverLayer sceneWithWon:YES];
-        [[CCDirector sharedDirector] replaceScene:winScene];
-    }
-
 }
 
 
