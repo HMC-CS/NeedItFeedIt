@@ -28,8 +28,9 @@ static const int NUMORGS = 3;
         NSDictionary* plistDictionary = [NSDictionary dictionaryWithContentsOfFile:path];
         factoryList = [plistDictionary allValues];
         
-        //NSArray* temp = [[NSArray alloc] initWithArray: plistDictionary[[LevelManager sharedInstance].curLevel.ecosystem];
-        //factoryList = temp[[LevelManager sharedInstance].curLevel.ecosystem];
+        //Level* curLevel = [[LevelManager sharedInstance] currentLevel];
+        //NSArray* temp = [[NSArray alloc] initWithArray: plistDictionary[curLevel.ecosystem];
+        //factoryList = temp[curLevel.levelNum];
         
         return self;
     }
