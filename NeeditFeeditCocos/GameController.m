@@ -38,7 +38,9 @@ static const int POINTS_PER_RESOURCE = 10;
 		winSize = [[CCDirector sharedDirector] winSize];
         
         //Create and add background
-        CCSprite* background = [CCSprite spriteWithFile:@"background1.png"];
+        Level* curLevel = [[LevelManager sharedInstance] currentLevel];
+        NSString* backPic = [[NSString alloc] initWithFormat:@"%@.png", curLevel.ecosystem];
+        CCSprite* background = [CCSprite spriteWithFile:backPic];
         background.position = ccp(winSize.width/2, winSize.height/2);
         [self addChild:background z:-1];
         
