@@ -17,7 +17,7 @@ static const int SATISFIED_HEALTH = 85;
 static const int ICON_HEIGHT = 170;
 static const int OFFSET = 30;
 static const double ICON_SCALE = 0.2;
-static const ccTime DELTA = 1.0;
+static const ccTime DELTA = 10.0;
 static const int PERCENT_DECAY = 1;
 
 
@@ -64,7 +64,7 @@ static const int PERCENT_DECAY = 1;
         [super addChild:icon];
         
         //Starts bar at 50%
-        [self updateBar:10.0];
+        [self updateBar:50.0];
         
         //Schedule decreasing of resource bars
         [self schedule:@selector(decreaseUpdate:) interval:DELTA];

@@ -7,7 +7,9 @@
 //
 
 #import "UserLayer.h"
+#import "PauseLayer.h"
 
+static const int HEIGHTSCALE = 0.97;
 
 @implementation UserLayer{
     CCLabelTTF* timeLabel;
@@ -23,19 +25,28 @@
         
         //Create a label
         timeLabel = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
-        timeLabel.position = ccp(5*size.width/6, size.height*0.97);
+        timeLabel.position = ccp(5*size.width/6, size.height*HEIGHTSCALE);
         timeLabel.color = ccBLACK;
         
         scoreLabel = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
-        scoreLabel.position = ccp(2*size.width/6, size.height*0.97);
+        scoreLabel.position = ccp(3*size.width/6, size.height*HEIGHTSCALE);
         scoreLabel.color = ccBLACK;
         
+        //Add pause button in
+        [CCMenuItemFont setFontName:@"Marker Felt"];
+        [CCMenuItemFont setFontSize:36];
+        CCMenuItem* pause = [CCMenuItemFont itemWithString:@"Pause" target:self selector:@selector(pausePressed:)];
+        pause.color = ccBLACK;
+        CCMenu* pauseMenu = [CCMenu menuWithItems:pause, nil];
+        pauseMenu.position = ccp(size.width/8, size.height*HEIGHTSCALE);
+               
         [self updateTimer:0];
         [self updatePoints:0];
         [self addChild: timeLabel];
         [self addChild: scoreLabel];
+        [self addChild: pauseMenu];
         
-        self.touchEnabled = NO;
+        self.touchEnabled = YES;
         
         return self;
     }
@@ -52,7 +63,11 @@
 }
 
 -(void) updatePoints: (int) points{
-    scoreLabel.string = [NSString stringWithFormat:@"Score %d", points];
+    scoreLabel.string = [NSString stringWithFormat:@"Score: %d", points];
+}
+
+-(void) pausePressed: (id) sender{
+    [[CCDirector sharedDirector] pushScene:[PauseLayer node]];
 }
 
 @end

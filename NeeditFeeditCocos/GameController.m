@@ -28,7 +28,6 @@
     Level* level;
 }
 
-static const int NUM_RESOURCEBARS = 3;
 static const int POINTS_PER_RESOURCE = 10;
 
 -(id) init{
@@ -49,7 +48,9 @@ static const int POINTS_PER_RESOURCE = 10;
         //Initialize any necessary variables
         organisms = [[NSMutableArray alloc] init];
         resources = [[NSMutableArray alloc] init];
+        
         _userLayer =[[UserLayer alloc] init];
+        _userLayer.position = ccp(0, winSize.height*0.97);
         [self addChild:_userLayer];
         
         
@@ -98,7 +99,7 @@ static const int POINTS_PER_RESOURCE = 10;
         
         //Creates all the resource bars and adds them as a property of the organism
         NSMutableArray* resBars = [[NSMutableArray alloc] init];
-        for (int j=0; j<NUM_RESOURCEBARS; j++) {
+        for (int j=0; j<newOrg.neededResources.count; j++) {
             ResourceBar *newBar = [[ResourceBar alloc] initGivenResources:orgTemps[i][j]];
             newBar.position = ccp(newOrg.position.x , winSize.height/8 - 30*j);
             [self addChild:newBar];
