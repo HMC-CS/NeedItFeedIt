@@ -6,59 +6,43 @@
 	<array>
 		<array>
 			<string>water</string>
-			<integer>20</integer>
+			<integer>10</integer>
 		</array>
 		<array>
 			<string>sun</string>
-			<integer>60</integer>
-		</array>
-		<array>
-			<string>soil</string>
-			<integer>20</integer>
+			<integer>90</integer>
 		</array>
 	</array>
 	<key>flower</key>
 	<array>
 		<array>
-			<string>water</string>
-			<integer>34</integer>
-		</array>
-		<array>
 			<string>sun</string>
-			<integer>33</integer>
+			<integer>50</integer>
 		</array>
 		<array>
 			<string>soil</string>
-			<integer>33</integer>
+			<integer>50</integer>
 		</array>
 	</array>
 	<key>grass</key>
 	<array>
 		<array>
 			<string>water</string>
-			<integer>34</integer>
-		</array>
-		<array>
-			<string>sun</string>
-			<integer>33</integer>
+			<integer>50</integer>
 		</array>
 		<array>
 			<string>soil</string>
-			<integer>33</integer>
+			<integer>50</integer>
 		</array>
 	</array>
 	<key>moss</key>
 	<array>
 		<array>
 			<string>water</string>
-			<string>60</string>
+			<string>80</string>
 		</array>
 		<array>
 			<string>sun</string>
-			<string>20</string>
-		</array>
-		<array>
-			<string>soil</string>
 			<string>20</string>
 		</array>
 	</array>
@@ -66,60 +50,44 @@
 	<array>
 		<array>
 			<string>water</string>
-			<string>34</string>
-		</array>
-		<array>
-			<string>sun</string>
-			<string>33</string>
+			<string>50</string>
 		</array>
 		<array>
 			<string>soil</string>
-			<string>33</string>
+			<string>50</string>
 		</array>
 	</array>
 	<key>bush</key>
 	<array>
 		<array>
 			<string>water</string>
-			<string>34</string>
-		</array>
-		<array>
-			<string>sun</string>
-			<string>33</string>
+			<string>50</string>
 		</array>
 		<array>
 			<string>soil</string>
-			<string>33</string>
+			<string>50</string>
 		</array>
 	</array>
 	<key>tree</key>
 	<array>
 		<array>
 			<string>water</string>
-			<string>34</string>
-		</array>
-		<array>
-			<string>sun</string>
-			<string>33</string>
+			<string>50</string>
 		</array>
 		<array>
 			<string>soil</string>
-			<string>33</string>
+			<string>50</string>
 		</array>
 	</array>
 	<key>bunny</key>
 	<array>
 		<array>
 			<string>grass</string>
-			<integer>34</integer>
-		</array>
-		<array>
-			<string>water</string>
-			<integer>33</integer>
+			<integer>50</integer>
 		</array>
 		<array>
 			<string>bush</string>
-			<integer>33</integer>
+			<integer>50</integer>
 		</array>
 	</array>
 	<key>cow</key>
@@ -130,56 +98,40 @@
 		</array>
 		<array>
 			<string>water</string>
-			<integer>30</integer>
-		</array>
-		<array>
-			<string>sun</string>
-			<integer>20</integer>
+			<integer>50</integer>
 		</array>
 	</array>
 	<key>deer</key>
 	<array>
 		<array>
 			<string>grass</string>
-			<integer>34</integer>
-		</array>
-		<array>
-			<string>water</string>
-			<integer>33</integer>
+			<integer>50</integer>
 		</array>
 		<array>
 			<string>bush</string>
-			<integer>33</integer>
+			<integer>50</integer>
 		</array>
 	</array>
 	<key>elephant</key>
 	<array>
 		<array>
 			<string>grass</string>
-			<integer>34</integer>
+			<integer>50</integer>
 		</array>
 		<array>
-			<string>water</string>
-			<integer>33</integer>
-		</array>
-		<array>
-			<string>bush</string>
-			<integer>33</integer>
+			<string>tree</string>
+			<integer>50</integer>
 		</array>
 	</array>
 	<key>giraffe</key>
 	<array>
 		<array>
 			<string>tree</string>
-			<integer>34</integer>
-		</array>
-		<array>
-			<string>water</string>
-			<integer>33</integer>
+			<integer>50</integer>
 		</array>
 		<array>
 			<string>bush</string>
-			<integer>33</integer>
+			<integer>50</integer>
 		</array>
 	</array>
 	<key>lion</key>
@@ -189,12 +141,371 @@
 			<integer>60</integer>
 		</array>
 		<array>
+			<string>giraffe</string>
+			<integer>40</integer>
+		</array>
+	</array>
+	<key>plant</key>
+	<array>
+		<array>
+			<string>sun</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>water</string>
+			<integer>50</integer>
+		</array>
+	</array>
+	<key>rodent</key>
+	<array>
+		<array>
+			<string>bugs</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>bush</string>
+			<integer>50</integer>
+		</array>
+	</array>
+	<key>wolf</key>
+	<array>
+		<array>
+			<string>bunny</string>
+			<integer>60</integer>
+		</array>
+		<array>
+			<string>deer</string>
+			<integer>40</integer>
+		</array>
+	</array>
+	<key>bear</key>
+	<array>
+		<array>
+			<string>deer</string>
+			<integer>40</integer>
+		</array>
+		<array>
+			<string>rodent</string>
+			<integer>60</integer>
+		</array>
+	</array>
+	<key>bugs</key>
+	<array>
+		<array>
+			<string>grass</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>flower</string>
+			<integer>50</integer>
+		</array>
+	</array>
+	<key>zebra</key>
+	<array>
+		<array>
+			<string>grass</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>bush</string>
+			<integer>50</integer>
+		</array>
+	</array>
+	<key>hyena</key>
+	<array>
+		<array>
+			<string>elephant</string>
+			<integer>30</integer>
+		</array>
+		<array>
+			<string>zebra</string>
+			<integer>70</integer>
+		</array>
+	</array>
+	<key>vulture</key>
+	<array>
+		<array>
+			<string>lion</string>
+			<integer>40</integer>
+		</array>
+		<array>
+			<string>antelope</string>
+			<integer>60</integer>
+		</array>
+	</array>
+	<key>crocodile</key>
+	<array>
+		<array>
+			<string>zebra</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>antelope</string>
+			<integer>50</integer>
+		</array>
+	</array>
+	<key>lizard</key>
+	<array>
+		<array>
+			<string>bugs</string>
+			<integer>70</integer>
+		</array>
+		<array>
+			<string>bush</string>
+			<integer>30</integer>
+		</array>
+	</array>
+	<key>tortoise</key>
+	<array>
+		<array>
+			<string>flower</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>shrub</string>
+			<integer>50</integer>
+		</array>
+	</array>
+	<key>jackrabbit</key>
+	<array>
+		<array>
+			<string>cactus</string>
+			<integer>60</integer>
+		</array>
+		<array>
+			<string>bush</string>
+			<integer>40</integer>
+		</array>
+	</array>
+	<key>snake</key>
+	<array>
+		<array>
+			<string>rodent</string>
+			<integer>70</integer>
+		</array>
+		<array>
+			<string>bugs</string>
+			<integer>30</integer>
+		</array>
+	</array>
+	<key>hawk</key>
+	<array>
+		<array>
+			<string>rodent</string>
+			<integer>70</integer>
+		</array>
+		<array>
+			<string>bugs</string>
+			<integer>30</integer>
+		</array>
+	</array>
+	<key>coyote</key>
+	<array>
+		<array>
+			<string>jackrabbit</string>
+			<integer>60</integer>
+		</array>
+		<array>
+			<string>roadrunner</string>
+			<integer>40</integer>
+		</array>
+	</array>
+	<key>roadrunner</key>
+	<array>
+		<array>
+			<string>snake</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>tortoise</string>
+			<integer>50</integer>
+		</array>
+	</array>
+	<key>plankton</key>
+	<array>
+		<array>
+			<string>sun</string>
+			<integer>80</integer>
+		</array>
+		<array>
 			<string>water</string>
 			<integer>20</integer>
 		</array>
+	</array>
+	<key>shellfish</key>
+	<array>
 		<array>
-			<string>giraffe</string>
+			<string>plankton</string>
+			<integer>80</integer>
+		</array>
+		<array>
+			<string>water</string>
 			<integer>20</integer>
+		</array>
+	</array>
+	<key>seaweed</key>
+	<array>
+		<array>
+			<string>sun</string>
+			<integer>80</integer>
+		</array>
+		<array>
+			<string>water</string>
+			<integer>20</integer>
+		</array>
+	</array>
+	<key>smallfish</key>
+	<array>
+		<array>
+			<string>plankton</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>seaweed</string>
+			<integer>50</integer>
+		</array>
+	</array>
+	<key>whale</key>
+	<array>
+		<array>
+			<string>plankton</string>
+			<integer>70</integer>
+		</array>
+		<array>
+			<string>krill</string>
+			<integer>30</integer>
+		</array>
+	</array>
+	<key>fish</key>
+	<array>
+		<array>
+			<string>smallfish</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>krill</string>
+			<integer>50</integer>
+		</array>
+	</array>
+	<key>jellyfish</key>
+	<array>
+		<array>
+			<string>smallfish</string>
+			<integer>80</integer>
+		</array>
+		<array>
+			<string>jellyfish</string>
+			<integer>20</integer>
+		</array>
+	</array>
+	<key>shark</key>
+	<array>
+		<array>
+			<string>fish</string>
+			<integer>70</integer>
+		</array>
+		<array>
+			<string>seal</string>
+			<integer>30</integer>
+		</array>
+	</array>
+	<key>squid</key>
+	<array>
+		<array>
+			<string>fish</string>
+			<integer>70</integer>
+		</array>
+		<array>
+			<string>squid</string>
+			<integer>30</integer>
+		</array>
+	</array>
+	<key>marlin</key>
+	<array>
+		<array>
+			<string>fish</string>
+			<integer>60</integer>
+		</array>
+		<array>
+			<string>squid</string>
+			<integer>40</integer>
+		</array>
+	</array>
+	<key>krill</key>
+	<array>
+		<array>
+			<string>plankton</string>
+			<integer>70</integer>
+		</array>
+		<array>
+			<string>seaweed</string>
+			<integer>30</integer>
+		</array>
+	</array>
+	<key>seal</key>
+	<array>
+		<array>
+			<string>fish</string>
+			<integer>60</integer>
+		</array>
+		<array>
+			<string>penguin</string>
+			<integer>40</integer>
+		</array>
+	</array>
+	<key>penguin</key>
+	<array>
+		<array>
+			<string>fish</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>krill</string>
+			<integer>50</integer>
+		</array>
+	</array>
+	<key>bird</key>
+	<array>
+		<array>
+			<string>fish</string>
+			<integer>60</integer>
+		</array>
+		<array>
+			<string>krill</string>
+			<integer>40</integer>
+		</array>
+	</array>
+	<key>polarbear</key>
+	<array>
+		<array>
+			<string>seal</string>
+			<integer>70</integer>
+		</array>
+		<array>
+			<string>narwhal</string>
+			<integer>30</integer>
+		</array>
+	</array>
+	<key>walrus</key>
+	<array>
+		<array>
+			<string>shellfish</string>
+			<integer>80</integer>
+		</array>
+		<array>
+			<string>squid</string>
+			<integer>20</integer>
+		</array>
+	</array>
+	<key>narwhal</key>
+	<array>
+		<array>
+			<string>squid</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>krill</string>
+			<integer>50</integer>
 		</array>
 	</array>
 </dict>
