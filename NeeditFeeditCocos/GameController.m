@@ -16,6 +16,8 @@
 #import "LevelManager.h"
 #import "GameOverLayer.h"
 
+
+
 @implementation GameController{
     NSMutableArray* organismList;
     NSMutableArray* organisms;
@@ -54,6 +56,7 @@ static const int POINTS_PER_RESOURCE = 10;
         _userLayer.position = ccp(0, winSize.height*0.97);
         [self addChild:_userLayer];
         
+        seconds = 120;
         
         //Add all organisms and resources
         [self loadOrganisms];
@@ -220,7 +223,7 @@ static const int POINTS_PER_RESOURCE = 10;
             
         }
         if (allSatisfied) {
-            CCScene *loseScene = [GameOverLayer sceneWithWon:YES];
+            CCScene *loseScene = [GameOverLayer sceneWithWon:YES andScore:self.userLayer.points+300];
             [[CCDirector sharedDirector] replaceScene:loseScene];
         }
         self.userLayer.points -= POINTS_PER_RESOURCE/2;
@@ -254,8 +257,13 @@ static const int POINTS_PER_RESOURCE = 10;
 }
 
 -(void) tick: (NSTimer*) timer{
-    seconds++;
+    seconds--;
     [_userLayer updateTimer:seconds];
+    if (seconds == 0) {
+        [self startStopwatch];
+        CCScene *loseScene = [GameOverLayer sceneWithWon:YES andScore:self.userLayer.points];
+        [[CCDirector sharedDirector] replaceScene:loseScene];
+    }
 }
 
 -(void) stopStopWatch{
