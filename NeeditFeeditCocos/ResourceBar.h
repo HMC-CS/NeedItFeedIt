@@ -9,11 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
+
+@class ResourceBar;
+@protocol OrgDeadProtocol <NSObject>
+
+-(void) stopStopwatch;
+
+@end
+
+
 @interface ResourceBar : CCLayer {
     
 }
 
-//@property (nonatomic) int* percentage;
+@property(weak, nonatomic) id <OrgDeadProtocol> deadDelegate;
 
 
 -(id) initGivenResources:(NSArray*) resource andDecay: (int) decay;
