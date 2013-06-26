@@ -90,6 +90,17 @@
 			<integer>50</integer>
 		</array>
 	</array>
+	<key>squirrel</key>
+	<array>
+		<array>
+			<string>tree</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>pinetree</string>
+			<integer>50</integer>
+		</array>
+	</array>
 	<key>cow</key>
 	<array>
 		<array>

@@ -225,7 +225,7 @@ static const int POINTS_PER_RESOURCE = 10;
             
         }
         if (allSatisfied) {
-            [self startStopwatch];
+            [self stopStopWatch];
             CCScene *loseScene = [GameOverLayer sceneWithWon:YES andScore:self.userLayer.points+300];
             [[CCDirector sharedDirector] replaceScene:loseScene];
         }
@@ -263,7 +263,7 @@ static const int POINTS_PER_RESOURCE = 10;
     seconds--;
     [_userLayer updateTimer:seconds];
     if (seconds == 0) {
-        [self startStopwatch];
+        [self stopStopWatch];
         CCScene *loseScene = [GameOverLayer sceneWithWon:YES andScore:self.userLayer.points];
         [[CCDirector sharedDirector] replaceScene:loseScene];
     }
@@ -272,6 +272,7 @@ static const int POINTS_PER_RESOURCE = 10;
 -(void) stopStopWatch{
     [timer invalidate];
     timer = nil;
+    NSLog(@"countdown stopped");
 }
 
 
