@@ -22,18 +22,20 @@ static const int NUMORGS = 3;
         //Loads the list of all organismss into factory list
         factoryList = [[NSArray alloc] init];
         
-        NSString* fileName = [[NSString alloc] initWithFormat:@"OrganismsLevel2"];
-        //NSString* fileName = [[NSString alloc] initWithFormat:@"Levels"];
+        //NSString* fileName = [[NSString alloc] initWithFormat:@"OrganismsLevel2"];
+        NSString* fileName = [[NSString alloc] initWithFormat:@"Levels"];
         NSString* path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"plist"];
         NSDictionary* plistDictionary = [NSDictionary dictionaryWithContentsOfFile:path];
-        factoryList = [plistDictionary allValues];
-        _decay = 60;
+        //factoryList = [plistDictionary allValues];
+        //_decay = 60;
         
-        //Level* curLevel = [[LevelManager sharedInstance] currentLevel];
-        //NSArray* temp = [[NSArray alloc] initWithArray: plistDictionary[curLevel.ecosystem];
-        //factoryList = temp[curLevel.levelNum-1]; 
-        //NSNumber dec = temp[3];
-        //_decay = dec.intValue;
+        Level* curLevel = [[LevelManager sharedInstance] currentLevel];
+        NSArray* temp = [[NSArray alloc] initWithArray: plistDictionary[curLevel.ecosystem]];
+        NSLog(@"%d", temp.count);
+        factoryList = temp[curLevel.levelNum-1];
+        NSLog(@"%d", factoryList.count);
+        NSNumber *dec = temp[3];
+        _decay = dec.intValue;
         
         return self;
     }
@@ -49,7 +51,7 @@ static const int NUMORGS = 3;
     
     //Go through copy list num times, pick out a random organisms, add it to returns
     //and remove the organism from copyList
-    NSAssert(copyList.count>NUMORGS, @"Not enough organisms in factoryList to fulfill NUMORGS");
+    NSAssert(copyList.count>=NUMORGS, @"Not enough organisms in factoryList to fulfill NUMORGS");
     for (int i = 0; i<NUMORGS; i++) {
         int j = arc4random()%copyList.count;
         [returns addObject:[copyList objectAtIndex:j]];
