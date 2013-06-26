@@ -17,7 +17,6 @@ static const int SATISFIED_HEALTH = 85;
 static const int ICON_HEIGHT = 170;
 static const int OFFSET = 30;
 static const double ICON_SCALE = 0.2;
-static const ccTime DELTA = 10.0;
 static const int PERCENT_DECAY = 1;
 
 
@@ -32,7 +31,7 @@ static const int PERCENT_DECAY = 1;
     NSArray* resources;
 }
 
--(id) initGivenResources:(NSArray*) resource {
+-(id) initGivenResources:(NSArray*) resource andDecay: (int) decay{
     if (self = [super init]) {
         
         resources = [[NSArray alloc] initWithArray:resource];
@@ -66,8 +65,10 @@ static const int PERCENT_DECAY = 1;
         //Starts bar at 50%
         [self updateBar:50.0];
         
+        NSLog(@"%d", decay);
+        
         //Schedule decreasing of resource bars
-        [self schedule:@selector(decreaseUpdate:) interval:DELTA];
+        [self schedule:@selector(decreaseUpdate:) interval:decay];
         
         return self;
     }
