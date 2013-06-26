@@ -51,6 +51,7 @@
     //At end it checks ccTouchesMoved one more time to make sure resource is in the right location
     if (_touch!=nil){
         [self ccTouchesMoved:touches withEvent:event];
+        self.scale = 0.6;
         
         //Tells the GameController that a resource has been dropped
         if (self.dragDelegate)

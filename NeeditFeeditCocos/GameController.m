@@ -62,8 +62,8 @@ static const int POINTS_PER_RESOURCE = 10;
         [self loadOrganisms];
         [self addOrganismsAndResources];
         
-        //Schedule new resources to be added every 2 sec
-        [self schedule:@selector(update:) interval:1.0];
+        //Schedule new resources to be added at specific time interval
+        [self schedule:@selector(update:) interval:0.75];
         
         //Start the timer
         [self startStopwatch];
@@ -158,6 +158,7 @@ static const int POINTS_PER_RESOURCE = 10;
     int rangeDuration = maxDuration - minDuration;
     int actualDuration = (arc4random() % rangeDuration) + minDuration;
     
+    
     // Create the actions
     CCMoveTo * actionMove = [CCMoveTo actionWithDuration:actualDuration
                                       position:ccp(winSize.width+ newResource.contentSize.width/2, actualY)];
@@ -179,6 +180,7 @@ static const int POINTS_PER_RESOURCE = 10;
             resource.touch = thisTouch;
             [resource stopAllActions];
             [resource setOffsetX:(pt.x - resource.position.x) andOffsetY:(pt.y - resource.position.y)];
+            resource.scale= 0.75;
             break;
         }
     }
@@ -223,6 +225,7 @@ static const int POINTS_PER_RESOURCE = 10;
             
         }
         if (allSatisfied) {
+            [self startStopwatch];
             CCScene *loseScene = [GameOverLayer sceneWithWon:YES andScore:self.userLayer.points+300];
             [[CCDirector sharedDirector] replaceScene:loseScene];
         }
