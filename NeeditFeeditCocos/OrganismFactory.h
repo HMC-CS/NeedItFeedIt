@@ -12,7 +12,7 @@
 @interface OrganismFactory : CCNode {
     
 }
-
+@property(nonatomic) int decay;
 -(id) init;
 -(NSMutableArray*) getOrganisms;
 

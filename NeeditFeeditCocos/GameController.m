@@ -26,6 +26,7 @@
     NSTimer* timer;
     int seconds;
     Level* level;
+    int decay;
 }
 
 static const int POINTS_PER_RESOURCE = 10;
@@ -78,6 +79,7 @@ static const int POINTS_PER_RESOURCE = 10;
     OrganismFactory *orgFac = [[OrganismFactory alloc] init];
     organismList = [[NSMutableArray alloc] init];
     organismList = [orgFac getOrganisms];
+    decay = orgFac.decay;
 }
 
 -(void) addOrganismsAndResources{
@@ -100,7 +102,7 @@ static const int POINTS_PER_RESOURCE = 10;
         //Creates all the resource bars and adds them as a property of the organism
         NSMutableArray* resBars = [[NSMutableArray alloc] init];
         for (int j=0; j<newOrg.neededResources.count; j++) {
-            ResourceBar *newBar = [[ResourceBar alloc] initGivenResources:orgTemps[i][j]];
+            ResourceBar *newBar = [[ResourceBar alloc] initGivenResources:orgTemps[i][j] andDecay:decay];
             newBar.position = ccp(newOrg.position.x , winSize.height/8 - 30*j);
             [self addChild:newBar];
             [resBars addObject:newBar];
@@ -223,7 +225,6 @@ static const int POINTS_PER_RESOURCE = 10;
         }
         self.userLayer.points -= POINTS_PER_RESOURCE/2;
         [_userLayer updatePoints:self.userLayer.points];
-        NSLog(@"points: %d", self.userLayer.points);
         [self animateRemoveResource:resource];
         
     }

@@ -20,6 +20,7 @@
 			<string>eagle</string>
 			<string>bear</string>
 		</array>
+		<integer>60</integer>
 	</array>
 	<key>Ocean</key>
 	<array>
@@ -41,6 +42,7 @@
 			<string>giantsquid</string>
 			<string>marlin</string>
 		</array>
+		<integer>45</integer>
 	</array>
 	<key>Desert</key>
 	<array>
@@ -62,6 +64,7 @@
 			<string>hawk</string>
 			<string>jackrabbit</string>
 		</array>
+		<integer>30</integer>
 	</array>
 	<key>Savanna</key>
 	<array>
@@ -83,6 +86,7 @@
 			<string>crocodile</string>
 			<string>vulture</string>
 		</array>
+		<integer>15</integer>
 	</array>
 	<key>Arctic</key>
 	<array>
@@ -102,6 +106,7 @@
 			<string>walrus</string>
 			<string>narwhal</string>
 		</array>
+		<string>10</string>
 	</array>
 </dict>
 </plist>
