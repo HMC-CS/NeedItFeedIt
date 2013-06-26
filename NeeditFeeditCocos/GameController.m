@@ -137,7 +137,6 @@ static const int POINTS_PER_RESOURCE = 10;
     newResource.dragDelegate = self;
     [resources insertObject:newResource atIndex:0];
 
-
     // Determine where to spawn the resource along the Y axis
     int minY = 3*winSize.height/4 - newResource.image.contentSize.height / 2;
     int maxY = winSize.height*.95 - newResource.image.contentSize.height/2;
@@ -147,6 +146,7 @@ static const int POINTS_PER_RESOURCE = 10;
     // Create the resource slightly off-screen along the right edge,
     // and along a random position along the Y axis as calculated above
     newResource.position = ccp(-newResource.contentSize.width/2, actualY);
+    newResource.scale = 0.65;
     [self addChild:newResource z:1];
     
     // Determine speed of the resource
