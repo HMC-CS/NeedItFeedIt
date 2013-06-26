@@ -211,6 +211,17 @@
 			<integer>50</integer>
 		</array>
 	</array>
+	<key>antelope</key>
+	<array>
+		<array>
+			<string>grass</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>bush</string>
+			<integer>50</integer>
+		</array>
+	</array>
 	<key>hyena</key>
 	<array>
 		<array>
