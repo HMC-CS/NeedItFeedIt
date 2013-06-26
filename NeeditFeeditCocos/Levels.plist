@@ -88,17 +88,18 @@
 	<key>Arctic</key>
 	<array>
 		<array>
-			<string>algae</string>
+			<string>plankton</string>
 			<string>krill</string>
 			<string>smallfish</string>
 		</array>
 		<array>
 			<string>seal</string>
+			<string>fish</string>
 			<string>penguin</string>
 		</array>
 		<array>
 			<string>polarbear</string>
-			<string>orca</string>
+			<string>whale</string>
 			<string>walrus</string>
 			<string>narwhal</string>
 		</array>
