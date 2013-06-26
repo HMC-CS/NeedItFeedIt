@@ -81,7 +81,7 @@
 			<string>crocodile</string>
 			<string>vulture</string>
 		</array>
-		<integer>5</integer>
+		<integer>8</integer>
 	</array>
 	<key>Arctic</key>
 	<array>
@@ -101,7 +101,7 @@
 			<string>walrus</string>
 			<string>narwhal</string>
 		</array>
-		<string>1</string>
+		<string>5</string>
 	</array>
 </dict>
 </plist>

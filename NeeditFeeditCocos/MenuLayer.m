@@ -63,8 +63,9 @@
         [CCMenuItemFont setFontName:@"Marker Felt"];
         [CCMenuItemFont setFontSize:50];
         CCMenuItem* instructions  = [CCMenuItemFont itemWithString:@"Instructions" target:self selector:@selector(goToInstructions:)];
-        
+        instructions.color = ccBLACK;
         CCMenuItem* credits  = [CCMenuItemFont itemWithString:@"Credits" target:self selector:@selector(goToCredits:)];
+        credits.color = ccBLACK;
         
         //Create the menu to hold the start command
         CCMenu* topMenu = [CCMenu menuWithItems:start, nil];
