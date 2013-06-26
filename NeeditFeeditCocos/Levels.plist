@@ -8,16 +8,16 @@
 			<string>pinetree</string>
 			<string>moss</string>
 			<string>plant</string>
+			<string>bush</string>
 		</array>
 		<array>
 			<string>deer</string>
-			<string>rodent</string>
-			<string>bird</string>
+			<string>squirrel</string>
 			<string>bunny</string>
 		</array>
 		<array>
 			<string>wolf</string>
-			<string>eagle</string>
+			<string>hawk</string>
 			<string>bear</string>
 		</array>
 		<integer>60</integer>
@@ -50,7 +50,6 @@
 			<string>cactus</string>
 			<string>bugs</string>
 			<string>flower</string>
-			<string>bush</string>
 		</array>
 		<array>
 			<string>lizard</string>
@@ -62,7 +61,6 @@
 			<string>snake</string>
 			<string>coyote</string>
 			<string>hawk</string>
-			<string>jackrabbit</string>
 		</array>
 		<integer>30</integer>
 	</array>
@@ -71,7 +69,6 @@
 		<array>
 			<string>tree</string>
 			<string>grass</string>
-			<string>bush</string>
 			<string>bugs</string>
 		</array>
 		<array>
@@ -98,11 +95,10 @@
 		<array>
 			<string>seal</string>
 			<string>penguin</string>
-			<string>bird</string>
 		</array>
 		<array>
 			<string>polarbear</string>
-			<string>orcawhale</string>
+			<string>orca</string>
 			<string>walrus</string>
 			<string>narwhal</string>
 		</array>
