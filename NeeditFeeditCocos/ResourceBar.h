@@ -16,7 +16,7 @@
 //@property (nonatomic) int* percentage;
 
 
--(id) initGivenResources:(NSArray*) resource;
+-(id) initGivenResources:(NSArray*) resource andDecay: (int) decay;
 
 // Fill up the bars depending on percentage
 -(void)updateBar:(float)addedPercentage;
