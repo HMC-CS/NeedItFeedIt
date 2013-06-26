@@ -17,7 +17,7 @@ static const int SATISFIED_HEALTH = 85;
 static const int ICON_HEIGHT = 170;
 static const int OFFSET = 30;
 static const double ICON_SCALE = 0.15;
-static const int PERCENT_DECAY = 1;
+static const int PERCENT_DECAY = 5;
 
 
 @implementation ResourceBar{
@@ -65,8 +65,6 @@ static const int PERCENT_DECAY = 1;
         //Starts bar at 50%
         [self updateBar:50.0];
         
-        NSLog(@"%d", decay);
-        
         //Schedule decreasing of resource bars
         [self schedule:@selector(decreaseUpdate:) interval:decay];
         
@@ -78,6 +76,8 @@ static const int PERCENT_DECAY = 1;
 -(void) decreaseUpdate:(ccTime)delta{
     if (percentage>=PERCENT_DECAY) {
         [self updateBar:-PERCENT_DECAY];
+    }else{
+        [self updateBar:0];
     }
     
     //Check for death
@@ -137,7 +137,7 @@ static const int PERCENT_DECAY = 1;
 
 -(void) checkDeath{
     if (percentage<=0) {
-        CCScene *loseScene = [GameOverLayer sceneWithWon:NO];
+        CCScene *loseScene = [GameOverLayer sceneWithWon:NO andScore:0];
         [[CCDirector sharedDirector] replaceScene:loseScene];
     }
 }

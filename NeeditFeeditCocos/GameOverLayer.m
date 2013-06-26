@@ -13,30 +13,31 @@
 
 @implementation GameOverLayer
 
-+(CCScene *) sceneWithWon:(BOOL)won {
++(CCScene *) sceneWithWon:(BOOL)won andScore: (int) score{
     CCScene *scene = [CCScene node];
-    GameOverLayer *layer = [[GameOverLayer alloc] initWithWon:won];
+    GameOverLayer *layer = [[GameOverLayer alloc] initWithWon:won andScore:score];
     [scene addChild: layer];
     return scene;
 }
 
-- (id)initWithWon:(BOOL)won {
+- (id)initWithWon:(BOOL)won andScore: (int) score{
     if (self = [super init]) {
         
-        [[LevelManager sharedInstance] nextLevel];
-        Level* curLevel = [[LevelManager sharedInstance] currentLevel];
+        
         NSString * message;
-        NSString* nextLevel = [[NSString alloc] initWithFormat:@" "];
-        if (won && curLevel) {
+        NSString* nextLevel = [[NSString alloc] initWithFormat:@"Retry Level"];
+        if (won) {
             message = @"You Won!";
             nextLevel = @"Next Level";
-        } else if (won){
-            message = @"You Won!";
-            [[LevelManager sharedInstance] reset];
+            [[LevelManager sharedInstance] nextLevel];
+            Level* curLevel = [[LevelManager sharedInstance] currentLevel];
+            if (!curLevel) {
+                nextLevel = @"Retry Level";
+                [[LevelManager sharedInstance] reset];
+            }
         }
         else {
             message = @"You Lost!";
-            [[LevelManager sharedInstance] reset];
         }
         
         CGSize size = [[CCDirector sharedDirector] winSize];
@@ -47,8 +48,14 @@
         
         CCLabelTTF * label = [CCLabelTTF labelWithString:message fontName:@"Arial" fontSize:60];
         label.color = ccBLUE;
-        label.position = ccp(size.width/2, 3*size.height/4);
+        label.position = ccp(size.width/2, 7*size.height/8);
         [self addChild:label];
+        
+         NSString* scoring = [[NSString alloc] initWithFormat:@"Score: %d", score];
+        CCLabelTTF * scoreLabel = [CCLabelTTF labelWithString:scoring fontName:@"Arial" fontSize:45];
+        scoreLabel.color = ccBLACK;
+        scoreLabel.position = ccp(size.width/2, 3*size.height/4);
+        [self addChild:scoreLabel];
         
         [CCMenuItemFont setFontName:@"Arial"];
         [CCMenuItemFont setFontSize:32];

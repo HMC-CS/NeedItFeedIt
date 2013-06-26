@@ -43,6 +43,7 @@
         
         CCMenuItem *back = [CCMenuItemFont itemWithString:@"Main Menu" block:^(id sender) {
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[MenuLayer node]]];
+            [[LevelManager sharedInstance] reset];
         }];
         back.color = ccBLACK;
         
