@@ -328,19 +328,8 @@
 			<integer>60</integer>
 		</array>
 		<array>
-			<string>roadrunner</string>
+			<string>lizard</string>
 			<integer>40</integer>
-		</array>
-	</array>
-	<key>roadrunner</key>
-	<array>
-		<array>
-			<string>snake</string>
-			<integer>50</integer>
-		</array>
-		<array>
-			<string>tortoise</string>
-			<integer>50</integer>
 		</array>
 	</array>
 	<key>plankton</key>
