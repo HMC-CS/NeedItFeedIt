@@ -49,23 +49,21 @@
 		CGSize size = [[CCDirector sharedDirector] winSize];
         
         //Create and add background
-        CCSprite* background = [CCSprite spriteWithFile:@"background.png"];
+        CCSprite* background = [CCSprite spriteWithFile:@"background2.png"];
         background.position = ccp(size.width/2, size.height/2);
         [self addChild:background z:-1];
 		
 		// create title label
-        CCSprite* title = [CCSprite spriteWithFile:@"title1.png"];
+        CCSprite* title = [CCSprite spriteWithFile:@"title.png"];
 		title.position =  ccp( size.width /2 , size.height/1.5 );
         
-        CCMenuItemImage* start =[CCMenuItemImage itemWithNormalImage:@"start1.png" selectedImage:@"start1.png" target:self selector:@selector(goToLevelPick:)];
+        CCMenuItemImage* start =[CCMenuItemImage itemWithNormalImage:@"start.png" selectedImage:@"start.png" target:self selector:@selector(goToLevelPick:)];
         
         //Create an instructions menu item 
-        [CCMenuItemFont setFontName:@"Marker Felt"];
-        [CCMenuItemFont setFontSize:50];
-        CCMenuItem* instructions  = [CCMenuItemFont itemWithString:@"Instructions" target:self selector:@selector(goToInstructions:)];
-        instructions.color = ccBLACK;
-        CCMenuItem* credits  = [CCMenuItemFont itemWithString:@"Credits" target:self selector:@selector(goToCredits:)];
-        credits.color = ccBLACK;
+        CCMenuItemImage* instructions  = [CCMenuItemImage itemWithNormalImage:@"instructions.png" selectedImage:@"instructions.png" target:self selector:@selector(goToInstructions:)];
+
+        //Create a credits menu item
+        CCMenuItemImage* credits  = [CCMenuItemImage itemWithNormalImage:@"credits.png" selectedImage:@"credits.png" target:self selector:@selector(goToCredits:)];
         
         //Create the menu to hold the start command
         CCMenu* topMenu = [CCMenu menuWithItems:start, nil];
