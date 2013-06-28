@@ -25,7 +25,6 @@
     NSMutableArray* resources;
     NSArray* resourceProbs;
     CGSize winSize;
-    NSTimer* timer;
     int seconds;
     Level* level;
     int decay;
@@ -252,14 +251,10 @@ static const int POINTS_PER_RESOURCE = 10;
 }
 
 -(void) startStopwatch{
-    timer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                             target:self
-                                           selector:@selector(tick:)
-                                           userInfo:nil
-                                            repeats:YES];
+    [self schedule:@selector(tick) interval:1.0];
 }
 
--(void) tick: (NSTimer*) timer{
+-(void) tick {
     seconds--;
     [_userLayer updateTimer:seconds];
     if (seconds == 0) {
@@ -270,8 +265,7 @@ static const int POINTS_PER_RESOURCE = 10;
 }
 
 -(void) stopStopWatch{
-    [timer invalidate];
-    timer = nil;
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(tick) object:nil];
     NSLog(@"countdown stopped");
 }
 

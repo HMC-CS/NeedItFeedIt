@@ -53,6 +53,7 @@
 		0ADC0E11177B64210009CD55 /* walrus.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADC0DFF177B63FB0009CD55 /* walrus.png */; };
 		0ADC0E12177B64210009CD55 /* whale.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADC0E00177B640E0009CD55 /* whale.png */; };
 		0ADC0E14177B86A40009CD55 /* marlin.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADC0E13177B86A40009CD55 /* marlin.png */; };
+		0AE8A4A0177D3AC2006F4076 /* glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE8A49D177D3AC2006F4076 /* glow.png */; };
 		0AEEE0AC1778CCB50037D895 /* PauseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEE0AB1778CCB50037D895 /* PauseLayer.m */; };
 		0AF163F71773B9190089D59D /* Levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AF163F61773B9190089D59D /* Levels.plist */; };
 		0AF163FA1773C30B0089D59D /* PickLevelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF163F91773C30A0089D59D /* PickLevelLayer.m */; };
@@ -298,6 +299,7 @@
 		0ADC0DFF177B63FB0009CD55 /* walrus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walrus.png; path = ../walrus.png; sourceTree = "<group>"; };
 		0ADC0E00177B640E0009CD55 /* whale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whale.png; sourceTree = "<group>"; };
 		0ADC0E13177B86A40009CD55 /* marlin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marlin.png; sourceTree = "<group>"; };
+		0AE8A49D177D3AC2006F4076 /* glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glow.png; sourceTree = "<group>"; };
 		0AEEE0AA1778CCB40037D895 /* PauseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseLayer.h; sourceTree = "<group>"; };
 		0AEEE0AB1778CCB50037D895 /* PauseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PauseLayer.m; sourceTree = "<group>"; };
 		0AF163F61773B9190089D59D /* Levels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Levels.plist; sourceTree = "<group>"; };
@@ -854,6 +856,7 @@
 				0AF163F01773B8170089D59D /* Arctic */,
 				0A91A7651770C30D003BDFF7 /* Glow Images */,
 				EF737E46176BDD4500EF4E4D /* cow.png */,
+				0AE8A49D177D3AC2006F4076 /* glow.png */,
 				0ADC0E13177B86A40009CD55 /* marlin.png */,
 				EF737E44176BDD4500EF4E4D /* bush.png */,
 				0ADC0DEF177B63590009CD55 /* bugs.png */,
@@ -1461,6 +1464,7 @@
 				EFE37CA1177BB3FB001A124A /* background2.png in Resources */,
 				EFE37CA3177C273E001A124A /* grass.png in Resources */,
 				EFE37CA5177C28FC001A124A /* grass2.png in Resources */,
+				0AE8A4A0177D3AC2006F4076 /* glow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -135,9 +135,6 @@ static const int PERCENT_DECAY = 5;
 
 -(void) checkDeath{
     if (percentage<=0) {
-        if (self.deadDelegate) {
-            [self.deadDelegate stopStopwatch];
-        }
         CCScene *loseScene = [GameOverLayer sceneWithWon:NO andScore:0];
         [[CCDirector sharedDirector] replaceScene:loseScene];
     }
