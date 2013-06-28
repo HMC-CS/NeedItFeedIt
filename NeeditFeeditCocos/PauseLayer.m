@@ -36,16 +36,14 @@
         [CCMenuItemFont setFontSize:36];
         [CCMenuItemFont setFontName:@"Marker Felt"];
         
-        CCMenuItem* resume = [CCMenuItemFont itemWithString:@"Resume" block:^(id sender) {
+        CCMenuItemImage* resume = [CCMenuItemImage itemWithNormalImage:@"resume.png" selectedImage:@"resumeSel.png" block:^(id sender) {
             [[CCDirector sharedDirector] popScene];
         }];
-        resume.color = ccBLACK;
         
-        CCMenuItem *back = [CCMenuItemFont itemWithString:@"Main Menu" block:^(id sender) {
+        CCMenuItem *back = [CCMenuItemImage itemWithNormalImage:@"mainMenu.png" selectedImage:@"mainMenuSel.png" block:^(id sender) {
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[MenuLayer node]]];
-            [[LevelManager sharedInstance] reset];
         }];
-        back.color = ccBLACK;
+
         
         //Create Menu
         CCMenu *menu = [CCMenu menuWithItems: resume, back, nil];
