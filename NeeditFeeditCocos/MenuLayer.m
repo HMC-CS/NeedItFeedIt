@@ -57,13 +57,13 @@
         CCSprite* title = [CCSprite spriteWithFile:@"title.png"];
 		title.position =  ccp( size.width /2 , size.height/1.5 );
         
-        CCMenuItemImage* start =[CCMenuItemImage itemWithNormalImage:@"start.png" selectedImage:@"start.png" target:self selector:@selector(goToLevelPick:)];
+        CCMenuItemImage* start =[CCMenuItemImage itemWithNormalImage:@"start.png" selectedImage:@"startSel.png" target:self selector:@selector(goToLevelPick:)];
         
         //Create an instructions menu item 
-        CCMenuItemImage* instructions  = [CCMenuItemImage itemWithNormalImage:@"instructions.png" selectedImage:@"instructions.png" target:self selector:@selector(goToInstructions:)];
+        CCMenuItemImage* instructions  = [CCMenuItemImage itemWithNormalImage:@"instructions.png" selectedImage:@"instructionsSel.png" target:self selector:@selector(goToInstructions:)];
 
         //Create a credits menu item
-        CCMenuItemImage* credits  = [CCMenuItemImage itemWithNormalImage:@"credits.png" selectedImage:@"credits.png" target:self selector:@selector(goToCredits:)];
+        CCMenuItemImage* credits  = [CCMenuItemImage itemWithNormalImage:@"credits.png" selectedImage:@"creditsSel.png" target:self selector:@selector(goToCredits:)];
         
         //Create the menu to hold the start command
         CCMenu* topMenu = [CCMenu menuWithItems:start, nil];

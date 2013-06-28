@@ -52,7 +52,7 @@ static const int POINTS_PER_RESOURCE = 10;
         resources = [[NSMutableArray alloc] init];
         
         _userLayer =[[UserLayer alloc] init];
-        _userLayer.position = ccp(0, winSize.height*0.97);
+        _userLayer.position = ccp(0, winSize.height*0.93);
         [self addChild:_userLayer];
         
         seconds = 120;
@@ -97,7 +97,7 @@ static const int POINTS_PER_RESOURCE = 10;
     float offset = winSize.width / organismList.count;
     for (int i=0; i<organismList.count; i++) {
         Organism *newOrg = [[Organism alloc] initWithString: organismList[i] andResources:orgTemps[i]];
-        newOrg.position = ccp(offset*i +newOrg.orgImage.contentSize.width/2 +50, winSize.height/4);
+        newOrg.position = ccp(offset*i +newOrg.orgImage.contentSize.width/2 + 90, winSize.height/4);
         [self addChild:newOrg z:0];
         [organisms addObject:newOrg];
         
@@ -105,7 +105,7 @@ static const int POINTS_PER_RESOURCE = 10;
         NSMutableArray* resBars = [[NSMutableArray alloc] init];
         for (int j=0; j<newOrg.neededResources.count; j++) {
             ResourceBar *newBar = [[ResourceBar alloc] initGivenResources:orgTemps[i][j] andDecay:decay];
-            newBar.position = ccp(newOrg.position.x , winSize.height/8 - 30*j);
+            newBar.position = ccp(newOrg.position.x , winSize.height/8 - (40*j) - 20);
             [self addChild:newBar];
             [resBars addObject:newBar];
         }
