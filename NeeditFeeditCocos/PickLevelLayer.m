@@ -34,34 +34,30 @@
         
         
         // Create MenuItem
-        [CCMenuItemFont setFontSize:36];
-        [CCMenuItemFont setFontName:@"Marker Felt"];
-        
-        CCMenuItem *back = [CCMenuItemFont itemWithString:@"Main Menu" block:^(id sender) {
+        CCMenuItemImage *back = [CCMenuItemImage itemWithNormalImage:@"mainMenu.png" selectedImage:@"mainMenuSel.png" block:^(id sender) {
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[MenuLayer node]]];
         }];
-        back.color = ccBLACK;
         
         //Create Menu
         CCMenu *menu = [CCMenu menuWithItems: back, nil];
         menu.position = ccp(size.width/2, size.height/8);
         [self addChild:menu];
         
-        CCMenuItem *forest = [CCMenuItemFont itemWithString:@"1. Forest" target:self selector:@selector(goToForest)];
-        forest.color = ccBLACK;
-        CCMenuItem *ocean = [CCMenuItemFont itemWithString:@"2. Ocean" target:self selector:@selector(goToOcean)];
-        ocean.color = ccBLACK;
-        CCMenuItem *desert = [CCMenuItemFont itemWithString:@"3. Desert" target:self selector:@selector(goToDesert)];
-        desert.color = ccBLACK;
-        CCMenuItem *savanna = [CCMenuItemFont itemWithString:@"4. Savanna" target:self selector:@selector(goToSavanna)];
-        savanna.color = ccBLACK;
-        CCMenuItem *arctic = [CCMenuItemFont itemWithString:@"5. Arctic" target:self selector:@selector(goToArctic)];
-        arctic.color = ccBLACK;
+        CCMenuItemImage *forest = [CCMenuItemImage itemWithNormalImage:@"forest1.png" selectedImage:@"forestsel.png" target:self selector:@selector(goToForest)];
+        CCMenuItemImage *ocean = [CCMenuItemImage itemWithNormalImage:@"ocean1.png" selectedImage:@"oceansel.png" target:self selector:@selector(goToOcean)];
+        CCMenuItemImage *desert = [CCMenuItemImage itemWithNormalImage:@"desert1.png" selectedImage:@"desertsel.png" target:self selector:@selector(goToDesert)];
+        CCMenuItemImage *savanna = [CCMenuItemImage itemWithNormalImage:@"savanna1.png" selectedImage:@"savannasel.png" target:self selector:@selector(goToSavanna)];
+        CCMenuItemImage *arctic = [CCMenuItemImage itemWithNormalImage:@"arctic1.png" selectedImage:@"arcticsel.png" target:self selector:@selector(goToArctic)];
         
         CCMenu* menu2 = [CCMenu menuWithItems:forest, ocean, desert, savanna, arctic, nil];
         menu2.position = ccp(size.width/2, size.height/2);
         [menu2 alignItemsVerticallyWithPadding:25];
         [self addChild:menu2];
+            
+        CCMenuItemImage *pickLevelTitle = [CCMenuItemImage itemWithNormalImage:@"pickLevelTitle.png" selectedImage:@"pickLevelTitle.png"];
+        CCMenu* menu3 = [CCMenu menuWithItems: pickLevelTitle, nil];
+        menu3.position = ccp(size.width/2, 3.3*size.height/4);
+        [self addChild:menu3];
         
     }
     return self;

@@ -16,7 +16,7 @@ static const int MAX_HEALTH = 100;
 static const int SATISFIED_HEALTH = 85;
 static const int ICON_HEIGHT = 170;
 static const int OFFSET = 30;
-static const double ICON_SCALE = 0.15;
+static const double ICON_SCALE = 0.2;
 static const int PERCENT_DECAY = 5;
 
 

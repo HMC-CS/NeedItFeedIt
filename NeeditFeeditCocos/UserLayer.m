@@ -26,17 +26,14 @@ static const int HEIGHTSCALE = 0.97;
         //Create a label
         timeLabel = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
         timeLabel.position = ccp(5*size.width/6, size.height*HEIGHTSCALE);
-        timeLabel.color = ccBLACK;
+        timeLabel.color = ccc3(68, 14, 98);
         
         scoreLabel = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
         scoreLabel.position = ccp(3*size.width/6, size.height*HEIGHTSCALE);
-        scoreLabel.color = ccBLACK;
+        scoreLabel.color = ccc3(68, 14, 98);
         
         //Add pause button in
-        [CCMenuItemFont setFontName:@"Marker Felt"];
-        [CCMenuItemFont setFontSize:36];
-        CCMenuItem* pause = [CCMenuItemFont itemWithString:@"Pause" target:self selector:@selector(pausePressed:)];
-        pause.color = ccBLACK;
+        CCMenuItemImage* pause  = [CCMenuItemImage itemWithNormalImage:@"pause.png" selectedImage:@"pausesel.png" target:self selector:@selector(pausePressed:)];
         CCMenu* pauseMenu = [CCMenu menuWithItems:pause, nil];
         pauseMenu.position = ccp(size.width/8, size.height*HEIGHTSCALE);
                
