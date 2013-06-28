@@ -64,6 +64,7 @@
 }
 
 -(void) goToForest{
+    [[LevelManager sharedInstance] startAtLevel:@"Forest"];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameController node]]];
 }
 
