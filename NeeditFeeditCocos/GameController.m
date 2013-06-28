@@ -140,8 +140,8 @@ static const int POINTS_PER_RESOURCE = 10;
     [resources insertObject:newResource atIndex:0];
 
     // Determine where to spawn the resource along the Y axis
-    int minY = 3*winSize.height/4 - newResource.image.contentSize.height / 2;
-    int maxY = winSize.height*.95 - newResource.image.contentSize.height/2;
+    int minY = winSize.height*.7 - newResource.image.contentSize.height / 2;
+    int maxY = winSize.height*.88 - newResource.image.contentSize.height/2;
     int rangeY = maxY - minY;
     int actualY = (arc4random() % rangeY) + minY;
     
