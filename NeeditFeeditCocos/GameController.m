@@ -104,13 +104,14 @@ static const int POINTS_PER_RESOURCE = 10;
         //Creates all the resource bars and adds them as a property of the organism
         NSMutableArray* resBars = [[NSMutableArray alloc] init];
         for (int j=0; j<newOrg.neededResources.count; j++) {
-            ResourceBar *newBar = [[ResourceBar alloc] initGivenResources:orgTemps[i][j] andDecay:decay];
+            ResourceBar *newBar = [[ResourceBar alloc] initGivenResources:orgTemps[i][j]];
             newBar.position = ccp(newOrg.position.x , winSize.height/8 - (40*j) - 20);
             [self addChild:newBar];
             [resBars addObject:newBar];
         }
         [newOrg setResourceBars:resBars];
     }
+    [self schedule:@selector(decayBars) interval:decay ];
 }
 
 //This way of moving comes from a Ray Weinderlich Tutorial that we made some adaptions to:
@@ -206,13 +207,14 @@ static const int POINTS_PER_RESOURCE = 10;
                 ResourceBar* current = targetOrg.resourceBars[i];
                 NSNumber *freq = temp[1];
                 [current updateBar: (100.0-freq.floatValue)/10.0];
-                self.userLayer.points += POINTS_PER_RESOURCE;
+                self.userLayer.points += (POINTS_PER_RESOURCE*self.userLayer.multiplier);
                 [_userLayer updatePoints:self.userLayer.points];
                 
                 break;
             }
         }
         BOOL allSatisfied = true;
+        int lowest = 500;
         for (Organism* org in organisms) {
             NSArray* storeBars = [[NSArray alloc] initWithArray: org.resourceBars];
             for (ResourceBar* bar in storeBars) {
@@ -221,11 +223,17 @@ static const int POINTS_PER_RESOURCE = 10;
                     break;
                 }
             }
-            
+            for (ResourceBar* bar in storeBars) {
+                int perc = [bar getPercentage];
+                if (perc<lowest) {
+                    lowest = perc;
+                }
+            }
         }
+        [self updateMultipler:lowest];
         if (allSatisfied) {
             [self stopStopWatch];
-            CCScene *loseScene = [GameOverLayer sceneWithWon:YES andScore:self.userLayer.points+300];
+            CCScene *loseScene = [GameOverLayer sceneWithWon:YES andScore:self.userLayer.points andBonus: 300];
             [[CCDirector sharedDirector] replaceScene:loseScene];
         }
         self.userLayer.points -= POINTS_PER_RESOURCE/2;
@@ -259,7 +267,7 @@ static const int POINTS_PER_RESOURCE = 10;
     [_userLayer updateTimer:seconds];
     if (seconds == 0) {
         [self stopStopWatch];
-        CCScene *loseScene = [GameOverLayer sceneWithWon:YES andScore:self.userLayer.points];
+        CCScene *loseScene = [GameOverLayer sceneWithWon:YES andScore:self.userLayer.points andBonus:0];
         [[CCDirector sharedDirector] replaceScene:loseScene];
     }
 }
@@ -269,13 +277,29 @@ static const int POINTS_PER_RESOURCE = 10;
     NSLog(@"countdown stopped");
 }
 
-
--(BOOL) allSatisfied{
-    return NO;
+-(void) decayBars{
+    int lowest = 500;
+    for (Organism* org in organisms) {
+        NSArray* storeBars = [[NSArray alloc] initWithArray: org.resourceBars];
+        for (ResourceBar* bar in storeBars) {
+            [bar decreaseUpdate];
+            int perc = [bar getPercentage];
+            if (perc<lowest) {
+                lowest = perc;
+            }
+        }
+    }
+    [self updateMultipler:lowest];
 }
 
--(BOOL) checkIntersectResource: (Resource*) resource{
-    return NO;
+-(void) updateMultipler: (int) lowestPerc{
+    if (lowestPerc<50) {
+        [self.userLayer updateMultiplier:1];
+    } else if (lowestPerc<75){
+        [self.userLayer updateMultiplier:2];
+    } else{
+        [self.userLayer updateMultiplier:4];
+    }
 }
 
 @end

@@ -13,7 +13,7 @@
     
 }
 
-+(CCScene *) sceneWithWon:(BOOL)won andScore: (int) score;
-- (id)initWithWon:(BOOL)won andScore: (int) score;
++(CCScene *) sceneWithWon:(BOOL)won andScore: (int) score andBonus: (int) bonus;
+- (id)initWithWon:(BOOL)won andScore: (int) score andBonus: (int) bonus;
 
 @end

@@ -22,20 +22,14 @@ static const int NUMORGS = 3;
         //Loads the list of all organismss into factory list
         factoryList = [[NSArray alloc] init];
         
-        //NSString* fileName = [[NSString alloc] initWithFormat:@"OrganismsLevel2"];
         NSString* fileName = [[NSString alloc] initWithFormat:@"Levels"];
         NSString* path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"plist"];
         NSDictionary* plistDictionary = [NSDictionary dictionaryWithContentsOfFile:path];
-        //factoryList = [plistDictionary allValues];
-        //_decay = 60;
         
         Level* curLevel = [[LevelManager sharedInstance] currentLevel];
         NSArray* temp = [[NSArray alloc] initWithArray: plistDictionary[curLevel.ecosystem]];
-        NSLog(@"%d", temp.count);
         factoryList = temp[curLevel.levelNum-1];
-        NSLog(@"%d", factoryList.count);
-        NSNumber *dec = temp[3];
-        _decay = dec.intValue;
+        _decay = [temp[3] intValue];
         
         return self;
     }

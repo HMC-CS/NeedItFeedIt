@@ -417,7 +417,11 @@
 		</array>
 		<array>
 			<string>seal</string>
-			<integer>30</integer>
+			<integer>20</integer>
+		</array>
+		<array>
+			<string>human</string>
+			<integer>10</integer>
 		</array>
 	</array>
 	<key>squid</key>
