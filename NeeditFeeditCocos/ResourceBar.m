@@ -29,7 +29,7 @@ static const int PERCENT_DECAY = 5;
     NSArray* resources;
 }
 
--(id) initGivenResources:(NSArray*) resource andDecay: (int) decay{
+-(id) initGivenResources:(NSArray*) resource{
     if (self = [super init]) {
         
         resources = [[NSArray alloc] initWithArray:resource];
@@ -63,15 +63,12 @@ static const int PERCENT_DECAY = 5;
         //Starts bar at 50%
         [self updateBar:50.0];
         
-        //Schedule decreasing of resource bars
-        [self schedule:@selector(decreaseUpdate:) interval:decay];
-        
         return self;
     }
     return nil;
 }
 
--(void) decreaseUpdate:(ccTime)delta{
+-(void) decreaseUpdate{
     if (percentage>=PERCENT_DECAY) {
         [self updateBar:-PERCENT_DECAY];
     }else{
@@ -98,6 +95,10 @@ static const int PERCENT_DECAY = 5;
     }
     else
         [innerBar setTextureRect: CGRectMake(0, 0, BAR_WIDTH * percentage / 100, BAR_HEIGHT * 0.5)];
+}
+
+-(float) getPercentage{
+    return percentage;
 }
 
 -(ccColor3B)colorFromRed: (float)redFrac Green: (float)greenFrac Blue: (float)blueFrac
@@ -135,7 +136,7 @@ static const int PERCENT_DECAY = 5;
 
 -(void) checkDeath{
     if (percentage<=0) {
-        CCScene *loseScene = [GameOverLayer sceneWithWon:NO andScore:0];
+        CCScene *loseScene = [GameOverLayer sceneWithWon:NO andScore:0 andBonus:0];
         [[CCDirector sharedDirector] replaceScene:loseScene];
     }
 }

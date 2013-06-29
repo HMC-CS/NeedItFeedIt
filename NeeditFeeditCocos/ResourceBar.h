@@ -14,12 +14,10 @@
     
 }
 
-
--(id) initGivenResources:(NSArray*) resource andDecay: (int) decay;
-
-// Fill up the bars depending on percentage
+-(id) initGivenResources:(NSArray*) resource;
+-(void) decreaseUpdate;
 -(void)updateBar:(float)addedPercentage;
-
+-(float) getPercentage;
 -(BOOL) checkSuccess;
 
 @end

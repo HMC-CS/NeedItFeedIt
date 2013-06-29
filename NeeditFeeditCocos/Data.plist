@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Forest</key>
+	<dict>
+		<key>unlocked</key>
+		<true/>
+		<key>Level1</key>
+		<integer>0</integer>
+		<key>Level2</key>
+		<integer>0</integer>
+		<key>Level3</key>
+		<integer>0</integer>
+	</dict>
+	<key>Ocean</key>
+	<dict>
+		<key>unlocked</key>
+		<true/>
+		<key>Level1</key>
+		<integer>0</integer>
+		<key>Level2</key>
+		<integer>0</integer>
+		<key>Level3</key>
+		<integer>0</integer>
+	</dict>
+	<key>Desert</key>
+	<dict>
+		<key>unlocked</key>
+		<true/>
+		<key>Level1</key>
+		<integer>0</integer>
+		<key>Level2</key>
+		<integer>0</integer>
+		<key>Level3</key>
+		<integer>0</integer>
+	</dict>
+	<key>Savanna</key>
+	<dict>
+		<key>unlocked</key>
+		<true/>
+		<key>Level1</key>
+		<integer>0</integer>
+		<key>Level2</key>
+		<integer>0</integer>
+		<key>Level3</key>
+		<integer>0</integer>
+	</dict>
+	<key>Arctic</key>
+	<dict>
+		<key>unlocked</key>
+		<true/>
+		<key>Level1</key>
+		<integer>0</integer>
+		<key>Level2</key>
+		<integer>0</integer>
+		<key>Level3</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>
