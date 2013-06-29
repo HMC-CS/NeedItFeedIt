@@ -16,5 +16,6 @@
 - (void)nextLevel;
 -(void) startAtLevel: (NSString*) ecosystem;
 - (void)reset;
+-(BOOL) atMaxLevel;
 
 @end

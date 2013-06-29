@@ -74,5 +74,12 @@
     }
 }
 
+-(BOOL) atMaxLevel{
+    if (currentLevelIndex == (levels.count-1)) {
+        return true;
+    }
+    return false;
+}
+
 
 @end

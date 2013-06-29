@@ -14,6 +14,7 @@ static const int HEIGHTSCALE = 0.97;
 @implementation UserLayer{
     CCLabelTTF* timeLabel;
     CCLabelTTF* scoreLabel;
+    CCLabelTTF* multiLabel;
     int endValue;
     double delta;
 }
@@ -29,8 +30,15 @@ static const int HEIGHTSCALE = 0.97;
         timeLabel.color = ccc3(68, 14, 98);
         
         scoreLabel = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
-        scoreLabel.position = ccp(3*size.width/6, size.height*HEIGHTSCALE);
+        scoreLabel.position = ccp(3*size.width/12, size.height*HEIGHTSCALE);
         scoreLabel.color = ccc3(68, 14, 98);
+        
+        multiLabel = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
+        multiLabel.position = ccp(3*size.width/6, size.height*HEIGHTSCALE);
+        multiLabel.color = ccc3(68, 14, 98);;
+        
+        _multiplier = 1;
+        multiLabel.string = [NSString stringWithFormat:@"Multiplier: x%d", _multiplier];
         
         //Add pause button in
         CCMenuItemImage* pause  = [CCMenuItemImage itemWithNormalImage:@"pause.png" selectedImage:@"pausesel.png" target:self selector:@selector(pausePressed:)];
@@ -41,6 +49,7 @@ static const int HEIGHTSCALE = 0.97;
         [self updatePoints:0];
         [self addChild: timeLabel];
         [self addChild: scoreLabel];
+        [self addChild: multiLabel];
         [self addChild: pauseMenu];
         
         self.touchEnabled = YES;
@@ -65,6 +74,11 @@ static const int HEIGHTSCALE = 0.97;
 
 -(void) pausePressed: (id) sender{
     [[CCDirector sharedDirector] pushScene:[PauseLayer node]];
+}
+
+-(void) updateMultiplier:(int)newMulti{
+    _multiplier = newMulti;
+    multiLabel.string = [NSString stringWithFormat:@"Multiplier: x%d", _multiplier];
 }
 
 @end
