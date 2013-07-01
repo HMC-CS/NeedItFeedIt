@@ -198,17 +198,21 @@ static const int POINTS_PER_RESOURCE = 10;
     
     //If a target org is selected, checks if the resource is one of the needed resources
     if (targetOrg!=nil) {
+        BOOL fed = NO;
         for (int i=0; i<targetOrg.neededResources.count; i++) {
             NSArray* temp = targetOrg.neededResources[i];
             if ([temp[0] isEqualToString:resource.name]) {
+                fed = YES;
                 [resources removeObject:resource];
                 [resource removeFromParentAndCleanup:YES];
                 [targetOrg highlight];
                 ResourceBar* current = targetOrg.resourceBars[i];
-                NSNumber *freq = temp[1];
-                [current updateBar: (100.0-freq.floatValue)/10.0];
-                self.userLayer.points += (POINTS_PER_RESOURCE*self.userLayer.multiplier);
-                [_userLayer updatePoints:self.userLayer.points];
+                if (![current checkSuccess]){
+                    NSNumber *freq = temp[1];
+                    [current updateBar: (100.0-freq.floatValue)/10.0];
+                    self.userLayer.points += (POINTS_PER_RESOURCE*self.userLayer.multiplier);
+                    [_userLayer updatePoints:self.userLayer.points];
+                }
                 
                 break;
             }
@@ -236,9 +240,11 @@ static const int POINTS_PER_RESOURCE = 10;
             CCScene *loseScene = [GameOverLayer sceneWithWon:YES andScore:self.userLayer.points andBonus: 300];
             [[CCDirector sharedDirector] replaceScene:loseScene];
         }
-        self.userLayer.points -= POINTS_PER_RESOURCE/2;
-        [_userLayer updatePoints:self.userLayer.points];
-        [self animateRemoveResource:resource];
+        if (!fed) {
+            self.userLayer.points -= POINTS_PER_RESOURCE/2;
+            [_userLayer updatePoints:self.userLayer.points];
+            [self animateRemoveResource:resource];
+        }
         
     }
     else

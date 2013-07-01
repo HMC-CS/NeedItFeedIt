@@ -24,14 +24,18 @@
 - (id)initWithWon:(BOOL)won andScore: (int) score andBonus: (int) bonus{
     if (self = [super init]) {
         
+        //Get the window size for alignment later
         CGSize size = [[CCDirector sharedDirector] winSize];
         
+        //Get the dictionary with the information for the level
         Level* curLevel = [[LevelManager sharedInstance] currentLevel];
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *path = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"Data.plist"]];
         NSMutableDictionary* plistDictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
         NSMutableDictionary* current = [[NSMutableDictionary alloc] initWithDictionary: plistDictionary[curLevel.ecosystem]];
+        
+        //If you have a new highscore, add it to the Data.plist
         NSString* level = [[NSString alloc] initWithFormat:@"Level%i", curLevel.levelNum];
         int bestScore = [current[level] intValue];
         if ((score+ bonus)>bestScore) {
@@ -42,10 +46,12 @@
             NSLog(@"new high score %i", [current[level] intValue]);
         }
         
+        
         NSString * message;
         NSString* nextLevel = [[NSString alloc] initWithFormat:@"Retry Level"];
         if (won) {
             
+            //Check if they won the game or if they just beat the level
             if (![[LevelManager sharedInstance] atMaxLevel]) {
                 nextLevel = @"Next Level";
                 message = @"You Won!";
@@ -54,18 +60,18 @@
                 message = @"You Beat the Game!";
             }
             
+            //Check if need to unlock next ecosystem
             Level* curLevel = [[LevelManager sharedInstance] currentLevel];
-            if (curLevel.levelNum == 1) {
-                if (![current[@"unlocked"] boolValue]){
-                    NSLog(@"Level Unlocked");
-                    current = plistDictionary[curLevel.ecosystem];
-                    [current setValue: [NSNumber numberWithBool:YES] forKey:@"unlocked"];
-                    [plistDictionary setValue:current forKey:curLevel.ecosystem];
+            if (curLevel.levelNum == 1.0) {
+                if ([current[@"unlocked"] intValue] == 1){
+                    NSMutableDictionary* curDict = plistDictionary[curLevel.ecosystem];
+                    [curDict setValue: [NSNumber numberWithBool:YES] forKey:@"unlocked"];
+                    [plistDictionary setValue:curDict forKey:curLevel.ecosystem];
                     [plistDictionary writeToFile:path atomically:YES];
                 }
             }
             
-            
+            //If they earned a bonus, create score and bonus counting labels for a cool effect
             if (bonus!=0) {
                 CGPoint pt = ccp(size.width/2, 5*size.height/8);
                 CounterLabel* bonusLabel = [CounterLabel labelWithFont:@"Marker Felt"
@@ -81,7 +87,7 @@
                 [self addChild:scoreLabel];
                 [scoreLabel countTo:score+bonus withDuration:0.5 afterDelay:1.0];
                 
-
+            //If they didn't get a bonus, display score in a normal label
             }else{
                 NSString* scoring = [[NSString alloc] initWithFormat:@"Score: %d", score];
                 CCLabelTTF* score = [[CCLabelTTF alloc] initWithString:scoring fontName:@"Marker Felt" fontSize:50];
@@ -90,6 +96,7 @@
                 [self addChild: score];
             }
             
+            //Display the high score
             NSString* highScores = [[NSString alloc] initWithFormat:@"High Scoore: %d", bestScore];
             CCLabelTTF* highScore  =  [[CCLabelTTF alloc] initWithString:highScores fontName:@"Marker Felt" fontSize:50];
             highScore.position = ccp(size.width/2, size.height/2);
