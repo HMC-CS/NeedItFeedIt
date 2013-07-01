@@ -48,9 +48,23 @@
         CCMenuItemImage *Savanna = nil;
         CCMenuItemImage *Arctic = nil;
         
+        NSError *error;
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *path = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"Data.plist"]];
+        
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        
+        if (![fileManager fileExistsAtPath: path]){
+            NSLog(@"File don't exists at path %@", path);
+            
+            NSString *plistPathBundle = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
+            
+            [fileManager copyItemAtPath:plistPathBundle toPath: path error:&error];
+        }else{
+            NSLog(@"File exists at path:%@", path);
+        }
 
-        NSString* fileName = [[NSString alloc] initWithFormat:@"Data"];
-        NSString* path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"plist"];
         NSDictionary* plistDictionary = [NSDictionary dictionaryWithContentsOfFile:path];
         
         NSDictionary* forest = plistDictionary[@"Forest"];
