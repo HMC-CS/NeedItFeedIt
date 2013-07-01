@@ -10,6 +10,8 @@
 // Import the interfaces
 #import "IntroLayer.h"
 #import "MenuLayer.h"
+#import "SimpleAudioEngine.h"
+#import "CDAudioManager.h"
 
 
 #pragma mark - IntroLayer
@@ -40,6 +42,10 @@
 
 		// ask director for the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
+        
+        //Create audio engine and load background music
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"one.mp3" loop:YES];
+        [CDAudioManager sharedManager].backgroundMusic.volume = 1.0;
 
 		CCSprite *background;
 		

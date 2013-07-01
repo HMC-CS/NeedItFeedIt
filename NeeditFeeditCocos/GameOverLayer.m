@@ -24,6 +24,7 @@
 - (id)initWithWon:(BOOL)won andScore: (int) score andBonus: (int) bonus{
     if (self = [super init]) {
         
+        
         //Get the window size for alignment later
         CGSize size = [[CCDirector sharedDirector] winSize];
         
@@ -97,7 +98,7 @@
             }
             
             //Display the high score
-            NSString* highScores = [[NSString alloc] initWithFormat:@"High Scoore: %d", bestScore];
+            NSString* highScores = [[NSString alloc] initWithFormat:@"High Score: %d", bestScore];
             CCLabelTTF* highScore  =  [[CCLabelTTF alloc] initWithString:highScores fontName:@"Marker Felt" fontSize:50];
             highScore.position = ccp(size.width/2, size.height/2);
             highScore.color = ccc3(68, 14, 98);
