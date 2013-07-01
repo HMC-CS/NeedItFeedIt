@@ -56,7 +56,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Hobo.TTF</string>
+		<string>Hobo.ttf</string>
 	</array>
 </dict>
 </plist>
