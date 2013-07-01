@@ -32,25 +32,25 @@ static const int HEIGHTSCALE = 0.97;
         timeLabel = [CCSprite spriteWithFile:@"timer.png"];
         timeLabel.position = ccp(5*size.width/6, size.height*HEIGHTSCALE);
         
-        timeText = [CCLabelTTF labelWithString:@"" fontName:@"Hobo" fontSize:36];
-        timeText.position = ccp(5*size.width/6 + timeLabel.contentSize.width + 10, size.height*HEIGHTSCALE);
-        timeText.color = ccc3(68, 14, 98);
+        timeText = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
+        timeText.position = ccp(5*size.width/6 + timeLabel.contentSize.width + 20, size.height*HEIGHTSCALE);
+        timeText.color = ccc3(48, 0, 68);
         
         //Create score label
         scoreLabel = [CCSprite spriteWithFile:@"score.png"];
-        scoreLabel.position = ccp(1*size.width/5, size.height*HEIGHTSCALE);
+        scoreLabel.position = ccp(3*size.width/12, size.height*HEIGHTSCALE);
         
-        scoreText = [CCLabelTTF labelWithString:@"" fontName:@"Hobo" fontSize:36];
-        scoreText.position = ccp(1*size.width/5 + scoreLabel.contentSize.width/2 + 10, size.height*HEIGHTSCALE);
-        scoreText.color = ccc3(68, 14, 98);
+        scoreText = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
+        scoreText.position = ccp(3*size.width/12 + scoreLabel.contentSize.width/2 + 10, size.height*HEIGHTSCALE);
+        scoreText.color = ccc3(48, 0, 68);
         
         //Create multiplier label
         multiLabel = [CCSprite spriteWithFile:@"multiplier.png"];
         multiLabel.position = ccp(3*size.width/6, size.height*HEIGHTSCALE);
         
-        multiText = [CCLabelTTF labelWithString:@"" fontName:@"Hobo" fontSize:36];
-        multiText.position = ccp(3*size.width/6 + multiLabel.contentSize.width/2 + 15, size.height*HEIGHTSCALE);
-        multiText.color = ccc3(68, 14, 98);
+        multiText = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
+        multiText.position = ccp(3*size.width/6 + multiLabel.contentSize.width/2 + 20, size.height*HEIGHTSCALE);
+        multiText.color = ccc3(48, 0, 68);
         
         _multiplier = 1;
         multiText.string = [NSString stringWithFormat:@" x%d", _multiplier];
