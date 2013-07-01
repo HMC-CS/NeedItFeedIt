@@ -27,8 +27,9 @@
         CGSize size = [[CCDirector sharedDirector] winSize];
         
         Level* curLevel = [[LevelManager sharedInstance] currentLevel];
-        NSString* fileName = [[NSString alloc] initWithFormat:@"Data"];
-        NSString* path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"plist"];
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *path = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"Data.plist"]];
         NSMutableDictionary* plistDictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
         NSMutableDictionary* current = [[NSMutableDictionary alloc] initWithDictionary: plistDictionary[curLevel.ecosystem]];
         NSString* level = [[NSString alloc] initWithFormat:@"Level%i", curLevel.levelNum];
