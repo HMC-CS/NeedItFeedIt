@@ -102,12 +102,10 @@
 		EF737E5E176BDD4600EF4E4D /* bunny.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E43176BDD4500EF4E4D /* bunny.png */; };
 		EF737E5F176BDD4600EF4E4D /* bush.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E44176BDD4500EF4E4D /* bush.png */; };
 		EF737E60176BDD4600EF4E4D /* cactus.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E45176BDD4500EF4E4D /* cactus.png */; };
-		EF737E61176BDD4600EF4E4D /* cow.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E46176BDD4500EF4E4D /* cow.png */; };
 		EF737E62176BDD4600EF4E4D /* deer.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E47176BDD4500EF4E4D /* deer.png */; };
 		EF737E63176BDD4600EF4E4D /* elephant.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E48176BDD4500EF4E4D /* elephant.png */; };
 		EF737E64176BDD4600EF4E4D /* flower.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E49176BDD4500EF4E4D /* flower.png */; };
 		EF737E66176BDD4600EF4E4D /* giraffe.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E4B176BDD4500EF4E4D /* giraffe.png */; };
-		EF737E67176BDD4600EF4E4D /* grass1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E4C176BDD4500EF4E4D /* grass1.png */; };
 		EF737E68176BDD4600EF4E4D /* lion.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E4D176BDD4500EF4E4D /* lion.png */; };
 		EF737E6A176BDD4600EF4E4D /* moss.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E4F176BDD4500EF4E4D /* moss.png */; };
 		EF737E6D176BDD4600EF4E4D /* pinetree.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E52176BDD4500EF4E4D /* pinetree.png */; };
@@ -115,7 +113,6 @@
 		EF737E72176BDD4600EF4E4D /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E57176BDD4600EF4E4D /* sun.png */; };
 		EF737E73176BDD4600EF4E4D /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E58176BDD4600EF4E4D /* tree.png */; };
 		EF737E74176BDD4600EF4E4D /* water.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E59176BDD4600EF4E4D /* water.png */; };
-		EF737E75176BDD4600EF4E4D /* water1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF737E5A176BDD4600EF4E4D /* water1.png */; };
 		EF7A6F1B17629CD900F81B3C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7A6F1A17629CD900F81B3C /* QuartzCore.framework */; };
 		EF7A6F1D17629CD900F81B3C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7A6F1C17629CD900F81B3C /* OpenGLES.framework */; };
 		EF7A6F1F17629CD900F81B3C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7A6F1E17629CD900F81B3C /* OpenAL.framework */; };
@@ -421,12 +418,10 @@
 		EF737E43176BDD4500EF4E4D /* bunny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bunny.png; sourceTree = "<group>"; };
 		EF737E44176BDD4500EF4E4D /* bush.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bush.png; sourceTree = "<group>"; };
 		EF737E45176BDD4500EF4E4D /* cactus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cactus.png; sourceTree = "<group>"; };
-		EF737E46176BDD4500EF4E4D /* cow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cow.png; sourceTree = "<group>"; };
 		EF737E47176BDD4500EF4E4D /* deer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deer.png; sourceTree = "<group>"; };
 		EF737E48176BDD4500EF4E4D /* elephant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant.png; sourceTree = "<group>"; };
 		EF737E49176BDD4500EF4E4D /* flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flower.png; sourceTree = "<group>"; };
 		EF737E4B176BDD4500EF4E4D /* giraffe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giraffe.png; sourceTree = "<group>"; };
-		EF737E4C176BDD4500EF4E4D /* grass1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass1.png; sourceTree = "<group>"; };
 		EF737E4D176BDD4500EF4E4D /* lion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lion.png; sourceTree = "<group>"; };
 		EF737E4F176BDD4500EF4E4D /* moss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moss.png; sourceTree = "<group>"; };
 		EF737E52176BDD4500EF4E4D /* pinetree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinetree.png; sourceTree = "<group>"; };
@@ -434,7 +429,6 @@
 		EF737E57176BDD4600EF4E4D /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
 		EF737E58176BDD4600EF4E4D /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		EF737E59176BDD4600EF4E4D /* water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water.png; sourceTree = "<group>"; };
-		EF737E5A176BDD4600EF4E4D /* water1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water1.png; sourceTree = "<group>"; };
 		EF7A6F1717629CD900F81B3C /* NeeditFeeditCocos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeeditFeeditCocos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7A6F1A17629CD900F81B3C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EF7A6F1C17629CD900F81B3C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -843,64 +837,64 @@
 			isa = PBXGroup;
 			children = (
 				EFCCB9951781FE0200A4724F /* antelope@2x.png */,
-				EFCCB9D11781FF9500A4724F /* startSel@2x.png */,
-				EFCCB9971781FE0C00A4724F /* bear@2x.png */,
-				EFCCB9CF1781FF8E00A4724F /* start@2x.png */,
-				EFCCB9CB1781FF7000A4724F /* pinetree@2x.png */,
-				EFCCB9D71781FFAC00A4724F /* tree@2x.png */,
-				EFCCB9D51781FFA400A4724F /* title@2x.png */,
-				EFCCB9C91781FF6700A4724F /* pickLevelTitle@2x.png */,
-				EFCCB9D31781FF9C00A4724F /* sun@2x.png */,
-				EFCCB9CD1781FF8400A4724F /* soil@2x.png */,
-				EFCCB9991781FE1600A4724F /* coyote@2x.png */,
+				0A6DB594177E1AB300B5B37B /* Arctic@2x.png */,
 				EFCCB9D91782005B00A4724F /* background2@2x.png */,
-				EFCCB9C71781FF5900A4724F /* moss@2x.png */,
-				EFCCB9B91781FF0200A4724F /* bush@2x.png */,
-				EFCCB9C31781FF3A00A4724F /* giraffe@2x.png */,
-				EFCCB9C51781FF4D00A4724F /* lion@2x.png */,
-				EFCCB9BB1781FF0A00A4724F /* cactus@2x.png */,
-				EFCCB9C11781FF3100A4724F /* flower@2x.png */,
-				EFCCB9BF1781FF1F00A4724F /* elephant@2x.png */,
-				EFCCB9BD1781FF1600A4724F /* deer@2x.png */,
+				EFCCB9971781FE0C00A4724F /* bear@2x.png */,
+				0A6DB595177E1AB300B5B37B /* bugs@2x.png */,
 				EFCCB9B71781FEF900A4724F /* bunny@2x.png */,
-				EFCCB9B11781FE9900A4724F /* vulture@2x.png */,
+				EFCCB9B91781FF0200A4724F /* bush@2x.png */,
+				EFCCB9BB1781FF0A00A4724F /* cactus@2x.png */,
+				EFCCB9991781FE1600A4724F /* coyote@2x.png */,
+				0A6DB596177E1AB300B5B37B /* crocodile@2x.png */,
+				EFCCB9BD1781FF1600A4724F /* deer@2x.png */,
+				0A6DB597177E1AB300B5B37B /* Desert@2x.png */,
+				EFCCB9BF1781FF1F00A4724F /* elephant@2x.png */,
+				0A6DB598177E1AB300B5B37B /* fish@2x.png */,
+				EFCCB9C11781FF3100A4724F /* flower@2x.png */,
+				0A6DB599177E1AB300B5B37B /* Forest@2x.png */,
+				EFCCB9C31781FF3A00A4724F /* giraffe@2x.png */,
 				EFCCB99B1781FE2500A4724F /* grass@2x.png */,
-				EFCCB9B31781FEA700A4724F /* wolf@2x.png */,
-				EFCCB9AD1781FE8500A4724F /* snake@2x.png */,
-				EFCCB9B51781FEAE00A4724F /* zebra@2x.png */,
-				EFCCB9AF1781FE9000A4724F /* squirrel@2x.png */,
-				EFCCB9AB1781FE7C00A4724F /* shark@2x.png */,
 				EFCCB99D1781FE2D00A4724F /* hawk@2x.png */,
+				0A6DB59A177E1AB300B5B37B /* human@2x.png */,
 				EFCCB99F1781FE3700A4724F /* hyena@2x.png */,
 				EFCCB9A11781FE4100A4724F /* jackrabbit@2x.png */,
-				EFCCB9A31781FE5000A4724F /* orca@2x.png */,
-				EFCCB9A91781FE7100A4724F /* rodent@2x.png */,
-				EFCCB9A71781FE6700A4724F /* polarbear@2x.png */,
-				EFCCB9A51781FE5900A4724F /* penguin@2x.png */,
-				0A6DB59E177E1AB300B5B37B /* marlin@2x.png */,
-				0A6DB594177E1AB300B5B37B /* Arctic@2x.png */,
-				0A6DB595177E1AB300B5B37B /* bugs@2x.png */,
-				0A6DB596177E1AB300B5B37B /* crocodile@2x.png */,
-				0A6DB597177E1AB300B5B37B /* Desert@2x.png */,
-				0A6DB598177E1AB300B5B37B /* fish@2x.png */,
-				0A6DB599177E1AB300B5B37B /* Forest@2x.png */,
-				0A6DB59A177E1AB300B5B37B /* human@2x.png */,
 				0A6DB59B177E1AB300B5B37B /* jellyfish@2x.png */,
 				0A6DB59C177E1AB300B5B37B /* krill@2x.png */,
+				EFCCB9C51781FF4D00A4724F /* lion@2x.png */,
 				0A6DB59D177E1AB300B5B37B /* lizard@2x.png */,
+				0A6DB59E177E1AB300B5B37B /* marlin@2x.png */,
+				EFCCB9C71781FF5900A4724F /* moss@2x.png */,
 				0A6DB59F177E1AB300B5B37B /* narwhal@2x.png */,
 				0A6DB5A0177E1AB300B5B37B /* Ocean@2x.png */,
+				EFCCB9A31781FE5000A4724F /* orca@2x.png */,
+				EFCCB9A51781FE5900A4724F /* penguin@2x.png */,
+				EFCCB9C91781FF6700A4724F /* pickLevelTitle@2x.png */,
+				EFCCB9CB1781FF7000A4724F /* pinetree@2x.png */,
 				0A6DB5A1177E1AB300B5B37B /* plankton@2x.png */,
 				0A6DB5A2177E1AB300B5B37B /* plant@2x.png */,
+				EFCCB9A71781FE6700A4724F /* polarbear@2x.png */,
+				EFCCB9A91781FE7100A4724F /* rodent@2x.png */,
 				0A6DB5A3177E1AB300B5B37B /* Savanna@2x.png */,
 				0A6DB5A4177E1AB300B5B37B /* seal@2x.png */,
 				0A6DB5A5177E1AB400B5B37B /* seaweed@2x.png */,
+				EFCCB9AB1781FE7C00A4724F /* shark@2x.png */,
 				0A6DB5A6177E1AB400B5B37B /* shellfish@2x.png */,
 				0A6DB5A7177E1AB400B5B37B /* smallfish@2x.png */,
+				EFCCB9AD1781FE8500A4724F /* snake@2x.png */,
+				EFCCB9CD1781FF8400A4724F /* soil@2x.png */,
 				0A6DB5A8177E1AB400B5B37B /* squid@2x.png */,
+				EFCCB9AF1781FE9000A4724F /* squirrel@2x.png */,
+				EFCCB9CF1781FF8E00A4724F /* start@2x.png */,
+				EFCCB9D11781FF9500A4724F /* startSel@2x.png */,
+				EFCCB9D31781FF9C00A4724F /* sun@2x.png */,
+				EFCCB9D51781FFA400A4724F /* title@2x.png */,
 				0A6DB5A9177E1AB400B5B37B /* tortoise@2x.png */,
+				EFCCB9D71781FFAC00A4724F /* tree@2x.png */,
+				EFCCB9B11781FE9900A4724F /* vulture@2x.png */,
 				0A6DB5AA177E1AB400B5B37B /* walrus@2x.png */,
 				0A6DB5AB177E1AB400B5B37B /* whale@2x.png */,
+				EFCCB9B31781FEA700A4724F /* wolf@2x.png */,
+				EFCCB9B51781FEAE00A4724F /* zebra@2x.png */,
 			);
 			name = "Retina Images";
 			path = "redemimages (1)";
@@ -943,7 +937,6 @@
 			isa = PBXGroup;
 			children = (
 				EFE37CA2177C273D001A124A /* grass.png */,
-				EF737E4C176BDD4500EF4E4D /* grass1.png */,
 				EFE37CA4177C28FC001A124A /* grass2.png */,
 				EF737E58176BDD4600EF4E4D /* tree.png */,
 				EFE37C90177B6C41001A124A /* zebra.png */,
@@ -1038,7 +1031,6 @@
 				0AF163F21773B82A0089D59D /* Savanna */,
 				0AF163F01773B8170089D59D /* Arctic */,
 				0A91A7651770C30D003BDFF7 /* Retina Images */,
-				EF737E46176BDD4500EF4E4D /* cow.png */,
 				0AE8A49D177D3AC2006F4076 /* glow.png */,
 				0ADC0E13177B86A40009CD55 /* marlin.png */,
 				EF737E44176BDD4500EF4E4D /* bush.png */,
@@ -1048,7 +1040,6 @@
 				EF737E55176BDD4500EF4E4D /* soil.png */,
 				EF737E57176BDD4600EF4E4D /* sun.png */,
 				EF737E59176BDD4600EF4E4D /* water.png */,
-				EF737E5A176BDD4600EF4E4D /* water1.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -1556,12 +1547,10 @@
 				EF737E5E176BDD4600EF4E4D /* bunny.png in Resources */,
 				EF737E5F176BDD4600EF4E4D /* bush.png in Resources */,
 				EF737E60176BDD4600EF4E4D /* cactus.png in Resources */,
-				EF737E61176BDD4600EF4E4D /* cow.png in Resources */,
 				EF737E62176BDD4600EF4E4D /* deer.png in Resources */,
 				EF737E63176BDD4600EF4E4D /* elephant.png in Resources */,
 				EF737E64176BDD4600EF4E4D /* flower.png in Resources */,
 				EF737E66176BDD4600EF4E4D /* giraffe.png in Resources */,
-				EF737E67176BDD4600EF4E4D /* grass1.png in Resources */,
 				EF737E68176BDD4600EF4E4D /* lion.png in Resources */,
 				EF737E6A176BDD4600EF4E4D /* moss.png in Resources */,
 				EF737E6D176BDD4600EF4E4D /* pinetree.png in Resources */,
@@ -1569,7 +1558,6 @@
 				EF737E72176BDD4600EF4E4D /* sun.png in Resources */,
 				EF737E73176BDD4600EF4E4D /* tree.png in Resources */,
 				EF737E74176BDD4600EF4E4D /* water.png in Resources */,
-				EF737E75176BDD4600EF4E4D /* water1.png in Resources */,
 				0A2F8FC4176D162000A98CC7 /* backbar.png in Resources */,
 				0A2F8FC5176D162000A98CC7 /* innerBar.png in Resources */,
 				0A2F8FC7176D314F00A98CC7 /* fillBar.png in Resources */,
