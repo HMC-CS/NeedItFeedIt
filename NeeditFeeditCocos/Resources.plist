@@ -419,10 +419,6 @@
 			<string>seal</string>
 			<integer>20</integer>
 		</array>
-		<array>
-			<string>human</string>
-			<integer>10</integer>
-		</array>
 	</array>
 	<key>squid</key>
 	<array>
