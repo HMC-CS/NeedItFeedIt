@@ -16,7 +16,7 @@
 	<key>Ocean</key>
 	<dict>
 		<key>unlocked</key>
-		<true/>
+		<false/>
 		<key>Level1</key>
 		<integer>0</integer>
 		<key>Level2</key>
@@ -27,7 +27,7 @@
 	<key>Desert</key>
 	<dict>
 		<key>unlocked</key>
-		<true/>
+		<false/>
 		<key>Level1</key>
 		<integer>0</integer>
 		<key>Level2</key>
@@ -38,7 +38,7 @@
 	<key>Savanna</key>
 	<dict>
 		<key>unlocked</key>
-		<true/>
+		<false/>
 		<key>Level1</key>
 		<integer>0</integer>
 		<key>Level2</key>
@@ -49,7 +49,7 @@
 	<key>Arctic</key>
 	<dict>
 		<key>unlocked</key>
-		<true/>
+		<false/>
 		<key>Level1</key>
 		<integer>0</integer>
 		<key>Level2</key>

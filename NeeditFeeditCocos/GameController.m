@@ -62,7 +62,7 @@ static const int POINTS_PER_RESOURCE = 10;
         [self addOrganismsAndResources];
         
         //Schedule new resources to be added at specific time interval
-        [self schedule:@selector(update:) interval:0.75];
+        [self schedule:@selector(update:) interval:0.70];
         
         //Start the timer
         [self startStopwatch];
@@ -153,7 +153,7 @@ static const int POINTS_PER_RESOURCE = 10;
     [self addChild:newResource z:1];
     
     // Determine speed of the resource
-    int minDuration = 7.0;
+    int minDuration = 5.0;
     int maxDuration = 10.0;
     int rangeDuration = maxDuration - minDuration;
     int actualDuration = (arc4random() % rangeDuration) + minDuration;

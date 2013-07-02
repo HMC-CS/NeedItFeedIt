@@ -77,6 +77,7 @@
 		0AF1FB481763A1DD009CF2E6 /* ResourceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1FB471763A1DD009CF2E6 /* ResourceFactory.m */; };
 		0AF1FB4B1763A1F1009CF2E6 /* ResourceBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1FB4A1763A1F1009CF2E6 /* ResourceBar.m */; };
 		0AF1FB4E1763A226009CF2E6 /* UserLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1FB4D1763A226009CF2E6 /* UserLayer.m */; };
+		19BA6384178381A40035569F /* glow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 19BA6383178381A40035569F /* glow@2x.png */; };
 		EF494940177E01C4004FDA42 /* startSel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF49493F177E01C4004FDA42 /* startSel.png */; };
 		EF494942177E0215004FDA42 /* arcticsel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF494941177E0215004FDA42 /* arcticsel.png */; };
 		EF494944177E022A004FDA42 /* desertsel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF494943177E022A004FDA42 /* desertsel.png */; };
@@ -422,6 +423,7 @@
 		0AF1FB4A1763A1F1009CF2E6 /* ResourceBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceBar.m; sourceTree = "<group>"; };
 		0AF1FB4C1763A226009CF2E6 /* UserLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLayer.h; sourceTree = "<group>"; };
 		0AF1FB4D1763A226009CF2E6 /* UserLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLayer.m; sourceTree = "<group>"; };
+		19BA6383178381A40035569F /* glow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glow@2x.png"; sourceTree = "<group>"; };
 		EF49493F177E01C4004FDA42 /* startSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startSel.png; sourceTree = "<group>"; };
 		EF494941177E0215004FDA42 /* arcticsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arcticsel.png; sourceTree = "<group>"; };
 		EF494943177E022A004FDA42 /* desertsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desertsel.png; sourceTree = "<group>"; };
@@ -921,6 +923,7 @@
 				EFCCB9C11781FF3100A4724F /* flower@2x.png */,
 				0A6DB599177E1AB300B5B37B /* Forest@2x.png */,
 				EFCCB9C31781FF3A00A4724F /* giraffe@2x.png */,
+				19BA6383178381A40035569F /* glow@2x.png */,
 				EFCCB99B1781FE2500A4724F /* grass@2x.png */,
 				EFCCB99D1781FE2D00A4724F /* hawk@2x.png */,
 				EF6EE146178374C900F98B27 /* highscore@2x.png */,
@@ -1822,6 +1825,7 @@
 				EF6EE15D1783753F00F98B27 /* retryLevelSel@2x.png in Resources */,
 				EF6EE15F1783754F00F98B27 /* score1@2x.png in Resources */,
 				EF6EE1611783757800F98B27 /* wincase@2x.png in Resources */,
+				19BA6384178381A40035569F /* glow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

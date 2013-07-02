@@ -26,8 +26,7 @@
         
         // Create Instructions Background
         CCSprite *background = [CCSprite spriteWithFile:@"background1.png"];
-        background.scale = 2.0;
-        background.position = ccp(0, 0);
+        background.position = ccp(size.width/2, size.height/2);
         [self addChild:background];
         
         

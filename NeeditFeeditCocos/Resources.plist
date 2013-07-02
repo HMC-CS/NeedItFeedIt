@@ -6,11 +6,11 @@
 	<array>
 		<array>
 			<string>water</string>
-			<integer>10</integer>
+			<integer>30</integer>
 		</array>
 		<array>
 			<string>sun</string>
-			<integer>90</integer>
+			<integer>70</integer>
 		</array>
 	</array>
 	<key>flower</key>
@@ -39,11 +39,11 @@
 	<array>
 		<array>
 			<string>water</string>
-			<string>80</string>
+			<string>70</string>
 		</array>
 		<array>
 			<string>sun</string>
-			<string>20</string>
+			<string>30</string>
 		</array>
 	</array>
 	<key>pinetree</key>
@@ -98,17 +98,6 @@
 		</array>
 		<array>
 			<string>pinetree</string>
-			<integer>50</integer>
-		</array>
-	</array>
-	<key>cow</key>
-	<array>
-		<array>
-			<string>grass</string>
-			<integer>50</integer>
-		</array>
-		<array>
-			<string>water</string>
 			<integer>50</integer>
 		</array>
 	</array>
@@ -237,11 +226,11 @@
 	<array>
 		<array>
 			<string>elephant</string>
-			<integer>30</integer>
+			<integer>40</integer>
 		</array>
 		<array>
 			<string>zebra</string>
-			<integer>70</integer>
+			<integer>60</integer>
 		</array>
 	</array>
 	<key>vulture</key>
@@ -336,33 +325,33 @@
 	<array>
 		<array>
 			<string>sun</string>
-			<integer>80</integer>
+			<integer>70</integer>
 		</array>
 		<array>
 			<string>water</string>
-			<integer>20</integer>
+			<integer>30</integer>
 		</array>
 	</array>
 	<key>shellfish</key>
 	<array>
 		<array>
 			<string>plankton</string>
-			<integer>80</integer>
+			<integer>70</integer>
 		</array>
 		<array>
 			<string>water</string>
-			<integer>20</integer>
+			<integer>30</integer>
 		</array>
 	</array>
 	<key>seaweed</key>
 	<array>
 		<array>
 			<string>sun</string>
-			<integer>80</integer>
+			<integer>70</integer>
 		</array>
 		<array>
 			<string>water</string>
-			<integer>20</integer>
+			<integer>30</integer>
 		</array>
 	</array>
 	<key>smallfish</key>
@@ -402,11 +391,11 @@
 	<array>
 		<array>
 			<string>smallfish</string>
-			<integer>80</integer>
+			<integer>70</integer>
 		</array>
 		<array>
 			<string>jellyfish</string>
-			<integer>20</integer>
+			<integer>30</integer>
 		</array>
 	</array>
 	<key>shark</key>
@@ -417,18 +406,18 @@
 		</array>
 		<array>
 			<string>seal</string>
-			<integer>20</integer>
+			<integer>30</integer>
 		</array>
 	</array>
 	<key>squid</key>
 	<array>
 		<array>
 			<string>fish</string>
-			<integer>70</integer>
+			<integer>60</integer>
 		</array>
 		<array>
 			<string>squid</string>
-			<integer>30</integer>
+			<integer>40</integer>
 		</array>
 	</array>
 	<key>marlin</key>
@@ -475,17 +464,6 @@
 			<integer>50</integer>
 		</array>
 	</array>
-	<key>bird</key>
-	<array>
-		<array>
-			<string>fish</string>
-			<integer>60</integer>
-		</array>
-		<array>
-			<string>krill</string>
-			<integer>40</integer>
-		</array>
-	</array>
 	<key>polarbear</key>
 	<array>
 		<array>
@@ -501,11 +479,11 @@
 	<array>
 		<array>
 			<string>shellfish</string>
-			<integer>80</integer>
+			<integer>70</integer>
 		</array>
 		<array>
 			<string>squid</string>
-			<integer>20</integer>
+			<integer>30</integer>
 		</array>
 	</array>
 	<key>narwhal</key>
