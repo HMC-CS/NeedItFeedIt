@@ -8,6 +8,8 @@
 
 #import "UserLayer.h"
 #import "PauseLayer.h"
+#import "SimpleAudioEngine.h"
+#import "CDAudioManager.h"
 
 static const int HEIGHTSCALE = 0.97;
 
@@ -38,18 +40,18 @@ static const int HEIGHTSCALE = 0.97;
         
         //Create score label
         scoreLabel = [CCSprite spriteWithFile:@"score.png"];
-        scoreLabel.position = ccp(3*size.width/12, size.height*HEIGHTSCALE);
+        scoreLabel.position = ccp(2*size.width/5, size.height*HEIGHTSCALE);
         
         scoreText = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
-        scoreText.position = ccp(3*size.width/12 + scoreLabel.contentSize.width/2 + 40, size.height*HEIGHTSCALE);
+        scoreText.position = ccp(2*size.width/5 + scoreLabel.contentSize.width/2 + 40, size.height*HEIGHTSCALE);
         scoreText.color = ccc3(48, 0, 68);
         
         //Create multiplier label
         multiLabel = [CCSprite spriteWithFile:@"multiplier.png"];
-        multiLabel.position = ccp(3*size.width/6, size.height*HEIGHTSCALE);
+        multiLabel.position = ccp(4*size.width/7, size.height*HEIGHTSCALE);
         
         multiText = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
-        multiText.position = ccp(3*size.width/6 + multiLabel.contentSize.width/2 + 20, size.height*HEIGHTSCALE);
+        multiText.position = ccp(4*size.width/7 + multiLabel.contentSize.width/2 + 20, size.height*HEIGHTSCALE);
         multiText.color = ccc3(48, 0, 68);
         
         _multiplier = 1;
@@ -59,6 +61,15 @@ static const int HEIGHTSCALE = 0.97;
         CCMenuItemImage* pause  = [CCMenuItemImage itemWithNormalImage:@"pause.png" selectedImage:@"pausesel.png" target:self selector:@selector(pausePressed:)];
         CCMenu* pauseMenu = [CCMenu menuWithItems:pause, nil];
         pauseMenu.position = ccp(size.width/11, size.height*HEIGHTSCALE);
+        
+        //Add sound icon
+        CCMenuItem* soundOn = [CCMenuItemImage itemFromNormalImage:@"soundIcon.png" selectedImage:@"soundIcon.png" target:nil selector:nil];
+        CCMenuItem* soundOff = [CCMenuItemImage itemFromNormalImage:@"soundIconMute.png" selectedImage:@"soundOff.png" target:nil selector:nil];
+        CCMenuItemToggle *soundToggle = [CCMenuItemToggle itemWithTarget:self selector:@selector(soundIconPressed:) items:soundOn, soundOff, nil];
+        
+        CCMenu* soundMenu = [CCMenu menuWithItems:soundToggle, nil];
+        soundMenu.position = ccp(size.width/5, size.height*HEIGHTSCALE);
+        
                
         [self updateTimer:0];
         [self updatePoints:0];
@@ -69,6 +80,7 @@ static const int HEIGHTSCALE = 0.97;
         [self addChild: multiLabel];
         [self addChild: multiText];
         [self addChild: pauseMenu];
+        [self addChild: soundMenu];
         
         
         self.touchEnabled = YES;
@@ -98,6 +110,15 @@ static const int HEIGHTSCALE = 0.97;
 -(void) updateMultiplier:(int)newMulti{
     _multiplier = newMulti;
     multiText.string = [NSString stringWithFormat:@" x%d", _multiplier];
+}
+
+-(void) soundIconPressed:(id) sender{
+    // toggle sound on and off
+    if ([CDAudioManager sharedManager].backgroundMusic.volume == 1.0)
+        [CDAudioManager sharedManager].backgroundMusic.volume = 0.0;
+    else
+        [CDAudioManager sharedManager].backgroundMusic.volume = 1.0;
+
 }
 
 @end
