@@ -33,7 +33,7 @@
         
         
         // Create MenuItem
-        CCMenuItemImage *back = [CCMenuItemImage itemWithNormalImage:@"mainMenu.png" selectedImage:@"mainMenuSel.png" block:^(id sender) {
+        CCMenuItem *back = [CCMenuItemImage itemWithNormalImage:@"menu1.png" selectedImage:@"menu2.png" block:^(id sender) {
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[MenuLayer node]]];
         }];
         
