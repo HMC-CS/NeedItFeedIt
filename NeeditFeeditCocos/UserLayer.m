@@ -41,7 +41,7 @@ static const int HEIGHTSCALE = 0.97;
         scoreLabel.position = ccp(3*size.width/12, size.height*HEIGHTSCALE);
         
         scoreText = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
-        scoreText.position = ccp(3*size.width/12 + scoreLabel.contentSize.width/2 + 10, size.height*HEIGHTSCALE);
+        scoreText.position = ccp(3*size.width/12 + scoreLabel.contentSize.width/2 + 40, size.height*HEIGHTSCALE);
         scoreText.color = ccc3(48, 0, 68);
         
         //Create multiplier label
