@@ -48,17 +48,19 @@
         }
         
         
-        NSString * message;
-        NSString* nextLevel = [[NSString alloc] initWithFormat:@"Retry Level"];
+        CCSprite * message;
+        CCSprite * nextLevel = [CCSprite spriteWithFile:@"retryLevel.png"];
+        CCSprite * nextLevelSel = [CCSprite spriteWithFile:@"retryLevelSel.png"];
         if (won) {
             
             //Check if they won the game or if they just beat the level
             if (![[LevelManager sharedInstance] atMaxLevel]) {
-                nextLevel = @"Next Level";
-                message = @"You Won!";
+                nextLevel = [CCSprite spriteWithFile:@"nextLevel.png"];
+                nextLevelSel = [CCSprite spriteWithFile:@"nextLevelSel.png"];
+                message = [CCSprite spriteWithFile:@"wincase.png"];
                 [[LevelManager sharedInstance] nextLevel];
             } else{
-                message = @"You Beat the Game!";
+                message = [CCSprite spriteWithFile:@"beatGame"];
             }
             
             //Check if need to unlock next ecosystem
@@ -90,50 +92,54 @@
                 
             //If they didn't get a bonus, display score in a normal label
             }else{
-                NSString* scoring = [[NSString alloc] initWithFormat:@"Score: %d", score];
-                CCLabelTTF* score = [[CCLabelTTF alloc] initWithString:scoring fontName:@"Marker Felt" fontSize:50];
-                score.position = ccp(size.width/2, 3*size.height/4);
-                score.color = ccc3(68, 14, 98);
-                [self addChild: score];
+                CCSprite* scoreLabel = [CCSprite spriteWithFile:@"score1.png"];
+                NSString* scoring = [[NSString alloc] initWithFormat:@" %d", score];
+                CCLabelTTF* scoreText = [[CCLabelTTF alloc] initWithString:scoring fontName:@"Marker Felt" fontSize:50];
+                scoreLabel.position = ccp(size.width/2 - scoreLabel.contentSize.width/2, 3*size.height/5);
+                scoreText.position = ccp(size.width/2 + scoreLabel.contentSize.width/2, 3*size.height/5);
+                scoreText.color = ccc3(68, 14, 98);
+                [self addChild: scoreLabel];
+                [self addChild: scoreText];
             }
             
             //Display the high score
-            NSString* highScores = [[NSString alloc] initWithFormat:@"High Score: %d", bestScore];
-            CCLabelTTF* highScore  =  [[CCLabelTTF alloc] initWithString:highScores fontName:@"Marker Felt" fontSize:50];
-            highScore.position = ccp(size.width/2, size.height/2);
-            highScore.color = ccc3(68, 14, 98);
-            [self addChild: highScore];
+            CCSprite* highScoreLabel = [CCSprite spriteWithFile:@"highscore.png"];
+            NSString* highScores = [[NSString alloc] initWithFormat:@" %d", bestScore];
+            CCLabelTTF* highScoreText  =  [[CCLabelTTF alloc] initWithString:highScores fontName:@"Marker Felt" fontSize:50];
+            highScoreLabel.position = ccp(size.width/2 - highScoreLabel.contentSize.width/2 + 35, size.height/2);
+            highScoreText.position = ccp(size.width/2 + highScoreLabel.contentSize.width/2 - 5, size.height/2);
+            highScoreText.color = ccc3(68, 14, 98);
+            [self addChild: highScoreLabel];
+            [self addChild: highScoreText];
             
         }
         else {
-            message = @"You Lost!";
+            message = [CCSprite spriteWithFile:@"losecase.png"];
         }
         
         CCSprite* background = [CCSprite spriteWithFile:@"background3.png"];
         background.position = ccp(size.width/2, size.height/2);
         [self addChild:background z:-1];
         
-        CCLabelTTF * label = [CCLabelTTF labelWithString:message fontName:@"Marker Felt" fontSize:100];
-        label.color = ccBLUE;
-        label.position = ccp(size.width/2, 7*size.height/8);
-        [self addChild:label];
+        message.position = ccp(size.width/2, 6*size.height/8);
+        [self addChild:message];
         
         [CCMenuItemFont setFontName:@"Marker Felt"];
         [CCMenuItemFont setFontSize:50];
         
-        CCMenuItem* next = [CCMenuItemFont itemWithString:nextLevel block:^(id sender) {
+        CCMenuItem* next = [CCMenuItemSprite itemWithNormalSprite:nextLevel selectedSprite:nextLevelSel block:^(id sender) {
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[GameController node]]];
         }];
-        next.color = ccc3(68, 14, 98);;
-        
-        CCMenuItem* mainMenu = [CCMenuItemFont itemWithString:@"Main Menu" block:^(id sender) {
+        CCSprite* menuUnselected = [CCSprite spriteWithFile:@"menu1.png"];
+        CCSprite* menuSelected = [CCSprite spriteWithFile:@"menu2.png"];
+        CCMenuItem* mainMenu = [CCMenuItemImage itemWithNormalSprite:menuUnselected selectedSprite:menuSelected block:^(id sender) {
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[MenuLayer node]]];
             [[LevelManager sharedInstance] reset];
         }];
         mainMenu.color = ccc3(68, 14, 98);;
         
         CCMenu* menu = [CCMenu menuWithItems:next, mainMenu, nil];
-        menu.position = ccp(size.width/2, size.height/4);
+        menu.position = ccp(size.width/2, size.height/3);
         [menu alignItemsVerticallyWithPadding:25];
         [self addChild:menu];
         
