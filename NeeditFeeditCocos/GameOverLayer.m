@@ -136,10 +136,11 @@
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[MenuLayer node]]];
             [[LevelManager sharedInstance] reset];
         }];
-        mainMenu.color = ccc3(68, 14, 98);;
         
         CCMenu* menu = [CCMenu menuWithItems:next, mainMenu, nil];
         menu.position = ccp(size.width/2, size.height/3);
+        if (!won)
+            menu.position = ccp(size.width/2, size.height/2);
         [menu alignItemsVerticallyWithPadding:25];
         [self addChild:menu];
         
