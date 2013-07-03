@@ -78,14 +78,14 @@
             //If they earned a bonus, create score and bonus counting labels for a cool effect
             if (bonus!=0) {
                 CGPoint pt = ccp(size.width/2, 5*size.height/8);
-                CounterLabel* bonusLabel = [CounterLabel labelWithFont:@"Marker Felt"
+                CounterLabel* bonusLabel = [CounterLabel labelWithFont:@"Hobo"
                                                               position:pt value:bonus andString:@"Bonus: "];
                 bonusLabel.color = ccc3(68, 14, 98);
                 [self addChild:bonusLabel];
                 [bonusLabel countTo:0 withDuration:0.5 afterDelay:1.0];
                 
                 CGPoint point = ccp(size.width/2, 11*size.height/16);
-                CounterLabel* scoreLabel = [CounterLabel labelWithFont:@"Marker Felt"
+                CounterLabel* scoreLabel = [CounterLabel labelWithFont:@"Hobo"
                                                               position:point value:score andString:@"Score: "];
                 scoreLabel.color = ccc3(68, 14, 98);
                 [self addChild:scoreLabel];
@@ -95,7 +95,7 @@
             }else{
                 CCSprite* scoreLabel = [CCSprite spriteWithFile:@"score1.png"];
                 NSString* scoring = [[NSString alloc] initWithFormat:@" %d", score];
-                CCLabelTTF* scoreText = [[CCLabelTTF alloc] initWithString:scoring fontName:@"Marker Felt" fontSize:50];
+                CCLabelTTF* scoreText = [[CCLabelTTF alloc] initWithString:scoring fontName:@"Hobo" fontSize:50];
                 scoreLabel.position = ccp(size.width/2 - scoreLabel.contentSize.width/2, 3*size.height/5);
                 scoreText.position = ccp(size.width/2 + scoreLabel.contentSize.width/2, 3*size.height/5);
                 scoreText.color = ccc3(68, 14, 98);
@@ -106,7 +106,7 @@
             //Display the high score
             CCSprite* highScoreLabel = [CCSprite spriteWithFile:@"highscore.png"];
             NSString* highScores = [[NSString alloc] initWithFormat:@" %d", bestScore];
-            CCLabelTTF* highScoreText  =  [[CCLabelTTF alloc] initWithString:highScores fontName:@"Marker Felt" fontSize:50];
+            CCLabelTTF* highScoreText  =  [[CCLabelTTF alloc] initWithString:highScores fontName:@"Hobo" fontSize:50];
             highScoreLabel.position = ccp(size.width/2 - highScoreLabel.contentSize.width/2 + 35, size.height/2);
             highScoreText.position = ccp(size.width/2 + highScoreLabel.contentSize.width/2 - 5, size.height/2);
             highScoreText.color = ccc3(68, 14, 98);
@@ -125,7 +125,7 @@
         message.position = ccp(size.width/2, 6*size.height/8);
         [self addChild:message];
         
-        [CCMenuItemFont setFontName:@"Marker Felt"];
+        [CCMenuItemFont setFontName:@"Hobo"];
         [CCMenuItemFont setFontSize:50];
         
         CCMenuItem* next = [CCMenuItemSprite itemWithNormalSprite:nextLevel selectedSprite:nextLevelSel block:^(id sender) {
