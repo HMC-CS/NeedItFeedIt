@@ -1,6 +1,5 @@
-Drag the resources to the organisms that need them. 
-Try to keep the organisms alive for 2 minutes.
-The fuller your organisms the higher the multiplier and the
-higher your score!
+Keep your organisms alive by dragging resources to them.
+Survive for 2 minutes to complete the level.
+Increase all the satisfaction meters for a higher multiplier and more points!
 
 Hint: Fully satisfy all the organisms before the time runs out for a bonus
