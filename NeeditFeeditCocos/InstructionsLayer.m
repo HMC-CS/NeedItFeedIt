@@ -26,7 +26,7 @@
         CGSize size = [[CCDirector sharedDirector] winSize];
         
         // Create Instructions Background
-        CCSprite *background = [CCSprite spriteWithFile:@"background3.png"];
+        CCSprite *background = [CCSprite spriteWithFile:@"background5.png"];
         background.position = ccp(size.width/2, size.height/2);
         [self addChild:background];
         
@@ -47,8 +47,8 @@
         NSString* fileContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
         
         // Create the label
-        CCLabelTTF *label = [CCLabelTTF labelWithString:fileContents fontName:@"Marker Felt" fontSize:34];
-        label.color = ccc3(68, 14, 98);
+        CCLabelTTF *label = [CCLabelTTF labelWithString:fileContents fontName:@"Hobo" fontSize:34];
+        label.color = ccc3(40, 0, 92);
         label.position = ccp(size.width/2,size.height/2);
         [self addChild:label];
         

@@ -5,6 +5,7 @@
 	<key>Forest</key>
 	<array>
 		<array>
+			<string>nuts</string>
 			<string>pinetree</string>
 			<string>moss</string>
 			<string>plant</string>
@@ -25,6 +26,7 @@
 	<key>Ocean</key>
 	<array>
 		<array>
+			<string>coral</string>
 			<string>plankton</string>
 			<string>seaweed</string>
 			<string>smallfish</string>

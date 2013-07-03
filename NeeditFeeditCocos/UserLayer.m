@@ -34,7 +34,7 @@ static const int HEIGHTSCALE = 0.97;
         timeLabel = [CCSprite spriteWithFile:@"timer.png"];
         timeLabel.position = ccp(5*size.width/6, size.height*HEIGHTSCALE);
         
-        timeText = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
+        timeText = [CCLabelTTF labelWithString:@"" fontName:@"Hobo" fontSize:36];
         timeText.position = ccp(5*size.width/6 + timeLabel.contentSize.width + 20, size.height*HEIGHTSCALE);
         timeText.color = ccc3(48, 0, 68);
         
@@ -42,7 +42,7 @@ static const int HEIGHTSCALE = 0.97;
         scoreLabel = [CCSprite spriteWithFile:@"score.png"];
         scoreLabel.position = ccp(size.width*.3, size.height*HEIGHTSCALE);
         
-        scoreText = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
+        scoreText = [CCLabelTTF labelWithString:@"" fontName:@"Hobo" fontSize:36];
         scoreText.position = ccp(size.width*.3 + scoreLabel.contentSize.width/2 + 40, size.height*HEIGHTSCALE);
         scoreText.color = ccc3(48, 0, 68);
         
@@ -50,7 +50,7 @@ static const int HEIGHTSCALE = 0.97;
         multiLabel = [CCSprite spriteWithFile:@"multiplier.png"];
         multiLabel.position = ccp(4*size.width/7, size.height*HEIGHTSCALE);
         
-        multiText = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
+        multiText = [CCLabelTTF labelWithString:@"" fontName:@"Hobo" fontSize:36];
         multiText.position = ccp(4*size.width/7 + multiLabel.contentSize.width/2 + 20, size.height*HEIGHTSCALE);
         multiText.color = ccc3(48, 0, 68);
         
