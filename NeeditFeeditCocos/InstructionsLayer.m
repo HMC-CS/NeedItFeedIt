@@ -49,8 +49,14 @@
         // Create the label
         CCLabelTTF *label = [CCLabelTTF labelWithString:fileContents fontName:@"Hobo" fontSize:34];
         label.color = ccc3(40, 0, 92);
-        label.position = ccp(size.width/2,size.height/2);
+        label.position = ccp(size.width/2,size.height/3);
         [self addChild:label];
+        
+        
+        // Add screenshot image
+        CCSprite *screenshot = [CCSprite spriteWithFile:@"screenshot.png"];
+        screenshot.position = ccp(size.width/2 - 50, 2*size.height/3 + 20);
+        [self addChild:screenshot];
         
     }
     return self;
