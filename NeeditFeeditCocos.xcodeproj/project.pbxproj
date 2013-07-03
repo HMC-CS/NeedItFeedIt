@@ -47,6 +47,8 @@
 		0AB6B14D1775247300B184B8 /* Savanna.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB6B1481775247300B184B8 /* Savanna.png */; };
 		0AD1A767177F6735008D6567 /* CounterLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD1A766177F6735008D6567 /* CounterLabel.m */; };
 		0AD1A769177F7B37008D6567 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AD1A768177F7B37008D6567 /* Data.plist */; };
+		0AD2F6061783A0E400256AE4 /* menu.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2F6041783A0E400256AE4 /* menu.wav */; };
+		0AD2F6071783A0E400256AE4 /* munch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2F6051783A0E400256AE4 /* munch.wav */; };
 		0ADC0E01177B64210009CD55 /* bugs.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADC0DEF177B63590009CD55 /* bugs.png */; };
 		0ADC0E02177B64210009CD55 /* crocodile.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADC0DF0177B635A0009CD55 /* crocodile.png */; };
 		0ADC0E03177B64210009CD55 /* fish.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADC0DF1177B635C0009CD55 /* fish.png */; };
@@ -404,6 +406,8 @@
 		0AD1A765177F6735008D6567 /* CounterLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterLabel.h; sourceTree = "<group>"; };
 		0AD1A766177F6735008D6567 /* CounterLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterLabel.m; sourceTree = "<group>"; };
 		0AD1A768177F7B37008D6567 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+		0AD2F6041783A0E400256AE4 /* menu.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = menu.wav; sourceTree = "<group>"; };
+		0AD2F6051783A0E400256AE4 /* munch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = munch.wav; sourceTree = "<group>"; };
 		0ADC0DEF177B63590009CD55 /* bugs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bugs.png; sourceTree = "<group>"; };
 		0ADC0DF0177B635A0009CD55 /* crocodile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crocodile.png; sourceTree = "<group>"; };
 		0ADC0DF1177B635C0009CD55 /* fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish.png; sourceTree = "<group>"; };
@@ -1263,6 +1267,8 @@
 				0A586F3F17726FBC006D3E9C /* instructions.txt */,
 				0A586F41177273F5006D3E9C /* credits.txt */,
 				0A295251178247F800BF2F1F /* one.mp3 */,
+				0AD2F6041783A0E400256AE4 /* menu.wav */,
+				0AD2F6051783A0E400256AE4 /* munch.wav */,
 				EF7A6F2E17629CD900F81B3C /* Default.png */,
 				EF7A6F3017629CD900F81B3C /* Default@2x.png */,
 				EF7A6F3217629CD900F81B3C /* Default-568h@2x.png */,
@@ -1906,6 +1912,8 @@
 				EF67D75317839D0200A136E5 /* timer@2x.png in Resources */,
 				EF67D75517839D2B00A136E5 /* pause@2x.png in Resources */,
 				EF67D75717839D3200A136E5 /* pausesel@2x.png in Resources */,
+				0AD2F6061783A0E400256AE4 /* menu.wav in Resources */,
+				0AD2F6071783A0E400256AE4 /* munch.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

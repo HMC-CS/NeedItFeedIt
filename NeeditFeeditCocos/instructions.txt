@@ -1,1 +1,6 @@
-instructions!!!!
+Drag the resources to the organisms that need them. 
+Try to keep the organisms alive for 2 minutes.
+The fuller your organisms the higher the multiplier and the
+higher your score!
+
+Hint: Fully satisfy all the organisms before the time runs out for a bonus

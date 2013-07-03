@@ -10,6 +10,7 @@
 #import "MenuLayer.h"
 #import "GameController.h"
 #import "LevelManager.h"
+#import "SimpleAudioEngine.h"
 
 
 @implementation PickLevelLayer
@@ -34,6 +35,7 @@
         
         // Create MenuItem
         CCMenuItem *back = [CCMenuItemImage itemWithNormalImage:@"menu1.png" selectedImage:@"menu2.png" block:^(id sender) {
+            [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[MenuLayer node]]];
         }];
         
@@ -103,26 +105,31 @@
 }
 
 -(void) goToForest{
+    [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
     [[LevelManager sharedInstance] startAtLevel:@"Forest"];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameController node]]];
 }
 
 -(void) goToOcean{
+    [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
     [[LevelManager sharedInstance] startAtLevel:@"Ocean"];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameController node]]];
 }
 
 -(void) goToDesert{
+    [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
     [[LevelManager sharedInstance] startAtLevel:@"Desert"];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameController node]]];
 }
 
 -(void) goToSavanna{
+    [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
     [[LevelManager sharedInstance] startAtLevel:@"Savanna"];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameController node]]];
 }
 
 -(void) goToArctic{
+    [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
     [[LevelManager sharedInstance] startAtLevel:@"Arctic"];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameController node]]];
 }

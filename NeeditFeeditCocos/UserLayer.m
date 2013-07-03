@@ -104,6 +104,7 @@ static const int HEIGHTSCALE = 0.97;
 }
 
 -(void) pausePressed: (id) sender{
+    [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
     [[CCDirector sharedDirector] pushScene:[PauseLayer node]];
 }
 
@@ -114,10 +115,14 @@ static const int HEIGHTSCALE = 0.97;
 
 -(void) soundIconPressed:(id) sender{
     // toggle sound on and off
-    if ([CDAudioManager sharedManager].backgroundMusic.volume == 1.0)
+    if ([CDAudioManager sharedManager].backgroundMusic.volume == 1.0){
         [CDAudioManager sharedManager].backgroundMusic.volume = 0.0;
-    else
+        [SimpleAudioEngine sharedEngine].effectsVolume = 0.0;
+    }
+    else{
         [CDAudioManager sharedManager].backgroundMusic.volume = 1.0;
+        [SimpleAudioEngine sharedEngine].effectsVolume = 1.0;
+    }
 
 }
 
