@@ -9,6 +9,7 @@
 #import "PauseLayer.h"
 #import "MenuLayer.h"
 #import "LevelManager.h"
+#import "SimpleAudioEngine.h"
 
 @implementation PauseLayer
 
@@ -37,10 +38,12 @@
         [CCMenuItemFont setFontName:@"Marker Felt"];
         
         CCMenuItemImage* resume = [CCMenuItemImage itemWithNormalImage:@"resume.png" selectedImage:@"resumeSel.png" block:^(id sender) {
+            [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
             [[CCDirector sharedDirector] popScene];
         }];
         
         CCMenuItemImage *back = [CCMenuItemImage itemWithNormalImage:@"menu1.png" selectedImage:@"menu2.png" block:^(id sender)  {
+            [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[MenuLayer node]]];
         }];
 

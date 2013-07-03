@@ -16,6 +16,7 @@
 #import "PickLevelLayer.h"
 #import "InstructionsLayer.h"
 #import "CreditsLayer.h"
+#import "SimpleAudioEngine.h"
 
 #pragma mark - HelloWorldLayer
 
@@ -52,7 +53,7 @@
         CCSprite* background = [CCSprite spriteWithFile:@"background4.png"];
         background.position = ccp(size.width/2, size.height/2);
         [self addChild:background z:-1];
-		
+        
 		// create title label
         CCSprite* title = [CCSprite spriteWithFile:@"title.png"];
 		title.position =  ccp( size.width /2 , size.height/1.5 );
@@ -94,14 +95,17 @@
 }
 
 -(void) goToLevelPick: (id) sender{
+    [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[PickLevelLayer node]]];
 }
 
 -(void) goToInstructions: (id) sender{
+    [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[InstructionsLayer node]]];
 }
 
 -(void) goToCredits: (id) sender{
+    [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[CreditsLayer node]]];
 }
 

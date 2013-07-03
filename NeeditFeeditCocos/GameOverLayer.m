@@ -11,6 +11,7 @@
 #import "LevelManager.h"
 #import "GameController.h"
 #import "CounterLabel.h"
+#import "SimpleAudioEngine.h"
 
 @implementation GameOverLayer
 
@@ -128,13 +129,16 @@
         [CCMenuItemFont setFontSize:50];
         
         CCMenuItem* next = [CCMenuItemSprite itemWithNormalSprite:nextLevel selectedSprite:nextLevelSel block:^(id sender) {
+            [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[GameController node]]];
         }];
+        
         CCSprite* menuUnselected = [CCSprite spriteWithFile:@"menu1.png"];
         CCSprite* menuSelected = [CCSprite spriteWithFile:@"menu2.png"];
         CCMenuItem* mainMenu = [CCMenuItemImage itemWithNormalSprite:menuUnselected selectedSprite:menuSelected block:^(id sender) {
-            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[MenuLayer node]]];
+            [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
             [[LevelManager sharedInstance] reset];
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[MenuLayer node]]];
         }];
         
         CCMenu* menu = [CCMenu menuWithItems:next, mainMenu, nil];

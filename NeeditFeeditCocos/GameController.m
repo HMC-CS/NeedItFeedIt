@@ -15,7 +15,7 @@
 #import "Level.h"
 #import "LevelManager.h"
 #import "GameOverLayer.h"
-
+#import "SimpleAudioEngine.h"
 
 
 @implementation GameController{
@@ -203,6 +203,7 @@ static const int POINTS_PER_RESOURCE = 10;
             NSArray* temp = targetOrg.neededResources[i];
             if ([temp[0] isEqualToString:resource.name]) {
                 fed = YES;
+                [[SimpleAudioEngine sharedEngine]playEffect:@"munch.wav"];
                 [resources removeObject:resource];
                 [resource removeFromParentAndCleanup:YES];
                 [targetOrg highlight];
