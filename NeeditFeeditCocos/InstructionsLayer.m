@@ -8,6 +8,7 @@
 
 #import "InstructionsLayer.h"
 #import "MenuLayer.h"
+#import "SimpleAudioEngine.h"
 
 
 @implementation InstructionsLayer
@@ -31,9 +32,8 @@
         
         
         // Create MenuItem
-        [CCMenuItemFont setFontSize:24];
-        [CCMenuItemFont setFontName:@"Marker Felt"];
-        CCMenuItemImage *back = [CCMenuItemImage itemWithNormalImage:@"menu3.png" selectedImage:@"menu2.png" block:^(id sender)  {
+        CCMenuItemImage *back = [CCMenuItemImage itemWithNormalImage:@"menu1.png" selectedImage:@"menu2.png" block:^(id sender)  {
+            [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[MenuLayer node]]];
         }];
         
@@ -48,7 +48,7 @@
         
         // Create the label
         CCLabelTTF *label = [CCLabelTTF labelWithString:fileContents fontName:@"Marker Felt" fontSize:34];
-        [label setColor:ccWHITE];
+        label.color = ccc3(68, 14, 98);
         label.position = ccp(size.width/2,size.height/2);
         [self addChild:label];
         

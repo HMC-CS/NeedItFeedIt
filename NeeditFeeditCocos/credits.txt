@@ -1,1 +1,14 @@
-credits!!!
+Original Coding and Ideas:
+Michael Culhane, Haley Erickson, Joey Klonowski
+
+Additional Coding:
+Paige Garratt and Haley Erickson
+
+Art:
+Haley Erickson and Paige Garratt
+
+Music:
+"One" by pheonton via opengameart.org / CC-BY 3.0
+
+Funded by NSF grant #1042472, The Games Network: Games for students, games by students 
+(PIs Sweedyk and Erlinger) and by the Dept. of Computer Science, Harvey Mudd College

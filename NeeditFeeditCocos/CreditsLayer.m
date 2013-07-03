@@ -8,6 +8,7 @@
 
 #import "CreditsLayer.h"
 #import "MenuLayer.h"
+#import "SimpleAudioEngine.h"
 
 
 @implementation CreditsLayer
@@ -32,9 +33,8 @@
         
         
         // Create MenuItem
-        [CCMenuItemFont setFontSize:24];
-        [CCMenuItemFont setFontName:@"Marker Felt"];
-        CCMenuItemImage *back = [CCMenuItemImage itemWithNormalImage:@"menu3.png" selectedImage:@"menu2.png" block:^(id sender) {
+        CCMenuItemImage *back = [CCMenuItemImage itemWithNormalImage:@"menu1.png" selectedImage:@"menu2.png" block:^(id sender) {
+            [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[MenuLayer node]]];
         }];
         
@@ -48,8 +48,8 @@
         NSString* fileContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
         
         // Create the label
-        CCLabelTTF *label = [CCLabelTTF labelWithString:fileContents fontName:@"Marker Felt" fontSize:34];
-        [label setColor:ccWHITE];
+        CCLabelTTF *label = [CCLabelTTF labelWithString:fileContents fontName:@"Marker Felt" fontSize:24];
+        label.color = ccc3(68, 14, 98);
         label.position = ccp(size.width/2,size.height/2);
         [self addChild:label];
         
