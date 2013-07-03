@@ -40,10 +40,10 @@ static const int HEIGHTSCALE = 0.97;
         
         //Create score label
         scoreLabel = [CCSprite spriteWithFile:@"score.png"];
-        scoreLabel.position = ccp(2*size.width/5, size.height*HEIGHTSCALE);
+        scoreLabel.position = ccp(size.width*.3, size.height*HEIGHTSCALE);
         
         scoreText = [CCLabelTTF labelWithString:@"" fontName:@"Marker Felt" fontSize:36];
-        scoreText.position = ccp(2*size.width/5 + scoreLabel.contentSize.width/2 + 40, size.height*HEIGHTSCALE);
+        scoreText.position = ccp(size.width*.3 + scoreLabel.contentSize.width/2 + 40, size.height*HEIGHTSCALE);
         scoreText.color = ccc3(48, 0, 68);
         
         //Create multiplier label
@@ -63,8 +63,8 @@ static const int HEIGHTSCALE = 0.97;
         pauseMenu.position = ccp(size.width/11, size.height*HEIGHTSCALE);
         
         //Add sound icon
-        CCMenuItem* soundOn = [CCMenuItemImage itemFromNormalImage:@"soundIcon.png" selectedImage:@"soundIcon.png" target:nil selector:nil];
-        CCMenuItem* soundOff = [CCMenuItemImage itemFromNormalImage:@"soundIconMute.png" selectedImage:@"soundOff.png" target:nil selector:nil];
+        CCMenuItem* soundOn = [CCMenuItemImage itemWithNormalImage:@"soundIcon.png" selectedImage:@"soundIcon.png" target:nil selector:nil];
+        CCMenuItem* soundOff = [CCMenuItemImage itemWithNormalImage:@"soundIconMute.png" selectedImage:@"soundOff.png" target:nil selector:nil];
         CCMenuItemToggle *soundToggle = [CCMenuItemToggle itemWithTarget:self selector:@selector(soundIconPressed:) items:soundOn, soundOff, nil];
         
         CCMenu* soundMenu = [CCMenu menuWithItems:soundToggle, nil];
