@@ -128,7 +128,6 @@
 		EF67D75717839D3200A136E5 /* pausesel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF67D75617839D3200A136E5 /* pausesel@2x.png */; };
 		EF67D75D1783BB3F00A136E5 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = EF67D75C1783BB3F00A136E5 /* icon-72.png */; };
 		EF67D75F1783BB4E00A136E5 /* initialscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = EF67D75E1783BB4E00A136E5 /* initialscreen.png */; };
-		EF67D76D1783E94B00A136E5 /* Hobo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF67D76C1783E94B00A136E5 /* Hobo.ttf */; };
 		EF6EE13B1783663B00F98B27 /* menu1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE13A1783663B00F98B27 /* menu1.png */; };
 		EF6EE13D1783664900F98B27 /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE13C1783664900F98B27 /* menu2.png */; };
 		EF6EE13F1783749400F98B27 /* background3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE13E1783749400F98B27 /* background3@2x.png */; };
@@ -1948,7 +1947,6 @@
 				0AD2F6071783A0E400256AE4 /* munch.wav in Resources */,
 				EF67D75D1783BB3F00A136E5 /* icon-72.png in Resources */,
 				EF67D75F1783BB4E00A136E5 /* initialscreen.png in Resources */,
-				EF67D76D1783E94B00A136E5 /* Hobo.ttf in Resources */,
 				EF0829A01784002800ABBB9D /* nuts.png in Resources */,
 				EF0829A21784003200ABBB9D /* nuts@2x.png in Resources */,
 				EF0829A417840ECD00ABBB9D /* coral.png in Resources */,
