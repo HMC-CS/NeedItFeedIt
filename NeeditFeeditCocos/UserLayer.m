@@ -70,6 +70,12 @@ static const int HEIGHTSCALE = 0.97;
         CCMenu* soundMenu = [CCMenu menuWithItems:soundToggle, nil];
         soundMenu.position = ccp(size.width/5, size.height*HEIGHTSCALE);
         
+        //Fix toggle
+        if (soundToggle.selectedItem == soundOn && [CDAudioManager sharedManager].backgroundMusic.volume == 0.0)
+            [soundToggle setSelectedIndex:1];
+        if (soundToggle.selectedItem == soundOff && [CDAudioManager sharedManager].backgroundMusic.volume == 1.0)
+            [soundToggle setSelectedIndex:0];
+        
                
         [self updateTimer:0];
         [self updatePoints:0];
