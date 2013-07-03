@@ -474,6 +474,10 @@
 			<string>narwhal</string>
 			<integer>30</integer>
 		</array>
+		<array>
+			<string>human</string>
+			<integer>5</integer>
+		</array>
 	</array>
 	<key>walrus</key>
 	<array>
@@ -485,6 +489,10 @@
 			<string>squid</string>
 			<integer>30</integer>
 		</array>
+		<array>
+			<string>human</string>
+			<integer>5</integer>
+		</array>
 	</array>
 	<key>narwhal</key>
 	<array>
@@ -495,6 +503,25 @@
 		<array>
 			<string>krill</string>
 			<integer>50</integer>
+		</array>
+		<array>
+			<string>human</string>
+			<integer>5</integer>
+		</array>
+	</array>
+	<key>orca</key>
+	<array>
+		<array>
+			<string>walrus</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>penguin</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>human</string>
+			<integer>5</integer>
 		</array>
 	</array>
 </dict>

@@ -103,7 +103,7 @@ static const int POINTS_PER_RESOURCE = 10;
         
         //Creates all the resource bars and adds them as a property of the organism
         NSMutableArray* resBars = [[NSMutableArray alloc] init];
-        for (int j=0; j<newOrg.neededResources.count; j++) {
+        for (int j=0; j<2; j++) {
             ResourceBar *newBar = [[ResourceBar alloc] initGivenResources:orgTemps[i][j]];
             newBar.position = ccp(newOrg.position.x , winSize.height/8 - (40*j) - 20);
             [self addChild:newBar];
@@ -207,14 +207,21 @@ static const int POINTS_PER_RESOURCE = 10;
                 [resources removeObject:resource];
                 [resource removeFromParentAndCleanup:YES];
                 [targetOrg highlight];
-                ResourceBar* current = targetOrg.resourceBars[i];
-                if (![current checkSuccess]){
-                    NSNumber *freq = temp[1];
-                    [current updateBar: (100.0-freq.floatValue)/10.0];
-                    self.userLayer.points += (POINTS_PER_RESOURCE*self.userLayer.multiplier);
-                    [_userLayer updatePoints:self.userLayer.points];
+                if ([resource.name isEqualToString: @"human"]) {
+                    for (ResourceBar* res in targetOrg.resourceBars){
+                        [res updateBar: 10];
+                        self.userLayer.points += (POINTS_PER_RESOURCE*self.userLayer.multiplier);
+                        [_userLayer updatePoints:self.userLayer.points];
+                    }
+                }else{
+                    ResourceBar* current = targetOrg.resourceBars[i];
+                    if (![current checkSuccess]){
+                        NSNumber *freq = temp[1];
+                        [current updateBar: (100.0-freq.floatValue)/10.0];
+                        self.userLayer.points += (POINTS_PER_RESOURCE*self.userLayer.multiplier);
+                        [_userLayer updatePoints:self.userLayer.points];
+                    }
                 }
-                
                 break;
             }
         }
