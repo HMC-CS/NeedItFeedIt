@@ -26,7 +26,7 @@
         CGSize size = [[CCDirector sharedDirector] winSize];
         
         // Create Instructions Background
-        CCSprite *background = [CCSprite spriteWithFile:@"background5.png"];
+        CCSprite *background = [CCSprite spriteWithFile:@"background6.png"];
         background.position = ccp(size.width/2, size.height/2);
 
         [self addChild:background];
