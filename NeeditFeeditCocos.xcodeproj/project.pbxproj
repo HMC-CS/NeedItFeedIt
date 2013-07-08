@@ -139,11 +139,11 @@
 		EF6EE14D178374E800F98B27 /* losecase@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE14C178374E800F98B27 /* losecase@2x.png */; };
 		EF6EE14F178374F300F98B27 /* menu1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE14E178374F300F98B27 /* menu1@2x.png */; };
 		EF6EE151178374F900F98B27 /* menu2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE150178374F900F98B27 /* menu2@2x.png */; };
-		EF6EE1531783750600F98B27 /* nextLevel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE1521783750600F98B27 /* nextLevel@2x.png */; };
+		EF6EE1531783750600F98B27 /* nextLevel1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE1521783750600F98B27 /* nextLevel1@2x.png */; };
 		EF6EE1551783750E00F98B27 /* nextLevelSel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE1541783750E00F98B27 /* nextLevelSel@2x.png */; };
 		EF6EE1571783752700F98B27 /* resume@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE1561783752700F98B27 /* resume@2x.png */; };
 		EF6EE1591783752E00F98B27 /* resumeSel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE1581783752E00F98B27 /* resumeSel@2x.png */; };
-		EF6EE15B1783753700F98B27 /* retrylevel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE15A1783753700F98B27 /* retrylevel@2x.png */; };
+		EF6EE15B1783753700F98B27 /* retrylevel1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE15A1783753700F98B27 /* retrylevel1@2x.png */; };
 		EF6EE15D1783753F00F98B27 /* retryLevelSel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE15C1783753F00F98B27 /* retryLevelSel@2x.png */; };
 		EF6EE15F1783754F00F98B27 /* score1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE15E1783754F00F98B27 /* score1@2x.png */; };
 		EF6EE1611783757800F98B27 /* wincase@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE1601783757800F98B27 /* wincase@2x.png */; };
@@ -300,9 +300,9 @@
 		EF86CBD317835D1800EA59A6 /* creditsSel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBD217835D1800EA59A6 /* creditsSel.png */; };
 		EF86CBD517835D3E00EA59A6 /* highscore.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBD417835D3E00EA59A6 /* highscore.png */; };
 		EF86CBD717835D5900EA59A6 /* losecase.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBD617835D5900EA59A6 /* losecase.png */; };
-		EF86CBD917835D6800EA59A6 /* nextLevel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBD817835D6800EA59A6 /* nextLevel.png */; };
+		EF86CBD917835D6800EA59A6 /* nextLevel1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBD817835D6800EA59A6 /* nextLevel1.png */; };
 		EF86CBDB17835D7000EA59A6 /* nextLevelSel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBDA17835D7000EA59A6 /* nextLevelSel.png */; };
-		EF86CBDD17835D8800EA59A6 /* retryLevel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBDC17835D8800EA59A6 /* retryLevel.png */; };
+		EF86CBDD17835D8800EA59A6 /* retryLevel1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBDC17835D8800EA59A6 /* retryLevel1.png */; };
 		EF86CBDF17835D9000EA59A6 /* retryLevelSel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBDE17835D9000EA59A6 /* retryLevelSel.png */; };
 		EF86CBE117835D9A00EA59A6 /* score1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBE017835D9A00EA59A6 /* score1.png */; };
 		EF86CBE317835DB200EA59A6 /* wincase.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBE217835DB200EA59A6 /* wincase.png */; };
@@ -523,11 +523,11 @@
 		EF6EE14C178374E800F98B27 /* losecase@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "losecase@2x.png"; sourceTree = "<group>"; };
 		EF6EE14E178374F300F98B27 /* menu1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu1@2x.png"; sourceTree = "<group>"; };
 		EF6EE150178374F900F98B27 /* menu2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu2@2x.png"; sourceTree = "<group>"; };
-		EF6EE1521783750600F98B27 /* nextLevel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nextLevel@2x.png"; sourceTree = "<group>"; };
+		EF6EE1521783750600F98B27 /* nextLevel1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nextLevel1@2x.png"; sourceTree = "<group>"; };
 		EF6EE1541783750E00F98B27 /* nextLevelSel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nextLevelSel@2x.png"; sourceTree = "<group>"; };
 		EF6EE1561783752700F98B27 /* resume@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "resume@2x.png"; sourceTree = "<group>"; };
 		EF6EE1581783752E00F98B27 /* resumeSel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "resumeSel@2x.png"; sourceTree = "<group>"; };
-		EF6EE15A1783753700F98B27 /* retrylevel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retrylevel@2x.png"; sourceTree = "<group>"; };
+		EF6EE15A1783753700F98B27 /* retrylevel1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retrylevel1@2x.png"; sourceTree = "<group>"; };
 		EF6EE15C1783753F00F98B27 /* retryLevelSel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retryLevelSel@2x.png"; sourceTree = "<group>"; };
 		EF6EE15E1783754F00F98B27 /* score1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "score1@2x.png"; sourceTree = "<group>"; };
 		EF6EE1601783757800F98B27 /* wincase@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wincase@2x.png"; sourceTree = "<group>"; };
@@ -830,9 +830,9 @@
 		EF86CBD217835D1800EA59A6 /* creditsSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = creditsSel.png; sourceTree = "<group>"; };
 		EF86CBD417835D3E00EA59A6 /* highscore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = highscore.png; sourceTree = "<group>"; };
 		EF86CBD617835D5900EA59A6 /* losecase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = losecase.png; sourceTree = "<group>"; };
-		EF86CBD817835D6800EA59A6 /* nextLevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextLevel.png; sourceTree = "<group>"; };
+		EF86CBD817835D6800EA59A6 /* nextLevel1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextLevel1.png; sourceTree = "<group>"; };
 		EF86CBDA17835D7000EA59A6 /* nextLevelSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextLevelSel.png; sourceTree = "<group>"; };
-		EF86CBDC17835D8800EA59A6 /* retryLevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retryLevel.png; sourceTree = "<group>"; };
+		EF86CBDC17835D8800EA59A6 /* retryLevel1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retryLevel1.png; sourceTree = "<group>"; };
 		EF86CBDE17835D9000EA59A6 /* retryLevelSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retryLevelSel.png; sourceTree = "<group>"; };
 		EF86CBE017835D9A00EA59A6 /* score1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = score1.png; sourceTree = "<group>"; };
 		EF86CBE217835DB200EA59A6 /* wincase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wincase.png; sourceTree = "<group>"; };
@@ -1021,7 +1021,7 @@
 				EFCCB9C71781FF5900A4724F /* moss@2x.png */,
 				EF67D75017839CF800A136E5 /* multiplier@2x.png */,
 				0A6DB59F177E1AB300B5B37B /* narwhal@2x.png */,
-				EF6EE1521783750600F98B27 /* nextLevel@2x.png */,
+				EF6EE1521783750600F98B27 /* nextLevel1@2x.png */,
 				EF6EE1541783750E00F98B27 /* nextLevelSel@2x.png */,
 				EF0829A11784003200ABBB9D /* nuts@2x.png */,
 				EF67D74417839AEE00A136E5 /* ocean1@2x.png */,
@@ -1038,7 +1038,7 @@
 				EFCCB9A71781FE6700A4724F /* polarbear@2x.png */,
 				EF6EE1561783752700F98B27 /* resume@2x.png */,
 				EF6EE1581783752E00F98B27 /* resumeSel@2x.png */,
-				EF6EE15A1783753700F98B27 /* retrylevel@2x.png */,
+				EF6EE15A1783753700F98B27 /* retrylevel1@2x.png */,
 				EF6EE15C1783753F00F98B27 /* retryLevelSel@2x.png */,
 				EFCCB9A91781FE7100A4724F /* rodent@2x.png */,
 				EF67D74817839B0B00A136E5 /* savanna1@2x.png */,
@@ -1171,9 +1171,9 @@
 				EF0829A9178416F500ABBB9D /* background6.png */,
 				EF86CBD417835D3E00EA59A6 /* highscore.png */,
 				EF86CBD617835D5900EA59A6 /* losecase.png */,
-				EF86CBD817835D6800EA59A6 /* nextLevel.png */,
+				EF86CBD817835D6800EA59A6 /* nextLevel1.png */,
 				EF86CBDA17835D7000EA59A6 /* nextLevelSel.png */,
-				EF86CBDC17835D8800EA59A6 /* retryLevel.png */,
+				EF86CBDC17835D8800EA59A6 /* retryLevel1.png */,
 				EF86CBDE17835D9000EA59A6 /* retryLevelSel.png */,
 				EF6EE13A1783663B00F98B27 /* menu1.png */,
 				EF6EE13C1783664900F98B27 /* menu2.png */,
@@ -1902,9 +1902,9 @@
 				EF86CBD317835D1800EA59A6 /* creditsSel.png in Resources */,
 				EF86CBD517835D3E00EA59A6 /* highscore.png in Resources */,
 				EF86CBD717835D5900EA59A6 /* losecase.png in Resources */,
-				EF86CBD917835D6800EA59A6 /* nextLevel.png in Resources */,
+				EF86CBD917835D6800EA59A6 /* nextLevel1.png in Resources */,
 				EF86CBDB17835D7000EA59A6 /* nextLevelSel.png in Resources */,
-				EF86CBDD17835D8800EA59A6 /* retryLevel.png in Resources */,
+				EF86CBDD17835D8800EA59A6 /* retryLevel1.png in Resources */,
 				EF86CBDF17835D9000EA59A6 /* retryLevelSel.png in Resources */,
 				EF86CBE117835D9A00EA59A6 /* score1.png in Resources */,
 				EF86CBE317835DB200EA59A6 /* wincase.png in Resources */,
@@ -1920,11 +1920,11 @@
 				EF6EE14D178374E800F98B27 /* losecase@2x.png in Resources */,
 				EF6EE14F178374F300F98B27 /* menu1@2x.png in Resources */,
 				EF6EE151178374F900F98B27 /* menu2@2x.png in Resources */,
-				EF6EE1531783750600F98B27 /* nextLevel@2x.png in Resources */,
+				EF6EE1531783750600F98B27 /* nextLevel1@2x.png in Resources */,
 				EF6EE1551783750E00F98B27 /* nextLevelSel@2x.png in Resources */,
 				EF6EE1571783752700F98B27 /* resume@2x.png in Resources */,
 				EF6EE1591783752E00F98B27 /* resumeSel@2x.png in Resources */,
-				EF6EE15B1783753700F98B27 /* retrylevel@2x.png in Resources */,
+				EF6EE15B1783753700F98B27 /* retrylevel1@2x.png in Resources */,
 				EF6EE15D1783753F00F98B27 /* retryLevelSel@2x.png in Resources */,
 				EF6EE15F1783754F00F98B27 /* score1@2x.png in Resources */,
 				EF6EE1611783757800F98B27 /* wincase@2x.png in Resources */,
