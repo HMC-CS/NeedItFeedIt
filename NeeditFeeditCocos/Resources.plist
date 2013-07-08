@@ -134,6 +134,17 @@
 			<integer>50</integer>
 		</array>
 	</array>
+	<key>bird</key>
+	<array>
+		<array>
+			<string>nuts</string>
+			<integer>50</integer>
+		</array>
+		<array>
+			<string>bugs</string>
+			<integer>50</integer>
+		</array>
+	</array>
 	<key>elephant</key>
 	<array>
 		<array>
@@ -203,11 +214,11 @@
 	<key>bear</key>
 	<array>
 		<array>
-			<string>deer</string>
+			<string>bird</string>
 			<integer>40</integer>
 		</array>
 		<array>
-			<string>rodent</string>
+			<string>nuts</string>
 			<integer>60</integer>
 		</array>
 	</array>
