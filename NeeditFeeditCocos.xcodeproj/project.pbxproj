@@ -307,6 +307,8 @@
 		EF86CBE117835D9A00EA59A6 /* score1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBE017835D9A00EA59A6 /* score1.png */; };
 		EF86CBE317835DB200EA59A6 /* wincase.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBE217835DB200EA59A6 /* wincase.png */; };
 		EFB3966F1785651B009B9E1B /* background6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB3966E1785651B009B9E1B /* background6@2x.png */; };
+		EFB39671178576DB009B9E1B /* bird.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB39670178576DB009B9E1B /* bird.png */; };
+		EFB39673178576F6009B9E1B /* bird@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB39672178576F6009B9E1B /* bird@2x.png */; };
 		EFCCB9961781FE0200A4724F /* antelope@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCCB9951781FE0200A4724F /* antelope@2x.png */; };
 		EFCCB9981781FE0C00A4724F /* bear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCCB9971781FE0C00A4724F /* bear@2x.png */; };
 		EFCCB99A1781FE1600A4724F /* coyote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCCB9991781FE1600A4724F /* coyote@2x.png */; };
@@ -835,6 +837,8 @@
 		EF86CBE017835D9A00EA59A6 /* score1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = score1.png; sourceTree = "<group>"; };
 		EF86CBE217835DB200EA59A6 /* wincase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wincase.png; sourceTree = "<group>"; };
 		EFB3966E1785651B009B9E1B /* background6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background6@2x.png"; sourceTree = "<group>"; };
+		EFB39670178576DB009B9E1B /* bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird.png; sourceTree = "<group>"; };
+		EFB39672178576F6009B9E1B /* bird@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bird@2x.png"; sourceTree = "<group>"; };
 		EFCCB9951781FE0200A4724F /* antelope@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "antelope@2x.png"; sourceTree = "<group>"; };
 		EFCCB9971781FE0C00A4724F /* bear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bear@2x.png"; sourceTree = "<group>"; };
 		EFCCB9991781FE1600A4724F /* coyote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coyote@2x.png"; sourceTree = "<group>"; };
@@ -976,6 +980,7 @@
 				EFB3966E1785651B009B9E1B /* background6@2x.png */,
 				EFCCB9971781FE0C00A4724F /* bear@2x.png */,
 				EF6EE1401783749D00F98B27 /* beatGame@2x.png */,
+				EFB39672178576F6009B9E1B /* bird@2x.png */,
 				0A6DB595177E1AB300B5B37B /* bugs@2x.png */,
 				EFCCB9B71781FEF900A4724F /* bunny@2x.png */,
 				EFCCB9B91781FF0200A4724F /* bush@2x.png */,
@@ -1148,6 +1153,7 @@
 				EF737E52176BDD4500EF4E4D /* pinetree.png */,
 				EF737E4F176BDD4500EF4E4D /* moss.png */,
 				EF08299F1784002800ABBB9D /* nuts.png */,
+				EFB39670178576DB009B9E1B /* bird.png */,
 				EFE37C8A177B6C15001A124A /* squirrel.png */,
 				EF737E43176BDD4500EF4E4D /* bunny.png */,
 				EF737E47176BDD4500EF4E4D /* deer.png */,
@@ -1956,6 +1962,8 @@
 				0ADBD1171784B5F600CC34ED /* screenshot.png in Resources */,
 				0ADBD1191784BB5600CC34ED /* screenshot@2x.png in Resources */,
 				EFB3966F1785651B009B9E1B /* background6@2x.png in Resources */,
+				EFB39671178576DB009B9E1B /* bird.png in Resources */,
+				EFB39673178576F6009B9E1B /* bird@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
