@@ -190,7 +190,8 @@ static const int POINTS_PER_RESOURCE = 10;
     //Loops over all organisms and checks if this resource is within its boundingBox
     Organism *targetOrg = nil;
     for (Organism* org in organisms){
-        if (CGRectIntersectsRect(org.boundingBox, resource.boundingBox)) {
+        CGRect orgRect = CGRectMake(org.boundingBox.origin.x, org.boundingBox.origin.y - org.boundingBox.size.height/2, org.boundingBox.size.width, 3*org.boundingBox.size.height/2);
+        if (CGRectIntersectsRect(orgRect, resource.boundingBox)) {
             targetOrg = org;
             break;
         }
