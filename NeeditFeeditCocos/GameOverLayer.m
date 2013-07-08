@@ -50,13 +50,13 @@
         
         
         CCSprite * message;
-        CCSprite * nextLevel = [CCSprite spriteWithFile:@"retryLevel.png"];
+        CCSprite * nextLevel = [CCSprite spriteWithFile:@"retryLevel1.png"];
         CCSprite * nextLevelSel = [CCSprite spriteWithFile:@"retryLevelSel.png"];
         if (won) {
             
             //Check if they won the game or if they just beat the level
             if (![[LevelManager sharedInstance] atMaxLevel]) {
-                nextLevel = [CCSprite spriteWithFile:@"nextLevel.png"];
+                nextLevel = [CCSprite spriteWithFile:@"nextLevel1.png"];
                 nextLevelSel = [CCSprite spriteWithFile:@"nextLevelSel.png"];
                 message = [CCSprite spriteWithFile:@"wincase.png"];
                 [[LevelManager sharedInstance] nextLevel];
@@ -122,7 +122,7 @@
         background.position = ccp(size.width/2, size.height/2);
         [self addChild:background z:-1];
         
-        message.position = ccp(size.width/2, 6*size.height/8);
+        message.position = ccp(size.width/2, 7*size.height/8);
         [self addChild:message];
         
         [CCMenuItemFont setFontName:@"Hobo"];
