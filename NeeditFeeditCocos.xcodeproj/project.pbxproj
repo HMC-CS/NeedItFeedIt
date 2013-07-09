@@ -104,7 +104,6 @@
 		EF49495E177E0328004FDA42 /* forest1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF49495D177E0328004FDA42 /* forest1.png */; };
 		EF494960177E036A004FDA42 /* savanna1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF49495F177E036A004FDA42 /* savanna1.png */; };
 		EF494962177E0920004FDA42 /* instructionsSel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF494961177E0920004FDA42 /* instructionsSel.png */; };
-		EF494964177E0B88004FDA42 /* creditsSel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF494963177E0B88004FDA42 /* creditsSel.png */; };
 		EF494966177E1F12004FDA42 /* ocean1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF494965177E1F12004FDA42 /* ocean1.png */; };
 		EF603C1017725FB100E49B22 /* GameOverLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EF603C0F17725FB100E49B22 /* GameOverLayer.m */; };
 		EF603C13177261D400E49B22 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = EF603C12177261D400E49B22 /* Level.m */; };
@@ -484,7 +483,6 @@
 		EF49495D177E0328004FDA42 /* forest1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forest1.png; sourceTree = "<group>"; };
 		EF49495F177E036A004FDA42 /* savanna1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = savanna1.png; sourceTree = "<group>"; };
 		EF494961177E0920004FDA42 /* instructionsSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instructionsSel.png; sourceTree = "<group>"; };
-		EF494963177E0B88004FDA42 /* creditsSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = creditsSel.png; sourceTree = "<group>"; };
 		EF494965177E1F12004FDA42 /* ocean1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ocean1.png; sourceTree = "<group>"; };
 		EF603C0E17725FB100E49B22 /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverLayer.h; sourceTree = "<group>"; };
 		EF603C0F17725FB100E49B22 /* GameOverLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverLayer.m; sourceTree = "<group>"; };
@@ -510,7 +508,6 @@
 		EF67D75617839D3200A136E5 /* pausesel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausesel@2x.png"; sourceTree = "<group>"; };
 		EF67D75C1783BB3F00A136E5 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
 		EF67D75E1783BB4E00A136E5 /* initialscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = initialscreen.png; sourceTree = "<group>"; };
-		EF67D76C1783E94B00A136E5 /* Hobo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Hobo.ttf; path = ../../../Downloads/Hobo.ttf; sourceTree = "<group>"; };
 		EF6EE13A1783663B00F98B27 /* menu1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu1.png; sourceTree = "<group>"; };
 		EF6EE13C1783664900F98B27 /* menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu2.png; sourceTree = "<group>"; };
 		EF6EE13E1783749400F98B27 /* background3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background3@2x.png"; sourceTree = "<group>"; };
@@ -1183,7 +1180,6 @@
 				EF67D75C1783BB3F00A136E5 /* icon-72.png */,
 				0A2F8FC2176D161F00A98CC7 /* backbar.png */,
 				EFCCB9E31782297000A4724F /* multiplier.png */,
-				EF494963177E0B88004FDA42 /* creditsSel.png */,
 				0A2F8FC3176D161F00A98CC7 /* innerBar.png */,
 				0A2F8FC6176D314E00A98CC7 /* fillBar.png */,
 				EF49495B177E031A004FDA42 /* pickLevelTitle.png */,
@@ -1297,7 +1293,6 @@
 		EF7A6F2D17629CD900F81B3C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EF67D76C1783E94B00A136E5 /* Hobo.ttf */,
 				EF737E77176BDD4C00EF4E4D /* images */,
 				0AF163F61773B9190089D59D /* Levels.plist */,
 				0A2F8FBA176A8F0500A98CC7 /* Resources.plist */,
@@ -1830,7 +1825,6 @@
 				EF49495E177E0328004FDA42 /* forest1.png in Resources */,
 				EF494960177E036A004FDA42 /* savanna1.png in Resources */,
 				EF494962177E0920004FDA42 /* instructionsSel.png in Resources */,
-				EF494964177E0B88004FDA42 /* creditsSel.png in Resources */,
 				EF494966177E1F12004FDA42 /* ocean1.png in Resources */,
 				0A6DB5AC177E1AB400B5B37B /* Arctic@2x.png in Resources */,
 				0A6DB5AD177E1AB400B5B37B /* bugs@2x.png in Resources */,

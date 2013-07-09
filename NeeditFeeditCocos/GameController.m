@@ -55,7 +55,7 @@ static const int POINTS_PER_RESOURCE = 10;
         _userLayer.position = ccp(0, winSize.height*0.93);
         [self addChild:_userLayer];
         
-        seconds = 120;
+        seconds = 60;
         
         //Add all organisms and resources
         [self loadOrganisms];
@@ -111,7 +111,6 @@ static const int POINTS_PER_RESOURCE = 10;
         }
         [newOrg setResourceBars:resBars];
     }
-    [self schedule:@selector(decayBars) interval:decay ];
 }
 
 //This way of moving comes from a Ray Weinderlich Tutorial that we made some adaptions to:
@@ -141,7 +140,7 @@ static const int POINTS_PER_RESOURCE = 10;
     [resources insertObject:newResource atIndex:0];
 
     // Determine where to spawn the resource along the Y axis
-    int minY = winSize.height*.7 - newResource.image.contentSize.height / 2;
+    int minY = winSize.height*.65 - newResource.image.contentSize.height/2;
     int maxY = winSize.height*.88 - newResource.image.contentSize.height/2;
     int rangeY = maxY - minY;
     int actualY = (arc4random() % rangeY) + minY;
@@ -153,8 +152,8 @@ static const int POINTS_PER_RESOURCE = 10;
     [self addChild:newResource z:1];
     
     // Determine speed of the resource
-    int minDuration = 5.0;
-    int maxDuration = 10.0;
+    int minDuration = 6.0;
+    int maxDuration = 8.0;
     int rangeDuration = maxDuration - minDuration;
     int actualDuration = (arc4random() % rangeDuration) + minDuration;
     
@@ -174,7 +173,7 @@ static const int POINTS_PER_RESOURCE = 10;
     //Gets the point at which the touch occured and checks if it is within this resource object
     UITouch* thisTouch = [touches anyObject];
     for(Resource* resource in resources){
-        CGRect boundingBox = CGRectOffset([resource boundingBox], -resource.contentSize.width/2, -resource.contentSize.height/2);
+        CGRect boundingBox = CGRectOffset([resource boundingBox], -resource.boundingBox.size.width/1.75, -resource.boundingBox.size.height/1.75);
         CGPoint pt = [self convertToWorldSpace:[self convertTouchToNodeSpace:thisTouch]];
         if (CGRectContainsPoint(boundingBox, pt)){
             resource.touch = thisTouch;
@@ -211,7 +210,7 @@ static const int POINTS_PER_RESOURCE = 10;
                 if ([resource.name isEqualToString: @"human"]) {
                     for (ResourceBar* res in targetOrg.resourceBars){
                         [res updateBar: 10];
-                        self.userLayer.points += (POINTS_PER_RESOURCE*self.userLayer.multiplier);
+                        self.userLayer.points += POINTS_PER_RESOURCE;
                         [_userLayer updatePoints:self.userLayer.points];
                     }
                 }else{
@@ -219,7 +218,7 @@ static const int POINTS_PER_RESOURCE = 10;
                     if (![current checkSuccess]){
                         NSNumber *freq = temp[1];
                         [current updateBar: (100.0-freq.floatValue)/10.0];
-                        self.userLayer.points += (POINTS_PER_RESOURCE*self.userLayer.multiplier);
+                        self.userLayer.points += POINTS_PER_RESOURCE;
                         [_userLayer updatePoints:self.userLayer.points];
                     }
                 }
@@ -227,7 +226,6 @@ static const int POINTS_PER_RESOURCE = 10;
             }
         }
         BOOL allSatisfied = true;
-        int lowest = 500;
         for (Organism* org in organisms) {
             NSArray* storeBars = [[NSArray alloc] initWithArray: org.resourceBars];
             for (ResourceBar* bar in storeBars) {
@@ -236,14 +234,7 @@ static const int POINTS_PER_RESOURCE = 10;
                     break;
                 }
             }
-            for (ResourceBar* bar in storeBars) {
-                int perc = [bar getPercentage];
-                if (perc<lowest) {
-                    lowest = perc;
-                }
-            }
         }
-        [self updateMultipler:lowest];
         if (allSatisfied) {
             [self stopStopWatch];
             CCScene *loseScene = [GameOverLayer sceneWithWon:YES andScore:self.userLayer.points andBonus: 300];
@@ -290,31 +281,6 @@ static const int POINTS_PER_RESOURCE = 10;
 -(void) stopStopWatch{
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(tick) object:nil];
     NSLog(@"countdown stopped");
-}
-
--(void) decayBars{
-    int lowest = 500;
-    for (Organism* org in organisms) {
-        NSArray* storeBars = [[NSArray alloc] initWithArray: org.resourceBars];
-        for (ResourceBar* bar in storeBars) {
-            [bar decreaseUpdate];
-            int perc = [bar getPercentage];
-            if (perc<lowest) {
-                lowest = perc;
-            }
-        }
-    }
-    [self updateMultipler:lowest];
-}
-
--(void) updateMultipler: (int) lowestPerc{
-    if (lowestPerc<50) {
-        [self.userLayer updateMultiplier:1];
-    } else if (lowestPerc<75){
-        [self.userLayer updateMultiplier:2];
-    } else{
-        [self.userLayer updateMultiplier:4];
-    }
 }
 
 @end
