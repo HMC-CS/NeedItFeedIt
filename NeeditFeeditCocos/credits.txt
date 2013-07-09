@@ -9,6 +9,8 @@ Haley Erickson and Paige Garratt
 
 Music:
 "One" by pheonton via opengameart.org / CC-BY 3.0
+"monster_eat1" by --Bender-- via freesound.org / CC-BY 3.0
+"Sci-fi Shwop 1" by Arthur vian opengameart.org / CC_BY_SA 3.0 / GPL 3.0 / GPL 2.0
 
 Funded by NSF grant #1042472, The Games Network: Games for students, games by students 
 (PIs Sweedyk and Erlinger) and by the Dept. of Computer Science, Harvey Mudd College

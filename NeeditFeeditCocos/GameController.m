@@ -152,8 +152,8 @@ static const int POINTS_PER_RESOURCE = 10;
     [self addChild:newResource z:1];
     
     // Determine speed of the resource
-    int minDuration = 6.0;
-    int maxDuration = 8.0;
+    int minDuration = 7.0;
+    int maxDuration = 9.0;
     int rangeDuration = maxDuration - minDuration;
     int actualDuration = (arc4random() % rangeDuration) + minDuration;
     
