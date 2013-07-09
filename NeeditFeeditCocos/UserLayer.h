@@ -14,12 +14,10 @@
 }
 
 @property (assign, nonatomic) int points;
-@property (assign, nonatomic) int multiplier;
 
 -(id) init;
 -(void) updateTimer: (int) seconds;
 -(void) updatePoints: (int) points;
--(void) updateMultiplier: (int) newMulti;
 
 
 @end
