@@ -93,6 +93,7 @@
 		EF1B0441178CC15800745EC6 /* startupscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1B0440178CC15800745EC6 /* startupscreen.png */; };
 		EF1B0443178CC31100745EC6 /* startupscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1B0442178CC31100745EC6 /* startupscreen@2x.png */; };
 		EF1B0445178CC33300745EC6 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1B0444178CC33200745EC6 /* Default-Landscape@2x~ipad.png */; };
+		EF1B0447178CC70F00745EC6 /* pickLevelTitle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1B0446178CC70F00745EC6 /* pickLevelTitle@2x.png */; };
 		EF494940177E01C4004FDA42 /* startSel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF49493F177E01C4004FDA42 /* startSel.png */; };
 		EF494942177E0215004FDA42 /* arcticsel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF494941177E0215004FDA42 /* arcticsel.png */; };
 		EF494944177E022A004FDA42 /* desertsel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF494943177E022A004FDA42 /* desertsel.png */; };
@@ -477,6 +478,7 @@
 		EF1B0440178CC15800745EC6 /* startupscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startupscreen.png; sourceTree = "<group>"; };
 		EF1B0442178CC31100745EC6 /* startupscreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startupscreen@2x.png"; sourceTree = "<group>"; };
 		EF1B0444178CC33200745EC6 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		EF1B0446178CC70F00745EC6 /* pickLevelTitle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pickLevelTitle@2x.png"; sourceTree = "<group>"; };
 		EF49493F177E01C4004FDA42 /* startSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startSel.png; sourceTree = "<group>"; };
 		EF494941177E0215004FDA42 /* arcticsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arcticsel.png; sourceTree = "<group>"; };
 		EF494943177E022A004FDA42 /* desertsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desertsel.png; sourceTree = "<group>"; };
@@ -1137,6 +1139,7 @@
 				EF4E5D5C178C089900B70278 /* Ecosystem Buttons */,
 				EF86CBD017835CFE00EA59A6 /* beatGame.png */,
 				EF86CBD417835D3E00EA59A6 /* highscore.png */,
+				EF1B0446178CC70F00745EC6 /* pickLevelTitle@2x.png */,
 				EF86CBD617835D5900EA59A6 /* losecase.png */,
 				EF86CBD817835D6800EA59A6 /* nextLevel1.png */,
 				EF86CBDA17835D7000EA59A6 /* nextLevelSel.png */,
@@ -1994,6 +1997,7 @@
 				EF1B0441178CC15800745EC6 /* startupscreen.png in Resources */,
 				EF1B0443178CC31100745EC6 /* startupscreen@2x.png in Resources */,
 				EF1B0445178CC33300745EC6 /* Default-Landscape@2x~ipad.png in Resources */,
+				EF1B0447178CC70F00745EC6 /* pickLevelTitle@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
