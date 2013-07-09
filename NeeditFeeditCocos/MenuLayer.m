@@ -50,13 +50,13 @@
 		CGSize size = [[CCDirector sharedDirector] winSize];
         
         //Create and add background
-        CCSprite* background = [CCSprite spriteWithFile:@"background4.png"];
+        CCSprite* background = [CCSprite spriteWithFile:@"background7.png"];
         background.position = ccp(size.width/2, size.height/2);
         [self addChild:background z:-1];
         
 		// create title label
         CCSprite* title = [CCSprite spriteWithFile:@"title.png"];
-		title.position =  ccp( size.width /2 , size.height/1.5 );
+		title.position =  ccp( size.width /2 , size.height/1.85 );
         
         CCMenuItemImage* start =[CCMenuItemImage itemWithNormalImage:@"start.png" selectedImage:@"startSel.png" target:self selector:@selector(goToLevelPick:)];
         
