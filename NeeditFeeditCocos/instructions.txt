@@ -1,5 +1,4 @@
-Keep your organisms alive by dragging resources to them.
-Survive for 2 minutes to complete the level.
-Increase all the satisfaction meters for a higher multiplier and more points!
+Keep your organisms alive by dragging needed resources to them.
+Survive for 1 minute to complete the level.
 
-Hint: Fully satisfy all the organisms before the time runs out for a bonus
+Hint: Fill the health bars of all the organisms before time runs out for a bonus
