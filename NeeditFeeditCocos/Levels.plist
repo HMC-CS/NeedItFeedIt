@@ -22,7 +22,7 @@
 			<string>hawk</string>
 			<string>bear</string>
 		</array>
-		<integer>8</integer>
+		<integer>15</integer>
 	</array>
 	<key>Ocean</key>
 	<array>
@@ -43,7 +43,7 @@
 			<string>squid</string>
 			<string>marlin</string>
 		</array>
-		<integer>6</integer>
+		<integer>8</integer>
 	</array>
 	<key>Desert</key>
 	<array>
@@ -63,7 +63,7 @@
 			<string>coyote</string>
 			<string>hawk</string>
 		</array>
-		<integer>5</integer>
+		<integer>6</integer>
 	</array>
 	<key>Savanna</key>
 	<array>

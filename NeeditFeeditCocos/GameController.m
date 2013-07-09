@@ -104,7 +104,7 @@ static const int POINTS_PER_RESOURCE = 10;
         //Creates all the resource bars and adds them as a property of the organism
         NSMutableArray* resBars = [[NSMutableArray alloc] init];
         for (int j=0; j<2; j++) {
-            ResourceBar *newBar = [[ResourceBar alloc] initGivenResources:orgTemps[i][j]];
+            ResourceBar *newBar = [[ResourceBar alloc] initGivenResources:orgTemps[i][j] andDecay:decay];
             newBar.position = ccp(newOrg.position.x , winSize.height/8 - (40*j) - 20);
             [self addChild:newBar];
             [resBars addObject:newBar];
@@ -217,7 +217,7 @@ static const int POINTS_PER_RESOURCE = 10;
                     ResourceBar* current = targetOrg.resourceBars[i];
                     if (![current checkSuccess]){
                         NSNumber *freq = temp[1];
-                        [current updateBar: (100.0-freq.floatValue)/10.0];
+                        [current updateBar: (100.0-freq.floatValue)/8.0];
                         self.userLayer.points += POINTS_PER_RESOURCE;
                         [_userLayer updatePoints:self.userLayer.points];
                     }

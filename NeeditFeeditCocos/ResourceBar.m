@@ -29,7 +29,7 @@ static const int PERCENT_DECAY = 5;
     NSArray* resources;
 }
 
--(id) initGivenResources:(NSArray*) resource{
+-(id) initGivenResources:(NSArray*) resource andDecay: (int) decay{
     if (self = [super init]) {
         
         resources = [[NSArray alloc] initWithArray:resource];
@@ -63,17 +63,15 @@ static const int PERCENT_DECAY = 5;
         //Starts bar at 50%
         [self updateBar:50.0];
         
+        [self schedule:@selector(decreaseUpdate) interval:decay];
+        
         return self;
     }
     return nil;
 }
 
 -(void) decreaseUpdate{
-    if (percentage>=PERCENT_DECAY) {
-        [self updateBar:-PERCENT_DECAY];
-    }else{
-        [self updateBar:0];
-    }
+    [self updateBar:-PERCENT_DECAY];
     
     //Check for death
     [self checkDeath];

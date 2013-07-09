@@ -14,7 +14,7 @@
     
 }
 
--(id) initGivenResources:(NSArray*) resource;
+-(id) initGivenResources:(NSArray*) resource andDecay: (int) decay;
 -(void) decreaseUpdate;
 -(void)updateBar:(float)addedPercentage;
 -(float) getPercentage;
