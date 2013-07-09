@@ -40,22 +40,11 @@ static const int HEIGHTSCALE = 0.97;
         
         //Create score label
         scoreLabel = [CCSprite spriteWithFile:@"score.png"];
-        scoreLabel.position = ccp(size.width*.3, size.height*HEIGHTSCALE);
+        scoreLabel.position = ccp(size.width*.48, size.height*HEIGHTSCALE);
         
         scoreText = [CCLabelTTF labelWithString:@"" fontName:@"Hobo" fontSize:36];
-        scoreText.position = ccp(size.width*.3 + scoreLabel.contentSize.width/2 + 40, size.height*HEIGHTSCALE);
+        scoreText.position = ccp(size.width*.48 + scoreLabel.contentSize.width/2 + 40, size.height*HEIGHTSCALE);
         scoreText.color = ccc3(48, 0, 68);
-        
-        //Create multiplier label
-        multiLabel = [CCSprite spriteWithFile:@"multiplier.png"];
-        multiLabel.position = ccp(4*size.width/7, size.height*HEIGHTSCALE);
-        
-        multiText = [CCLabelTTF labelWithString:@"" fontName:@"Hobo" fontSize:36];
-        multiText.position = ccp(4*size.width/7 + multiLabel.contentSize.width/2 + 20, size.height*HEIGHTSCALE);
-        multiText.color = ccc3(48, 0, 68);
-        
-        _multiplier = 1;
-        multiText.string = [NSString stringWithFormat:@" x%d", _multiplier];
         
         //Add pause button
         CCMenuItemImage* pause  = [CCMenuItemImage itemWithNormalImage:@"pause.png" selectedImage:@"pausesel.png" target:self selector:@selector(pausePressed:)];
@@ -83,8 +72,6 @@ static const int HEIGHTSCALE = 0.97;
         [self addChild: timeText];
         [self addChild: scoreLabel];
         [self addChild: scoreText];
-        [self addChild: multiLabel];
-        [self addChild: multiText];
         [self addChild: pauseMenu];
         [self addChild: soundMenu];
         
@@ -112,11 +99,6 @@ static const int HEIGHTSCALE = 0.97;
 -(void) pausePressed: (id) sender{
     [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
     [[CCDirector sharedDirector] pushScene:[PauseLayer node]];
-}
-
--(void) updateMultiplier:(int)newMulti{
-    _multiplier = newMulti;
-    multiText.string = [NSString stringWithFormat:@" x%d", _multiplier];
 }
 
 -(void) soundIconPressed:(id) sender{

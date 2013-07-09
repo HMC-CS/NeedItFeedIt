@@ -94,6 +94,9 @@ static const int PERCENT_DECAY = 5;
         percentage = 100;
     }
     else
+        if (percentage<0) {
+            percentage = 0;
+        }
         [innerBar setTextureRect: CGRectMake(0, 0, BAR_WIDTH * percentage / 100, BAR_HEIGHT * 0.5)];
 }
 
