@@ -71,23 +71,23 @@
         
         NSDictionary* forest = plistDictionary[@"Forest"];
         if ([forest[@"unlocked"] boolValue]) {
-            Forest = [CCMenuItemImage itemWithNormalImage:@"forest1.png" selectedImage:@"forestsel.png" target:self selector:@selector(goToForest)];
+            Forest = [CCMenuItemImage itemWithNormalImage:@"forest2.png" selectedImage:@"forest2sel.png" target:self selector:@selector(goToForest)];
         }
         NSDictionary* ocean = plistDictionary[@"Ocean"];
         if ([ocean[@"unlocked"] boolValue]) {
-            Ocean = [CCMenuItemImage itemWithNormalImage:@"ocean1.png" selectedImage:@"oceansel.png" target:self selector:@selector(goToOcean)];
+            Ocean = [CCMenuItemImage itemWithNormalImage:@"ocean2.png" selectedImage:@"ocean2sel.png" target:self selector:@selector(goToOcean)];
         }
         NSDictionary* desert = plistDictionary[@"Desert"];
         if ([desert[@"unlocked"] boolValue]) {
-            Desert = [CCMenuItemImage itemWithNormalImage:@"desert1.png" selectedImage:@"desertsel.png" target:self selector:@selector(goToDesert)];
+            Desert = [CCMenuItemImage itemWithNormalImage:@"desert2.png" selectedImage:@"desert2sel.png" target:self selector:@selector(goToDesert)];
         }
         NSDictionary* savanna = plistDictionary[@"Savanna"];
         if ([savanna[@"unlocked"]boolValue]) {
-            Savanna = [CCMenuItemImage itemWithNormalImage:@"savanna1.png" selectedImage:@"savannasel.png" target:self selector:@selector(goToSavanna)];
+            Savanna = [CCMenuItemImage itemWithNormalImage:@"savanna2.png" selectedImage:@"savanna2sel.png" target:self selector:@selector(goToSavanna)];
         }
         NSDictionary* arctic = plistDictionary[@"Arctic"];
         if ([arctic[@"unlocked"] boolValue]) {
-            Arctic = [CCMenuItemImage itemWithNormalImage:@"arctic1.png" selectedImage:@"arcticsel.png" target:self selector:@selector(goToArctic)];
+            Arctic = [CCMenuItemImage itemWithNormalImage:@"arctic2.png" selectedImage:@"arctic2sel.png" target:self selector:@selector(goToArctic)];
         }
         
         CCMenu* menu2 = [CCMenu menuWithItems:Forest, Ocean, Desert, Savanna, Arctic, nil];
