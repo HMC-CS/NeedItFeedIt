@@ -10,6 +10,7 @@
 #import "PauseLayer.h"
 #import "SimpleAudioEngine.h"
 #import "CDAudioManager.h"
+#import "LevelManager.h"
 
 static const int HEIGHTSCALE = 0.97;
 
@@ -20,8 +21,10 @@ static const int HEIGHTSCALE = 0.97;
     CCLabelTTF* scoreText;
     CCSprite* multiLabel;
     CCLabelTTF* multiText;
+    CCLabelTTF* highScoreText;
     int endValue;
     double delta;
+    int highScore;
 }
 
 -(id) init{
@@ -40,11 +43,26 @@ static const int HEIGHTSCALE = 0.97;
         
         //Create score label
         scoreLabel = [CCSprite spriteWithFile:@"score.png"];
-        scoreLabel.position = ccp(size.width*.48, size.height*HEIGHTSCALE);
+        scoreLabel.position = ccp(size.width*.35, size.height*HEIGHTSCALE);
         
         scoreText = [CCLabelTTF labelWithString:@"" fontName:@"Hobo" fontSize:36];
-        scoreText.position = ccp(size.width*.48 + scoreLabel.contentSize.width/2 + 40, size.height*HEIGHTSCALE);
+        scoreText.position = ccp(size.width*.35 + scoreLabel.contentSize.width/2 + 40, size.height*HEIGHTSCALE);
         scoreText.color = ccc3(48, 0, 68);
+        
+        //Get the high Score from the data file
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *path = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"Data.plist"]];
+        NSDictionary* plistDictionary = [NSDictionary dictionaryWithContentsOfFile:path];
+        Level *curLevel = [[LevelManager sharedInstance] currentLevel];
+        NSDictionary* ecosystem = plistDictionary[curLevel.ecosystem];
+        NSString* levelName = [NSString stringWithFormat:@"Level%i", curLevel.levelNum];
+        highScore = [ecosystem[levelName] intValue];
+        
+        NSString* hiScore = [NSString stringWithFormat:@"High Score: %d", highScore];
+        highScoreText = [CCLabelTTF labelWithString:hiScore fontName:@"Hobo" fontSize:36];
+        highScoreText.position = ccp(size.width*.6, size.height*HEIGHTSCALE);
+        highScoreText.color = ccc3(48, 0, 68);
         
         //Add pause button
         CCMenuItemImage* pause  = [CCMenuItemImage itemWithNormalImage:@"pause.png" selectedImage:@"pausesel.png" target:self selector:@selector(pausePressed:)];
@@ -74,6 +92,7 @@ static const int HEIGHTSCALE = 0.97;
         [self addChild: scoreText];
         [self addChild: pauseMenu];
         [self addChild: soundMenu];
+        [self addChild: highScoreText];
         
         
         self.touchEnabled = YES;
@@ -94,6 +113,10 @@ static const int HEIGHTSCALE = 0.97;
 
 -(void) updatePoints: (int) points{
     scoreText.string = [NSString stringWithFormat:@" %d", points];
+    if (_points>highScore) {
+        highScore = points;
+        highScoreText.string = [NSString stringWithFormat:@"High Score: %d", highScore];
+    }
 }
 
 -(void) pausePressed: (id) sender{
