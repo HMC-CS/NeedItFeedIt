@@ -561,7 +561,7 @@
 		EF737E57176BDD4600EF4E4D /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
 		EF737E58176BDD4600EF4E4D /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		EF737E59176BDD4600EF4E4D /* water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water.png; sourceTree = "<group>"; };
-		EF7A6F1717629CD900F81B3C /* NeeditFeeditCocos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeeditFeeditCocos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF7A6F1717629CD900F81B3C /* NeeditFeedit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeeditFeedit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7A6F1A17629CD900F81B3C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EF7A6F1C17629CD900F81B3C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		EF7A6F1E17629CD900F81B3C /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -1296,7 +1296,7 @@
 		EF7A6F1817629CD900F81B3C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EF7A6F1717629CD900F81B3C /* NeeditFeeditCocos.app */,
+				EF7A6F1717629CD900F81B3C /* NeeditFeedit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1741,7 +1741,7 @@
 			);
 			name = NeeditFeeditCocos;
 			productName = NeeditFeeditCocos;
-			productReference = EF7A6F1717629CD900F81B3C /* NeeditFeeditCocos.app */;
+			productReference = EF7A6F1717629CD900F81B3C /* NeeditFeedit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2213,7 +2213,7 @@
 					"-lsqlite3",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NeeditFeedit;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2234,7 +2234,7 @@
 					"-lsqlite3",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NeeditFeedit;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
