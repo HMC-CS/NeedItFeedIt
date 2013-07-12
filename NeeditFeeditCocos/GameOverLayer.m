@@ -50,7 +50,7 @@
         
         
         CCSprite * message;
-        CCSprite * nextLevel = [CCSprite spriteWithFile:@"retryLevel1.png"];
+        CCSprite * nextLevel = [CCSprite spriteWithFile:@"retryLevel2.png"];
         CCSprite * nextLevelSel = [CCSprite spriteWithFile:@"retryLevelSel.png"];
         if (won) {
             
@@ -62,6 +62,9 @@
                 [[LevelManager sharedInstance] nextLevel];
             } else{
                 message = [CCSprite spriteWithFile:@"beatGame.png"];
+
+
+                message.scale = 0.75;
             }
             
             //Check if need to unlock next ecosystem

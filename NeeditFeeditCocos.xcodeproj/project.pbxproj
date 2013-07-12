@@ -115,7 +115,7 @@
 		EF1B046D178DF8D500745EC6 /* savanna2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1B046C178DF8D500745EC6 /* savanna2@2x.png */; };
 		EF1B046F178DF8E400745EC6 /* savanna2sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1B046E178DF8E400745EC6 /* savanna2sel@2x.png */; };
 		EF1B0471178E358A00745EC6 /* nextLevel1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1B0470178E358900745EC6 /* nextLevel1@2x.png */; };
-		EF1B0473178E359900745EC6 /* retryLevel1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1B0472178E359900745EC6 /* retryLevel1@2x.png */; };
+		EF1B0473178E359900745EC6 /* retryLevel2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1B0472178E359900745EC6 /* retryLevel2@2x.png */; };
 		EF494940177E01C4004FDA42 /* startSel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF49493F177E01C4004FDA42 /* startSel.png */; };
 		EF49494E177E028C004FDA42 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = EF49494D177E028C004FDA42 /* pause.png */; };
 		EF494950177E0296004FDA42 /* pausesel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF49494F177E0296004FDA42 /* pausesel.png */; };
@@ -306,7 +306,7 @@
 		EF86CBD717835D5900EA59A6 /* losecase.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBD617835D5900EA59A6 /* losecase.png */; };
 		EF86CBD917835D6800EA59A6 /* nextLevel1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBD817835D6800EA59A6 /* nextLevel1.png */; };
 		EF86CBDB17835D7000EA59A6 /* nextLevelSel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBDA17835D7000EA59A6 /* nextLevelSel.png */; };
-		EF86CBDD17835D8800EA59A6 /* retryLevel1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBDC17835D8800EA59A6 /* retryLevel1.png */; };
+		EF86CBDD17835D8800EA59A6 /* retryLevel2.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBDC17835D8800EA59A6 /* retryLevel2.png */; };
 		EF86CBDF17835D9000EA59A6 /* retryLevelSel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBDE17835D9000EA59A6 /* retryLevelSel.png */; };
 		EF86CBE117835D9A00EA59A6 /* score1.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBE017835D9A00EA59A6 /* score1.png */; };
 		EF86CBE317835DB200EA59A6 /* wincase.png in Resources */ = {isa = PBXBuildFile; fileRef = EF86CBE217835DB200EA59A6 /* wincase.png */; };
@@ -504,7 +504,7 @@
 		EF1B046C178DF8D500745EC6 /* savanna2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "savanna2@2x.png"; sourceTree = "<group>"; };
 		EF1B046E178DF8E400745EC6 /* savanna2sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "savanna2sel@2x.png"; sourceTree = "<group>"; };
 		EF1B0470178E358900745EC6 /* nextLevel1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nextLevel1@2x.png"; sourceTree = "<group>"; };
-		EF1B0472178E359900745EC6 /* retryLevel1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retryLevel1@2x.png"; sourceTree = "<group>"; };
+		EF1B0472178E359900745EC6 /* retryLevel2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retryLevel2@2x.png"; sourceTree = "<group>"; };
 		EF49493F177E01C4004FDA42 /* startSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startSel.png; sourceTree = "<group>"; };
 		EF49494D177E028C004FDA42 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		EF49494F177E0296004FDA42 /* pausesel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausesel.png; sourceTree = "<group>"; };
@@ -844,7 +844,7 @@
 		EF86CBD617835D5900EA59A6 /* losecase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = losecase.png; sourceTree = "<group>"; };
 		EF86CBD817835D6800EA59A6 /* nextLevel1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextLevel1.png; sourceTree = "<group>"; };
 		EF86CBDA17835D7000EA59A6 /* nextLevelSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextLevelSel.png; sourceTree = "<group>"; };
-		EF86CBDC17835D8800EA59A6 /* retryLevel1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retryLevel1.png; sourceTree = "<group>"; };
+		EF86CBDC17835D8800EA59A6 /* retryLevel2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retryLevel2.png; sourceTree = "<group>"; };
 		EF86CBDE17835D9000EA59A6 /* retryLevelSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retryLevelSel.png; sourceTree = "<group>"; };
 		EF86CBE017835D9A00EA59A6 /* score1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = score1.png; sourceTree = "<group>"; };
 		EF86CBE217835DB200EA59A6 /* wincase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wincase.png; sourceTree = "<group>"; };
@@ -1151,7 +1151,7 @@
 				EF86CBD617835D5900EA59A6 /* losecase.png */,
 				EF86CBD817835D6800EA59A6 /* nextLevel1.png */,
 				EF86CBDA17835D7000EA59A6 /* nextLevelSel.png */,
-				EF86CBDC17835D8800EA59A6 /* retryLevel1.png */,
+				EF86CBDC17835D8800EA59A6 /* retryLevel2.png */,
 				EF86CBDE17835D9000EA59A6 /* retryLevelSel.png */,
 				EF6EE13A1783663B00F98B27 /* menu1.png */,
 				EF6EE13C1783664900F98B27 /* menu2.png */,
@@ -1200,7 +1200,7 @@
 				EF67D75417839D2B00A136E5 /* pause@2x.png */,
 				EF67D75617839D3200A136E5 /* pausesel@2x.png */,
 				EF6EE1561783752700F98B27 /* resume@2x.png */,
-				EF1B0472178E359900745EC6 /* retryLevel1@2x.png */,
+				EF1B0472178E359900745EC6 /* retryLevel2@2x.png */,
 				EF6EE1581783752E00F98B27 /* resumeSel@2x.png */,
 				EF6EE15C1783753F00F98B27 /* retryLevelSel@2x.png */,
 				EF6EE15E1783754F00F98B27 /* score1@2x.png */,
@@ -1931,7 +1931,7 @@
 				EF86CBD717835D5900EA59A6 /* losecase.png in Resources */,
 				EF86CBD917835D6800EA59A6 /* nextLevel1.png in Resources */,
 				EF86CBDB17835D7000EA59A6 /* nextLevelSel.png in Resources */,
-				EF86CBDD17835D8800EA59A6 /* retryLevel1.png in Resources */,
+				EF86CBDD17835D8800EA59A6 /* retryLevel2.png in Resources */,
 				EF86CBDF17835D9000EA59A6 /* retryLevelSel.png in Resources */,
 				EF86CBE117835D9A00EA59A6 /* score1.png in Resources */,
 				EF86CBE317835DB200EA59A6 /* wincase.png in Resources */,
@@ -2005,7 +2005,7 @@
 				EF1B046D178DF8D500745EC6 /* savanna2@2x.png in Resources */,
 				EF1B046F178DF8E400745EC6 /* savanna2sel@2x.png in Resources */,
 				EF1B0471178E358A00745EC6 /* nextLevel1@2x.png in Resources */,
-				EF1B0473178E359900745EC6 /* retryLevel1@2x.png in Resources */,
+				EF1B0473178E359900745EC6 /* retryLevel2@2x.png in Resources */,
 				0A9A8EA8178F77C90053C10F /* smallfish.png in Resources */,
 				0A9A8EA9178F77C90053C10F /* smallfish@2x.png in Resources */,
 				EFB3AEC317907CFE009A6D87 /* highscore1.png in Resources */,
