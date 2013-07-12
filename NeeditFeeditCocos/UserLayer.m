@@ -28,6 +28,7 @@ static const int HEIGHTSCALE = 0.97;
     int endValue;
     double delta;
     int highScore;
+    BOOL newHiScore;
 }
 
 -(id) init{
@@ -82,6 +83,8 @@ static const int HEIGHTSCALE = 0.97;
         highScoreText = [CCLabelTTF labelWithString:@"" fontName:@"Hobo" fontSize:36];
         highScoreText.position = ccp(size.width*.6 + highScoreLabel.contentSize.width/2 + 40, size.height*HEIGHTSCALE);
         highScoreText.color = ccc3(48, 0, 68);
+
+        newHiScore = FALSE;
         
         //Add pause button
         CCMenuItemImage* pause  = [CCMenuItemImage itemWithNormalImage:@"pause.png" selectedImage:@"pausesel.png" target:self selector:@selector(pausePressed:)];
@@ -135,7 +138,9 @@ static const int HEIGHTSCALE = 0.97;
 
 -(void) updatePoints: (int) points{
     scoreText.string = [NSString stringWithFormat:@" %d", points];
-    if (_points>highScore) {
+    if (_points>highScore && !newHiScore)
+        newHiScore = TRUE;
+    if (newHiScore){
         highScore = points;
         highScoreText.string = [NSString stringWithFormat:@"%d", highScore];
     }
