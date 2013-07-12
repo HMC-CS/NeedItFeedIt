@@ -61,6 +61,9 @@
     //Resets touches to nil so that a new touch is treated correctly
     _touch = nil;
 }
+-(void)ccTouchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self ccTouchesEnded:touches withEvent:event];
+}
 
 
 @end
