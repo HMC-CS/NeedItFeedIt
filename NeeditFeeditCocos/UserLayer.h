@@ -18,6 +18,8 @@
 -(id) init;
 -(void) updateTimer: (int) seconds;
 -(void) updatePoints: (int) points;
+-(void) highlight;
+-(void) redhighlight;
 
 
 @end
