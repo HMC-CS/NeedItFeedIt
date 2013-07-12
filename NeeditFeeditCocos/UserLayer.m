@@ -21,7 +21,10 @@ static const int HEIGHTSCALE = 0.97;
     CCLabelTTF* scoreText;
     CCSprite* multiLabel;
     CCLabelTTF* multiText;
+    CCSprite* highScoreLabel;
     CCLabelTTF* highScoreText;
+    CCSprite* scoreGlow;
+    CCSprite* scoreGlowRed;
     int endValue;
     double delta;
     int highScore;
@@ -49,6 +52,15 @@ static const int HEIGHTSCALE = 0.97;
         scoreText.position = ccp(size.width*.35 + scoreLabel.contentSize.width/2 + 40, size.height*HEIGHTSCALE);
         scoreText.color = ccc3(48, 0, 68);
         
+        //Create glow behind score label
+        scoreGlow = [CCSprite spriteWithFile:@"scoreglow.png"];
+        scoreGlow.position = ccp(size.width*.35 + scoreLabel.contentSize.width/2 - 10, size.height*HEIGHTSCALE);
+        scoreGlow.opacity = 0;
+
+        scoreGlowRed = [CCSprite spriteWithFile:@"scoreglowred.png"];
+        scoreGlowRed.position = ccp(size.width*.35 + scoreLabel.contentSize.width/2 - 10, size.height*HEIGHTSCALE);
+        scoreGlowRed.opacity = 0;
+        
         //Get the high Score from the data file
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -59,9 +71,16 @@ static const int HEIGHTSCALE = 0.97;
         NSString* levelName = [NSString stringWithFormat:@"Level%i", curLevel.levelNum];
         highScore = [ecosystem[levelName] intValue];
         
-        NSString* hiScore = [NSString stringWithFormat:@"High Score: %d", highScore];
+        NSString* hiScore = [NSString stringWithFormat:@"%d", highScore];
         highScoreText = [CCLabelTTF labelWithString:hiScore fontName:@"Hobo" fontSize:36];
         highScoreText.position = ccp(size.width*.6, size.height*HEIGHTSCALE);
+        highScoreText.color = ccc3(48, 0, 68);
+        
+        highScoreLabel = [CCSprite spriteWithFile:@"highscore1.png"];
+        highScoreLabel.position = ccp(size.width*.6, size.height*HEIGHTSCALE);
+        
+        highScoreText = [CCLabelTTF labelWithString:@"" fontName:@"Hobo" fontSize:36];
+        highScoreText.position = ccp(size.width*.6 + highScoreLabel.contentSize.width/2 + 40, size.height*HEIGHTSCALE);
         highScoreText.color = ccc3(48, 0, 68);
         
         //Add pause button
@@ -71,7 +90,7 @@ static const int HEIGHTSCALE = 0.97;
         
         //Add sound icon
         CCMenuItem* soundOn = [CCMenuItemImage itemWithNormalImage:@"soundIcon.png" selectedImage:@"soundIcon.png" target:nil selector:nil];
-        CCMenuItem* soundOff = [CCMenuItemImage itemWithNormalImage:@"soundIconMute.png" selectedImage:@"soundOff.png" target:nil selector:nil];
+        CCMenuItem* soundOff = [CCMenuItemImage itemWithNormalImage:@"soundIconMute.png" selectedImage:@"soundIconMute.png" target:nil selector:nil];
         CCMenuItemToggle *soundToggle = [CCMenuItemToggle itemWithTarget:self selector:@selector(soundIconPressed:) items:soundOn, soundOff, nil];
         
         CCMenu* soundMenu = [CCMenu menuWithItems:soundToggle, nil];
@@ -88,11 +107,14 @@ static const int HEIGHTSCALE = 0.97;
         [self updatePoints:0];
         [self addChild: timeLabel];
         [self addChild: timeText];
+        [self addChild: scoreGlow z:-1];
+        [self addChild: scoreGlowRed z:-1];
         [self addChild: scoreLabel];
         [self addChild: scoreText];
+        [self addChild: highScoreLabel];
+        [self addChild: highScoreText];
         [self addChild: pauseMenu];
         [self addChild: soundMenu];
-        [self addChild: highScoreText];
         
         
         self.touchEnabled = YES;
@@ -115,8 +137,20 @@ static const int HEIGHTSCALE = 0.97;
     scoreText.string = [NSString stringWithFormat:@" %d", points];
     if (_points>highScore) {
         highScore = points;
-        highScoreText.string = [NSString stringWithFormat:@"High Score: %d", highScore];
+        highScoreText.string = [NSString stringWithFormat:@"%d", highScore];
     }
+}
+
+-(void) highlight{
+    CCFadeTo* fadeIn = [CCFadeTo actionWithDuration:0.5 opacity:250];
+    CCFadeTo* fadeOut = [CCFadeTo actionWithDuration:0.75 opacity:0];
+    [scoreGlow runAction:[CCSequence actions:fadeIn, fadeOut, nil]];
+}
+
+-(void) redhighlight{
+    CCFadeTo* fadeIn = [CCFadeTo actionWithDuration:0.5 opacity:250];
+    CCFadeTo* fadeOut = [CCFadeTo actionWithDuration:0.75 opacity:0];
+    [scoreGlowRed runAction:[CCSequence actions:fadeIn, fadeOut, nil]];
 }
 
 -(void) pausePressed: (id) sender{

@@ -105,7 +105,7 @@ static const int POINTS_PER_RESOURCE = 10;
         NSMutableArray* resBars = [[NSMutableArray alloc] init];
         for (int j=0; j<2; j++) {
             ResourceBar *newBar = [[ResourceBar alloc] initGivenResources:orgTemps[i][j] andDecay:decay];
-            newBar.position = ccp(newOrg.position.x , winSize.height/8 - (40*j) - 20);
+            newBar.position = ccp(newOrg.position.x , winSize.height/8 - (50*j) - 15);
             [self addChild:newBar];
             [resBars addObject:newBar];
         }
@@ -207,6 +207,7 @@ static const int POINTS_PER_RESOURCE = 10;
                 [resources removeObject:resource];
                 [resource removeFromParentAndCleanup:YES];
                 [targetOrg highlight];
+                [self.userLayer highlight];
                 if ([resource.name isEqualToString: @"human"]) {
                     for (ResourceBar* res in targetOrg.resourceBars){
                         [res updateBar: 10];
@@ -224,6 +225,9 @@ static const int POINTS_PER_RESOURCE = 10;
                 }
                 break;
             }
+        else if (!([temp[0] isEqualToString:resource.name])) {
+            [self.userLayer redhighlight];
+        }
         }
         BOOL allSatisfied = true;
         for (Organism* org in organisms) {
