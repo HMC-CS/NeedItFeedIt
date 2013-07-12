@@ -72,15 +72,11 @@ static const int HEIGHTSCALE = 0.97;
         NSString* levelName = [NSString stringWithFormat:@"Level%i", curLevel.levelNum];
         highScore = [ecosystem[levelName] intValue];
         
-        NSString* hiScore = [NSString stringWithFormat:@"%d", highScore];
-        highScoreText = [CCLabelTTF labelWithString:hiScore fontName:@"Hobo" fontSize:36];
-        highScoreText.position = ccp(size.width*.6, size.height*HEIGHTSCALE);
-        highScoreText.color = ccc3(48, 0, 68);
-        
         highScoreLabel = [CCSprite spriteWithFile:@"highscore1.png"];
         highScoreLabel.position = ccp(size.width*.6, size.height*HEIGHTSCALE);
         
-        highScoreText = [CCLabelTTF labelWithString:@"" fontName:@"Hobo" fontSize:36];
+        NSString* hiScore = [NSString stringWithFormat:@" %d", highScore];
+        highScoreText = [CCLabelTTF labelWithString:hiScore fontName:@"Hobo" fontSize:36];
         highScoreText.position = ccp(size.width*.6 + highScoreLabel.contentSize.width/2 + 40, size.height*HEIGHTSCALE);
         highScoreText.color = ccc3(48, 0, 68);
 
@@ -142,7 +138,7 @@ static const int HEIGHTSCALE = 0.97;
         newHiScore = TRUE;
     if (newHiScore){
         highScore = points;
-        highScoreText.string = [NSString stringWithFormat:@"%d", highScore];
+        highScoreText.string = [NSString stringWithFormat:@" %d", highScore];
     }
 }
 
