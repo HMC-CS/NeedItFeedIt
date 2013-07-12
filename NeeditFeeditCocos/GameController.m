@@ -225,9 +225,6 @@ static const int POINTS_PER_RESOURCE = 10;
                 }
                 break;
             }
-        else if (!([temp[0] isEqualToString:resource.name])) {
-            [self.userLayer redhighlight];
-        }
         }
         BOOL allSatisfied = true;
         for (Organism* org in organisms) {
@@ -245,6 +242,7 @@ static const int POINTS_PER_RESOURCE = 10;
             [[CCDirector sharedDirector] replaceScene:loseScene];
         }
         if (!fed) {
+            [self.userLayer redhighlight];
             self.userLayer.points -= POINTS_PER_RESOURCE/2;
             [_userLayer updatePoints:self.userLayer.points];
             [self animateRemoveResource:resource];
