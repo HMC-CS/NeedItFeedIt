@@ -61,7 +61,7 @@
                 message = [CCSprite spriteWithFile:@"wincase.png"];
                 [[LevelManager sharedInstance] nextLevel];
             } else{
-                message = [CCSprite spriteWithFile:@"beatGame"];
+                message = [CCSprite spriteWithFile:@"beatGame.png"];
             }
             
             //Check if need to unlock next ecosystem
