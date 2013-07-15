@@ -9,11 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
+@class UserLayer;
+@protocol PauseProtocol <NSObject>
+
+-(void) endAllTouches;
+
+@end
+
+
 @interface UserLayer : CCLayer {
     
 }
 
 @property (assign, nonatomic) int points;
+@property(weak, nonatomic) id <PauseProtocol> endDelegate;
 
 -(id) init;
 -(void) updateTimer: (int) seconds;
