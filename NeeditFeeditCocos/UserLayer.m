@@ -155,6 +155,9 @@ static const int HEIGHTSCALE = 0.97;
 }
 
 -(void) pausePressed: (id) sender{
+    if (self.endDelegate) {
+        [self.endDelegate endAllTouches];
+    }
     [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
     [[CCDirector sharedDirector] pushScene:[PauseLayer node]];
 }
