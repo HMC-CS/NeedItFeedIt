@@ -283,17 +283,13 @@ static const int POINTS_PER_RESOURCE = 10;
 
 -(void) stopStopWatch{
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(tick) object:nil];
-    NSLog(@"countdown stopped");
 }
 
 -(void) endAllTouches{
-    NSLog(@"endAllTouches called");
     for (Resource* res in resources){
         if (res.touch!=nil) {
-            NSLog(@"tried to end a touch");
             NSSet* set = [[NSSet alloc] initWithObjects:res.touch, nil];
-            UIEvent* event = [[UIEvent alloc] init];
-            [res ccTouchesEnded:set withEvent:event];
+            [res ccTouchesEnded:set withEvent:nil];
         }
     }
 }
