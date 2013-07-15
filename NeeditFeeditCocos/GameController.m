@@ -52,6 +52,7 @@ static const int POINTS_PER_RESOURCE = 10;
         resources = [[NSMutableArray alloc] init];
         
         _userLayer =[[UserLayer alloc] init];
+        _userLayer.endDelegate = self;
         _userLayer.position = ccp(0, winSize.height*0.93);
         [self addChild:_userLayer];
         
@@ -286,8 +287,10 @@ static const int POINTS_PER_RESOURCE = 10;
 }
 
 -(void) endAllTouches{
+    NSLog(@"endAllTouches called");
     for (Resource* res in resources){
         if (res.touch!=nil) {
+            NSLog(@"tried to end a touch");
             NSSet* set = [[NSSet alloc] initWithObjects:res.touch, nil];
             UIEvent* event = [[UIEvent alloc] init];
             [res ccTouchesEnded:set withEvent:event];

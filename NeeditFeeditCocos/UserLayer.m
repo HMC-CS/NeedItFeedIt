@@ -156,6 +156,7 @@ static const int HEIGHTSCALE = 0.97;
 
 -(void) pausePressed: (id) sender{
     if (self.endDelegate) {
+        NSLog(@"tried to call delegate");
         [self.endDelegate endAllTouches];
     }
     [[SimpleAudioEngine sharedEngine] playEffect:@"menu.wav"];
