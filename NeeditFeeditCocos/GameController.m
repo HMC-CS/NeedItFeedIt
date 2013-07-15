@@ -285,4 +285,14 @@ static const int POINTS_PER_RESOURCE = 10;
     NSLog(@"countdown stopped");
 }
 
+-(void) endAllTouches{
+    for (Resource* res in resources){
+        if (res.touch!=nil) {
+            NSSet* set = [[NSSet alloc] initWithObjects:res.touch, nil];
+            UIEvent* event = [[UIEvent alloc] init];
+            [res ccTouchesEnded:set withEvent:event];
+        }
+    }
+}
+
 @end
